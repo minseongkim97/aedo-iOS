@@ -28,11 +28,12 @@
 		24CC4AE027F5789E001BDFA1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4ADF27F5789E001BDFA1 /* UIView.swift */; };
 		24CC4AE227F579FA001BDFA1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AE127F579FA001BDFA1 /* UIViewController.swift */; };
 		24CC4AE427F57B7A001BDFA1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AE327F57B7A001BDFA1 /* Constant.swift */; };
-		24CC4AE727F5A9CA001BDFA1 /* VerificationDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AE627F5A9CA001BDFA1 /* VerificationDataService.swift */; };
+		24CC4AE727F5A9CA001BDFA1 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AE627F5A9CA001BDFA1 /* VerificationService.swift */; };
 		24CC4AE927F5A9D1001BDFA1 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AE827F5A9D1001BDFA1 /* Verification.swift */; };
 		24CC4AEB27F5B3C0001BDFA1 /* GFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AEA27F5B3C0001BDFA1 /* GFError.swift */; };
-		24CC4AED27F5BC48001BDFA1 /* PolicyDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AEC27F5BC48001BDFA1 /* PolicyDataService.swift */; };
-		24CC4AEF27F5BC63001BDFA1 /* Policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AEE27F5BC63001BDFA1 /* Policy.swift */; };
+		24CC4AED27F5BC48001BDFA1 /* PolicyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AEC27F5BC48001BDFA1 /* PolicyService.swift */; };
+		24CC4AEF27F5BC63001BDFA1 /* AllPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AEE27F5BC63001BDFA1 /* AllPolicy.swift */; };
+		24CC4AF127F5C1FE001BDFA1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AF027F5C1FE001BDFA1 /* HTTPMethod.swift */; };
 		C5B5AD7A472A7775F082E432 /* Pods_aedo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,11 +61,12 @@
 		24CC4ADF27F5789E001BDFA1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		24CC4AE127F579FA001BDFA1 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		24CC4AE327F57B7A001BDFA1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		24CC4AE627F5A9CA001BDFA1 /* VerificationDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationDataService.swift; sourceTree = "<group>"; };
+		24CC4AE627F5A9CA001BDFA1 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		24CC4AE827F5A9D1001BDFA1 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
 		24CC4AEA27F5B3C0001BDFA1 /* GFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFError.swift; sourceTree = "<group>"; };
-		24CC4AEC27F5BC48001BDFA1 /* PolicyDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyDataService.swift; sourceTree = "<group>"; };
-		24CC4AEE27F5BC63001BDFA1 /* Policy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Policy.swift; sourceTree = "<group>"; };
+		24CC4AEC27F5BC48001BDFA1 /* PolicyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyService.swift; sourceTree = "<group>"; };
+		24CC4AEE27F5BC63001BDFA1 /* AllPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPolicy.swift; sourceTree = "<group>"; };
+		24CC4AF027F5C1FE001BDFA1 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		3CB04653FAB6734767AA1362 /* Pods-aedo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		55F49DF30242C1A7C859A53F /* Pods-aedo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.release.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aedo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				24CC4AE827F5A9D1001BDFA1 /* Verification.swift */,
-				24CC4AEE27F5BC63001BDFA1 /* Policy.swift */,
+				24CC4AEE27F5BC63001BDFA1 /* AllPolicy.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,8 +227,9 @@
 			isa = PBXGroup;
 			children = (
 				24CC4AEA27F5B3C0001BDFA1 /* GFError.swift */,
-				24CC4AE627F5A9CA001BDFA1 /* VerificationDataService.swift */,
-				24CC4AEC27F5BC48001BDFA1 /* PolicyDataService.swift */,
+				24CC4AF027F5C1FE001BDFA1 /* HTTPMethod.swift */,
+				24CC4AE627F5A9CA001BDFA1 /* VerificationService.swift */,
+				24CC4AEC27F5BC48001BDFA1 /* PolicyService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -365,14 +368,15 @@
 				24CC4ACB27F571B7001BDFA1 /* AppPolicy.swift in Sources */,
 				24CC4AAE27F553CB001BDFA1 /* UIColor.swift in Sources */,
 				24CC4AE027F5789E001BDFA1 /* UIView.swift in Sources */,
-				24CC4AED27F5BC48001BDFA1 /* PolicyDataService.swift in Sources */,
+				24CC4AED27F5BC48001BDFA1 /* PolicyService.swift in Sources */,
+				24CC4AF127F5C1FE001BDFA1 /* HTTPMethod.swift in Sources */,
 				24CC4A9127F551CA001BDFA1 /* AppDelegate.swift in Sources */,
 				24CC4AD027F57219001BDFA1 /* JailBrokenHelper.swift in Sources */,
 				24CC4AE427F57B7A001BDFA1 /* Constant.swift in Sources */,
 				24CC4AE227F579FA001BDFA1 /* UIViewController.swift in Sources */,
 				24CC4AB027F553ED001BDFA1 /* UIFont.swift in Sources */,
-				24CC4AE727F5A9CA001BDFA1 /* VerificationDataService.swift in Sources */,
-				24CC4AEF27F5BC63001BDFA1 /* Policy.swift in Sources */,
+				24CC4AE727F5A9CA001BDFA1 /* VerificationService.swift in Sources */,
+				24CC4AEF27F5BC63001BDFA1 /* AllPolicy.swift in Sources */,
 				24CC4ACE27F5720E001BDFA1 /* NetworkMonitor.swift in Sources */,
 				24CC4ADD27F57605001BDFA1 /* CustomAlertViewController.swift in Sources */,
 				24CC4A9327F551CA001BDFA1 /* SceneDelegate.swift in Sources */,
