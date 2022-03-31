@@ -93,6 +93,8 @@ class SplashViewController: UIViewController {
     }
     
     private func writeAppVerification(_ appVerfication: Verification) {
+        managerPolicyData()
+        
         let verification = AppVerification()
         verification.result = appVerfication.result
         verification._id = appVerfication.id
