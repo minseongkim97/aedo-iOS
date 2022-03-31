@@ -13,6 +13,13 @@
 		24CC4A9827F551CA001BDFA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24CC4A9627F551CA001BDFA1 /* Main.storyboard */; };
 		24CC4A9A27F551CB001BDFA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24CC4A9927F551CB001BDFA1 /* Assets.xcassets */; };
 		24CC4A9D27F551CB001BDFA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24CC4A9B27F551CB001BDFA1 /* LaunchScreen.storyboard */; };
+		24CC4AA927F552E2001BDFA1 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24CC4AA627F552E1001BDFA1 /* NotoSansCJKkr-Bold.otf */; };
+		24CC4AAA27F552E2001BDFA1 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24CC4AA727F552E1001BDFA1 /* NotoSansCJKkr-Regular.otf */; };
+		24CC4AAB27F552E2001BDFA1 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24CC4AA827F552E1001BDFA1 /* NotoSansCJKkr-Medium.otf */; };
+		24CC4AAE27F553CB001BDFA1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AAD27F553CB001BDFA1 /* UIColor.swift */; };
+		24CC4AB027F553ED001BDFA1 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AAF27F553ED001BDFA1 /* UIFont.swift */; };
+		24CC4AB227F55565001BDFA1 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AB127F55565001BDFA1 /* UIDevice.swift */; };
+		C5B5AD7A472A7775F082E432 /* Pods_aedo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,15 @@
 		24CC4A9927F551CB001BDFA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24CC4A9C27F551CB001BDFA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24CC4A9E27F551CB001BDFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24CC4AA627F552E1001BDFA1 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		24CC4AA727F552E1001BDFA1 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		24CC4AA827F552E1001BDFA1 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
+		24CC4AAD27F553CB001BDFA1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		24CC4AAF27F553ED001BDFA1 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		24CC4AB127F55565001BDFA1 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		3CB04653FAB6734767AA1362 /* Pods-aedo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		55F49DF30242C1A7C859A53F /* Pods-aedo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.release.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aedo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B5AD7A472A7775F082E432 /* Pods_aedo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042AB33250FEE12612A9A168 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CB04653FAB6734767AA1362 /* Pods-aedo-iOS.debug.xcconfig */,
+				55F49DF30242C1A7C859A53F /* Pods-aedo-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		24CC4A8427F551CA001BDFA1 = {
 			isa = PBXGroup;
 			children = (
 				24CC4A8F27F551CA001BDFA1 /* aedo-iOS */,
 				24CC4A8E27F551CA001BDFA1 /* Products */,
+				042AB33250FEE12612A9A168 /* Pods */,
+				7C4245A03A8820329133AF7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +85,53 @@
 		24CC4A8F27F551CA001BDFA1 /* aedo-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				24CC4AAC27F553BD001BDFA1 /* Extension */,
+				24CC4AA527F552BC001BDFA1 /* Fonts */,
+				24CC4AA427F55215001BDFA1 /* Resources */,
 				24CC4A9027F551CA001BDFA1 /* AppDelegate.swift */,
 				24CC4A9227F551CA001BDFA1 /* SceneDelegate.swift */,
 				24CC4A9427F551CA001BDFA1 /* ViewController.swift */,
-				24CC4A9627F551CA001BDFA1 /* Main.storyboard */,
-				24CC4A9927F551CB001BDFA1 /* Assets.xcassets */,
-				24CC4A9B27F551CB001BDFA1 /* LaunchScreen.storyboard */,
 				24CC4A9E27F551CB001BDFA1 /* Info.plist */,
 			);
 			path = "aedo-iOS";
+			sourceTree = "<group>";
+		};
+		24CC4AA427F55215001BDFA1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4A9627F551CA001BDFA1 /* Main.storyboard */,
+				24CC4A9927F551CB001BDFA1 /* Assets.xcassets */,
+				24CC4A9B27F551CB001BDFA1 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		24CC4AA527F552BC001BDFA1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4AA627F552E1001BDFA1 /* NotoSansCJKkr-Bold.otf */,
+				24CC4AA827F552E1001BDFA1 /* NotoSansCJKkr-Medium.otf */,
+				24CC4AA727F552E1001BDFA1 /* NotoSansCJKkr-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		24CC4AAC27F553BD001BDFA1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4AAD27F553CB001BDFA1 /* UIColor.swift */,
+				24CC4AAF27F553ED001BDFA1 /* UIFont.swift */,
+				24CC4AB127F55565001BDFA1 /* UIDevice.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		7C4245A03A8820329133AF7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24CC4AA127F551CB001BDFA1 /* Build configuration list for PBXNativeTarget "aedo-iOS" */;
 			buildPhases = (
+				99AE55EA03F0561543844F10 /* [CP] Check Pods Manifest.lock */,
 				24CC4A8927F551CA001BDFA1 /* Sources */,
 				24CC4A8A27F551CA001BDFA1 /* Frameworks */,
 				24CC4A8B27F551CA001BDFA1 /* Resources */,
+				2499E5819C2E1875367F1BB4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,13 +194,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24CC4AAA27F552E2001BDFA1 /* NotoSansCJKkr-Regular.otf in Resources */,
 				24CC4A9D27F551CB001BDFA1 /* LaunchScreen.storyboard in Resources */,
+				24CC4AA927F552E2001BDFA1 /* NotoSansCJKkr-Bold.otf in Resources */,
 				24CC4A9A27F551CB001BDFA1 /* Assets.xcassets in Resources */,
 				24CC4A9827F551CA001BDFA1 /* Main.storyboard in Resources */,
+				24CC4AAB27F552E2001BDFA1 /* NotoSansCJKkr-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2499E5819C2E1875367F1BB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99AE55EA03F0561543844F10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-aedo-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24CC4A8927F551CA001BDFA1 /* Sources */ = {
@@ -139,7 +253,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				24CC4A9527F551CA001BDFA1 /* ViewController.swift in Sources */,
+				24CC4AB227F55565001BDFA1 /* UIDevice.swift in Sources */,
+				24CC4AAE27F553CB001BDFA1 /* UIColor.swift in Sources */,
 				24CC4A9127F551CA001BDFA1 /* AppDelegate.swift in Sources */,
+				24CC4AB027F553ED001BDFA1 /* UIFont.swift in Sources */,
 				24CC4A9327F551CA001BDFA1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,6 +401,7 @@
 		};
 		24CC4AA227F551CB001BDFA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CB04653FAB6734767AA1362 /* Pods-aedo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,8 +413,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,12 +426,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		24CC4AA327F551CB001BDFA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F49DF30242C1A7C859A53F /* Pods-aedo-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,8 +444,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +457,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
