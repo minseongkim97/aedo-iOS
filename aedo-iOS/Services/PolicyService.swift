@@ -1,5 +1,5 @@
 //
-//  VerificationDataService.swift
+//  PolicyDataService.swift
 //  aedo-iOS
 //
 //  Created by MIN SEONG KIM on 2022/03/31.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-class VerificationDataService {
-    func getVerification(completion: @escaping ((Result<Verification, GFError>) -> Void)) {
-        guard let url = URL(string:  "\(Constant.BASE_URL)v1/app/verification") else {
+class PolicyService {
+    func getPolicy(completion: @escaping ((Result<AllPolicy, GFError>) -> Void)) {
+        guard let url = URL(string:  "\(Constant.BASE_URL)v1/app/policy") else {
             completion(.failure(.invalidURL))
             return
         }
@@ -25,8 +25,8 @@ class VerificationDataService {
                 return
             }
             
-            if let data = data, let verification = try? JSONDecoder().decode(Verification.self, from: data) {
-                completion(.success(verification))
+            if let data = data, let policy = try? JSONDecoder().decode(AllPolicy.self, from: data) {
+                completion(.success(policy))
                 return
             }
             completion(.failure(.invalidData))
