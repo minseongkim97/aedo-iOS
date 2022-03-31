@@ -45,6 +45,14 @@ extension UIViewController: CustomAlertDelegate {
         customAlert.show()
     }
     
+    func showSystemMaintenanceAlert() {
+        showCustomAlert(alertType: .SystemMaintenance, alertTitle: "서버 점검중입니다.", alertMessage: "잠시 후에 이용해 주세요.", isRightButtonHidden: true)
+    }
+    
+    func showNetworkErrorAlert() {
+        showCustomAlert(alertType: .NetworkError, alertTitle: "네트워크 연결이 원활하지 않습니다.", alertMessage: "다시 시도해주세요.", isRightButtonHidden: true)
+    }
+    
     //MARK: - 앱스토어로 이동
     func openAppstore(to appleID: String) {
         // UIApplication 은 Main Thread 에서 처리

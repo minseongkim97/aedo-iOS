@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIView {
+    
         //extension에서는 Stored Property(값을 넣는 프로퍼티)가
         //안되기 때문에, 이렇게 get과 set으로 넣어줘야한다.
         @IBInspectable var cornerRadius : CGFloat{
