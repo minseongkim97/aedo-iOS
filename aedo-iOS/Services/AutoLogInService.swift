@@ -24,7 +24,7 @@ class AutoLogInService {
                 return
             }
                            
-            guard let response = response as? HTTPURLResponse, ((200..<300) ~= response.statusCode || (400..<500) ~= response.statusCode) else {
+            guard let response = response as? HTTPURLResponse, (200..<300) ~= response.statusCode else {
                 completion(.failure(.invalidResponse))
                 return
             }
