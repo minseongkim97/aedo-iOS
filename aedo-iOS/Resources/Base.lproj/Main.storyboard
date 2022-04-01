@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ACZ-KT-TX2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -265,7 +265,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hFi-6y-V5f">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1033.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNY-1p-wIR">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
@@ -428,8 +428,8 @@
                                                     <constraint firstAttribute="height" constant="460" id="xYJ-Sn-qbe"/>
                                                 </constraints>
                                             </view>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ync-K8-Iy9">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="573.5"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ync-K8-Iy9">
+                                                <rect key="frame" x="0.0" y="460" width="414" height="573.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xNO-jd-DqX">
                                                         <rect key="frame" x="30" y="30" width="110.5" height="66.5"/>
@@ -640,10 +640,10 @@
             </objects>
             <point key="canvasLocation" x="2747.826086956522" y="45.535714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Private Info Access View Controller-->
         <scene sceneID="9S5-om-fs1">
             <objects>
-                <viewController id="qPM-Rn-IHh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PrivateInfoAccessViewController" id="qPM-Rn-IHh" customClass="PrivateInfoAccessViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xdt-JP-nJm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

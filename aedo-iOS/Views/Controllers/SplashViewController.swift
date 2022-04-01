@@ -22,7 +22,7 @@ class SplashViewController: UIViewController {
         
         // 네트워크 연결 확인
         if NetworkMonitor.shared.isConnected {
-            print("network connected \(String.init(describing: NetworkMonitor.ConnectionType.self))")
+            print("network connected")
             // jailbreak 확인
             if UIDevice().isJailBroken {
                 print("isJailBreak")
@@ -153,9 +153,11 @@ class SplashViewController: UIViewController {
             case .success(let policy):
                 DispatchQueue.main.async {
                     self?.writeAppPolicy(policy)
+                    self?.checkAppVersion()
                 }
                 
-            case .failure(.invalidURL), .failure(.unableToComplete), .failure(.invalidResponse), .failure(.invalidData):
+                
+            default:
                 print("get policy data is failed")
                 DispatchQueue.main.async {
                     self?.showSystemMaintenanceAlert()
@@ -175,25 +177,27 @@ class SplashViewController: UIViewController {
                     AccessToken.logInAceessToken = response.accessToken
                     let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
                     self?.changeRootViewController(mainViewController)
-                case 400..<500:
-                    if AccessToken.token == ""  {
-                        let permissionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: PermissionViewController.identifier)
-                        self?.changeRootViewController(permissionViewController)
-                        
-                    } else {
-                        if statusCode == 401 || statusCode == 404 {
-                            let logInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AuthNavigationController")
-                            self?.changeRootViewController(logInViewController)
-                        }
-                    }
                 default:
                     DispatchQueue.main.async {
                         self?.showSystemMaintenanceAlert()
                     }
                 }
-         
+            case .failure(.invalidResponse):
+                if AccessToken.token == ""  {
+                    DispatchQueue.main.async {
+                        let permissionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: PermissionViewController.identifier)
+                        self?.changeRootViewController(permissionViewController)
+                    }
+                    
+                } else {
+                    DispatchQueue.main.async {
+                        let logInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AuthNavigationController")
+                        self?.changeRootViewController(logInViewController)
+                    }
+                    
+                }
+                
             default:
-                print("autologin failed")
                 DispatchQueue.main.async {
                     self?.showSystemMaintenanceAlert()
                 }
