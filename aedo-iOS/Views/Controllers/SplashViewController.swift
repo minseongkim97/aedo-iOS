@@ -173,17 +173,17 @@ class SplashViewController: UIViewController {
                 case 200..<300:
                     UserDefaults.standard.set(response.accessToken, forKey: "logInAceessToken")
                     AccessToken.logInAceessToken = response.accessToken
-    //                let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
-    //                self.changeRootViewController(mainViewController)
+                    let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+                    self?.changeRootViewController(mainViewController)
                 case 400..<500:
                     if AccessToken.token == ""  {
-    //                    let appAccessViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AppAccessViewController")
-    //                    self.changeRootViewController(appAccessViewController)
+                        let permissionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: PermissionViewController.identifier)
+                        self?.changeRootViewController(permissionViewController)
                         
                     } else {
                         if statusCode == 401 || statusCode == 404 {
-    //                        let logInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SignViewController")
-    //                        self.changeRootViewController(logInViewController)
+                            let logInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: AuthViewController.identifier)
+                            self?.changeRootViewController(logInViewController)
                         }
                     }
                 default:
