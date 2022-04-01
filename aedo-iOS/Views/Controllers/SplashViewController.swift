@@ -14,6 +14,7 @@ class SplashViewController: UIViewController {
     let realm = try! Realm()
     let verificationService = VerificationService()
     let policyService = PolicyService()
+    let autoLogInService = AutoLogInService()
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -28,7 +29,7 @@ class SplashViewController: UIViewController {
                 showSystemMaintenanceAlert()
             } else {
                 print("isNotJailBreak")
-                managerVerficationData()
+                manageVerficationService()
             }
         } else { // 네트워크 연결 실패
             showNetworkErrorAlert()
@@ -93,7 +94,7 @@ class SplashViewController: UIViewController {
     }
     
     private func writeAppVerification(_ appVerfication: Verification) {
-        managerPolicyData()
+        managePolicyService()
         
         let verification = AppVerification()
         verification.result = appVerfication.result
@@ -129,7 +130,7 @@ class SplashViewController: UIViewController {
         }
     }
     
-    private func managerVerficationData() {
+    private func manageVerficationService() {
         verificationService.getVerification { [weak self] result in
             switch result {
             case .success(let verification):
@@ -146,7 +147,7 @@ class SplashViewController: UIViewController {
         }
     }
     
-    private func managerPolicyData() {
+    private func managePolicyService() {
         policyService.getPolicy { [weak self] result in
             switch result {
             case .success(let policy):
@@ -155,11 +156,80 @@ class SplashViewController: UIViewController {
                 }
                 
             case .failure(.invalidURL), .failure(.unableToComplete), .failure(.invalidResponse), .failure(.invalidData):
-                print("get verfication data is failed")
+                print("get policy data is failed")
                 DispatchQueue.main.async {
                     self?.showSystemMaintenanceAlert()
                 }
             }
         }
+    }
+    
+    private func requestAutoLogIn() {
+        autoLogInService.autoLogIn { [weak self] result in
+            switch result {
+            case .success(let response):
+                guard let statusCode = Int(response.status) else { return }
+                switch statusCode {
+                case 200..<300:
+                    UserDefaults.standard.set(response.accessToken, forKey: "logInAceessToken")
+                    AccessToken.logInAceessToken = response.accessToken
+                    let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+                    self?.changeRootViewController(mainViewController)
+                case 400..<500:
+                    if AccessToken.token == ""  {
+                        let permissionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: PermissionViewController.identifier)
+                        self?.changeRootViewController(permissionViewController)
+                        
+                    } else {
+                        if statusCode == 401 || statusCode == 404 {
+                            let logInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: AuthViewController.identifier)
+                            self?.changeRootViewController(logInViewController)
+                        }
+                    }
+                default:
+                    DispatchQueue.main.async {
+                        self?.showSystemMaintenanceAlert()
+                    }
+                }
+         
+            default:
+                print("autologin failed")
+                DispatchQueue.main.async {
+                    self?.showSystemMaintenanceAlert()
+                }
+            }
+        }
+    }
+    
+    
+    private func checkAppVersion() {
+        guard let info = Bundle.main.infoDictionary, let currentVersion = info["CFBundleShortVersionString"] as? String, let _ = info["CFBundleIdentifier"] as? String else { return }
+
+        let policy = realm.objects(Policy.self)
+        let versionPolicyObjcet = Array(policy.filter("id == 'APP_VER_IOS'"))
+        let appVersion = versionPolicyObjcet[0].value
+        print(appVersion)
+        if appVersion == currentVersion {
+            checkUrgentNotice()
+        } else {
+            showVersionUpdateAlert()
+        }
+    }
+    
+    private func checkUrgentNotice() {
+        let policy = realm.objects(Policy.self)
+        let noticeContentObject = Array(policy.filter("id == 'POPUP_CONTENT'"))
+        let needPopUpNoticeObject = Array(policy.filter("id == 'POPUP_ENABLE_YN'"))
+        let needPopUpNotice = needPopUpNoticeObject[0].value
+        let noticeContent = noticeContentObject[0].value
+      
+        // 긴급공지가 같다 - 다음 화면으로 이동
+        if needPopUpNotice == "N" {
+            requestAutoLogIn()
+        } else {
+            // 긴급공지가 다를 때 - 긴급공지 다이얼로그를 띄워준다.
+            showCustomAlert(alertType: .none, alertTitle: noticeContent, isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+        }
+        
     }
 }
