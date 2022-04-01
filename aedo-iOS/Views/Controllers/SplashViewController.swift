@@ -14,6 +14,7 @@ class SplashViewController: UIViewController {
     let realm = try! Realm()
     let verificationService = VerificationService()
     let policyService = PolicyService()
+    let autoLogInService = AutoLogInService()
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -28,7 +29,7 @@ class SplashViewController: UIViewController {
                 showSystemMaintenanceAlert()
             } else {
                 print("isNotJailBreak")
-                managerVerficationData()
+                manageVerficationService()
             }
         } else { // 네트워크 연결 실패
             showNetworkErrorAlert()
@@ -93,7 +94,7 @@ class SplashViewController: UIViewController {
     }
     
     private func writeAppVerification(_ appVerfication: Verification) {
-        managerPolicyData()
+        managePolicyService()
         
         let verification = AppVerification()
         verification.result = appVerfication.result
@@ -129,7 +130,7 @@ class SplashViewController: UIViewController {
         }
     }
     
-    private func managerVerficationData() {
+    private func manageVerficationService() {
         verificationService.getVerification { [weak self] result in
             switch result {
             case .success(let verification):
@@ -146,7 +147,7 @@ class SplashViewController: UIViewController {
         }
     }
     
-    private func managerPolicyData() {
+    private func managePolicyService() {
         policyService.getPolicy { [weak self] result in
             switch result {
             case .success(let policy):
@@ -155,7 +156,44 @@ class SplashViewController: UIViewController {
                 }
                 
             case .failure(.invalidURL), .failure(.unableToComplete), .failure(.invalidResponse), .failure(.invalidData):
-                print("get verfication data is failed")
+                print("get policy data is failed")
+                DispatchQueue.main.async {
+                    self?.showSystemMaintenanceAlert()
+                }
+            }
+        }
+    }
+    
+    private func requestAutoLogIn() {
+        autoLogInService.autoLogIn { [weak self] result in
+            switch result {
+            case .success(let response):
+                guard let statusCode = Int(response.status) else { return }
+                switch statusCode {
+                case 200..<300:
+                    UserDefaults.standard.set(response.accessToken, forKey: "logInAceessToken")
+                    AccessToken.logInAceessToken = response.accessToken
+    //                let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+    //                self.changeRootViewController(mainViewController)
+                case 400..<500:
+                    if AccessToken.token == ""  {
+    //                    let appAccessViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AppAccessViewController")
+    //                    self.changeRootViewController(appAccessViewController)
+                        
+                    } else {
+                        if statusCode == 401 || statusCode == 404 {
+    //                        let logInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SignViewController")
+    //                        self.changeRootViewController(logInViewController)
+                        }
+                    }
+                default:
+                    DispatchQueue.main.async {
+                        self?.showSystemMaintenanceAlert()
+                    }
+                }
+         
+            default:
+                print("autologin failed")
                 DispatchQueue.main.async {
                     self?.showSystemMaintenanceAlert()
                 }
@@ -192,10 +230,6 @@ class SplashViewController: UIViewController {
             // 긴급공지가 다를 때 - 긴급공지 다이얼로그를 띄워준다.
             showCustomAlert(alertType: .none, alertTitle: noticeContent, isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
         }
-        
-    }
-    
-    private func requestAutoLogIn() {
         
     }
 }

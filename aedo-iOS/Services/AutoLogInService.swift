@@ -16,6 +16,7 @@ class AutoLogInService {
         
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethod.PUT.rawValue
+        request.setValue(AccessToken.token, forHTTPHeaderField: Constant.ACCESSTOKEN_HEADERFIELD)
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let _ = error {
@@ -23,7 +24,7 @@ class AutoLogInService {
                 return
             }
                            
-            guard let response = response as? HTTPURLResponse, (200..<300) ~= response.statusCode else {
+            guard let response = response as? HTTPURLResponse, ((200..<300) ~= response.statusCode || (400..<500) ~= response.statusCode) else {
                 completion(.failure(.invalidResponse))
                 return
             }

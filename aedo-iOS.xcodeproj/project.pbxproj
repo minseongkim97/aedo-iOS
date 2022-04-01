@@ -36,6 +36,7 @@
 		24CC4AF127F5C1FE001BDFA1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AF027F5C1FE001BDFA1 /* HTTPMethod.swift */; };
 		24CC4AF327F6F813001BDFA1 /* AutoLogInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AF227F6F813001BDFA1 /* AutoLogInService.swift */; };
 		24CC4AF627F6F889001BDFA1 /* AutoLogInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AF527F6F889001BDFA1 /* AutoLogInResponse.swift */; };
+		24CC4AFA27F6FBEA001BDFA1 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4AF927F6FBEA001BDFA1 /* AccessToken.swift */; };
 		C5B5AD7A472A7775F082E432 /* Pods_aedo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		24CC4AF027F5C1FE001BDFA1 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		24CC4AF227F6F813001BDFA1 /* AutoLogInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLogInService.swift; sourceTree = "<group>"; };
 		24CC4AF527F6F889001BDFA1 /* AutoLogInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLogInResponse.swift; sourceTree = "<group>"; };
+		24CC4AF927F6FBEA001BDFA1 /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 		3CB04653FAB6734767AA1362 /* Pods-aedo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		55F49DF30242C1A7C859A53F /* Pods-aedo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.release.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aedo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +184,7 @@
 				24CC4ACD27F5720E001BDFA1 /* NetworkMonitor.swift */,
 				24CC4ACF27F57219001BDFA1 /* JailBrokenHelper.swift */,
 				24CC4AE327F57B7A001BDFA1 /* Constant.swift */,
+				24CC4AF927F6FBEA001BDFA1 /* AccessToken.swift */,
 			);
 			path = CommonClass;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				24CC4AE027F5789E001BDFA1 /* UIView.swift in Sources */,
 				24CC4AED27F5BC48001BDFA1 /* PolicyService.swift in Sources */,
 				24CC4AF127F5C1FE001BDFA1 /* HTTPMethod.swift in Sources */,
+				24CC4AFA27F6FBEA001BDFA1 /* AccessToken.swift in Sources */,
 				24CC4AF627F6F889001BDFA1 /* AutoLogInResponse.swift in Sources */,
 				24CC4A9127F551CA001BDFA1 /* AppDelegate.swift in Sources */,
 				24CC4AD027F57219001BDFA1 /* JailBrokenHelper.swift in Sources */,
