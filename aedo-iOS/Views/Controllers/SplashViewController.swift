@@ -182,7 +182,7 @@ class SplashViewController: UIViewController {
                         
                     } else {
                         if statusCode == 401 || statusCode == 404 {
-                            let logInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: AuthViewController.identifier)
+                            let logInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AuthNavigationController")
                             self?.changeRootViewController(logInViewController)
                         }
                     }
