@@ -170,12 +170,13 @@ class SplashViewController: UIViewController {
         autoLogInService.autoLogIn { [weak self] result in
             switch result {
             case .success(let response):
+                DispatchQueue.main.async {
+                    UserDefaults.standard.set(response.accessToken, forKey: "logInAceessToken")
+                    AccessToken.logInAceessToken = response.accessToken
+                    let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+                    self?.changeRootViewController(mainViewController)
+                }
                 
-                UserDefaults.standard.set(response.accessToken, forKey: "logInAceessToken")
-                AccessToken.logInAceessToken = response.accessToken
-                let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
-                self?.changeRootViewController(mainViewController)
-            
                 
             case .failure(.invalidResponse):
                 if AccessToken.token == ""  {
@@ -186,13 +187,22 @@ class SplashViewController: UIViewController {
                     
                 } else {
                     DispatchQueue.main.async {
-                        let logInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AuthNavigationController")
-                        self?.changeRootViewController(logInViewController)
+                        let authViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: AuthViewController.identifier)
+                        let navVC = UINavigationController(rootViewController: authViewController)
+                        navVC.isNavigationBarHidden = true
+                        self?.changeRootViewController(navVC)
                     }
                     
                 }
-                
+            
+            case .failure(.unableToComplete):
+                print("unabletocomplete")
+            case .failure(.invalidData):
+                print("data")
+            case .failure(.invalidURL):
+                print("url")
             default:
+                print("@")
                 DispatchQueue.main.async {
                     self?.showSystemMaintenanceAlert()
                 }

@@ -43,8 +43,10 @@ class PermissionViewController: UIViewController, UNUserNotificationCenterDelega
     
     //MARK: - Actions
     @IBAction private func didTappedCheckButton() {
-        let authNavViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AuthNavigationController")
-        self.changeRootViewController(authNavViewController)
+        let authViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: AuthViewController.identifier)
+        let navVC = UINavigationController(rootViewController: authViewController)
+        navVC.isNavigationBarHidden = true
+        self.changeRootViewController(navVC)
     }
 
     

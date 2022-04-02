@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class AuthViewController: UIViewController {
     //MARK: - Properties
@@ -61,15 +62,38 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction private func didTappedCheckAuthenticationNumberButton(_ sender: UIButton) {
-        if Int(authenticationNumberTextField.text!) ?? 1 == authNumber {
+        if Int(authenticationNumberTextField.text!)! == authNumber {
             print("인증번호 맞음")
             checkAuthenticationNumberButton.isUserInteractionEnabled = false
-            
-//            authUserRepository.logIn(LogInRequest(phone: phoneNumberTextField.text!), delegate: self)
+            login()
         } else {
             print("인증번호 아님")
             showCustomAlert(alertType: .none, alertTitle: "전화번호 또는 인증번호를 다시 확인해 주세요.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
         }
+    }
+    
+    
+    @IBAction private func didTappedReEnterPhoneNumberButton(_ sender: UIButton) {
+        titleLabel.text =  "휴대전화 정보를 \n입력해주세요."
+        scriptLabel.text = "안녕하세요. 애도입니다. \n로그인을 위해 휴대전화 번호를 입력해주세요."
+        phoneNumberTextField.text = ""
+        phoneNumberTextField.isUserInteractionEnabled = true
+        authenticationNumberTextField.isUserInteractionEnabled = true
+        checkAuthenticationNumberButton.isUserInteractionEnabled = true
+        authenticationNumberStack.isHidden = true
+        refunctionStack.isHidden = true
+        removePhoneNumberButton.isHidden = false
+        sendAuthenticationNumberButton.isHidden = false
+        signUpView.isHidden = true
+        phoneNumberTextField.becomeFirstResponder()
+    }
+
+    @IBAction private func didTappedResendAuthenticationNumberButton(_ sender: UIButton) {
+        authenticationNumberTextField.isUserInteractionEnabled = true
+        checkAuthenticationNumberButton.isUserInteractionEnabled = true
+        signUpView.isHidden = true
+        authenticationNumberTextField.text = ""
+        sendAuthNumber()
     }
     
     //MARK: - @objc functions
@@ -136,6 +160,34 @@ class AuthViewController: UIViewController {
             default:
                 DispatchQueue.main.async {
                     self?.showNetworkErrorAlert()
+                }
+            }
+        }
+    }
+    
+    private func login() {
+        authService.login(at: phoneNumberTextField.text!) { [weak self] result in
+            switch result {
+            case .success(let response):
+                DispatchQueue.main.async {
+                    UserDefaults.standard.set(response.Accesstoken, forKey: "logInAccessToken")
+                    AccessToken.logInAceessToken = response.Accesstoken
+                    let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+                    let navVC = UINavigationController(rootViewController: mainViewController)
+                    navVC.isNavigationBarHidden = true
+                    self?.changeRootViewController(navVC)
+                }
+                
+            default:
+                DispatchQueue.main.async {
+                    self?.titleLabel.text =  "인증번호를 \n입력해주세요."
+                    self?.scriptLabel.text = "휴대전화로 전송된 4자리의 \n인증번호를 입력해주세요."
+
+                    self?.authenticationNumberTextField.isUserInteractionEnabled = false
+                    
+                    self?.signUpView.isHidden = false
+                    self?.phoneNumberLabel.text = self?.phoneNumberTextField.text
+                    self?.birthdayTextField.becomeFirstResponder()
                 }
             }
         }
