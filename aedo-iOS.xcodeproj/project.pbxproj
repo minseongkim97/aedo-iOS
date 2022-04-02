@@ -50,6 +50,8 @@
 		24CC4B1327F7D7E4001BDFA1 /* LogInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4B1227F7D7E3001BDFA1 /* LogInRequest.swift */; };
 		24CC4B1527F80330001BDFA1 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4B1427F80330001BDFA1 /* SignUpResponse.swift */; };
 		24CC4B1727F80337001BDFA1 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4B1627F80337001BDFA1 /* SignUpRequest.swift */; };
+		24CC4B1927F808B9001BDFA1 /* TermService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4B1827F808B9001BDFA1 /* TermService.swift */; };
+		24CC4B1B27F808F8001BDFA1 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4B1A27F808F8001BDFA1 /* Term.swift */; };
 		C5B5AD7A472A7775F082E432 /* Pods_aedo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		24CC4B1227F7D7E3001BDFA1 /* LogInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRequest.swift; sourceTree = "<group>"; };
 		24CC4B1427F80330001BDFA1 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		24CC4B1627F80337001BDFA1 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		24CC4B1827F808B9001BDFA1 /* TermService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermService.swift; sourceTree = "<group>"; };
+		24CC4B1A27F808F8001BDFA1 /* Term.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
 		3CB04653FAB6734767AA1362 /* Pods-aedo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		55F49DF30242C1A7C859A53F /* Pods-aedo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.release.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aedo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +223,7 @@
 			children = (
 				24CC4AE827F5A9D1001BDFA1 /* Verification.swift */,
 				24CC4AEE27F5BC63001BDFA1 /* AllPolicy.swift */,
+				24CC4B1A27F808F8001BDFA1 /* Term.swift */,
 				24CC4AF527F6F889001BDFA1 /* AutoLogInResponse.swift */,
 				24CC4B0C27F7CEC9001BDFA1 /* SendAuthNumberResponse.swift */,
 				24CC4B0E27F7CEF5001BDFA1 /* SendAuthNumberRequest.swift */,
@@ -275,6 +280,7 @@
 				24CC4AF027F5C1FE001BDFA1 /* HTTPMethod.swift */,
 				24CC4AE627F5A9CA001BDFA1 /* VerificationService.swift */,
 				24CC4AEC27F5BC48001BDFA1 /* PolicyService.swift */,
+				24CC4B1827F808B9001BDFA1 /* TermService.swift */,
 				24CC4AF227F6F813001BDFA1 /* AutoLogInService.swift */,
 				24CC4B0A27F7CDE2001BDFA1 /* AuthService.swift */,
 			);
@@ -440,11 +446,13 @@
 				24CC4A9127F551CA001BDFA1 /* AppDelegate.swift in Sources */,
 				24CC4AD027F57219001BDFA1 /* JailBrokenHelper.swift in Sources */,
 				24CC4B1327F7D7E4001BDFA1 /* LogInRequest.swift in Sources */,
+				24CC4B1B27F808F8001BDFA1 /* Term.swift in Sources */,
 				24CC4AF327F6F813001BDFA1 /* AutoLogInService.swift in Sources */,
 				24CC4B1527F80330001BDFA1 /* SignUpResponse.swift in Sources */,
 				24CC4AE427F57B7A001BDFA1 /* Constant.swift in Sources */,
 				24CC4AE227F579FA001BDFA1 /* UIViewController.swift in Sources */,
 				24CC4AFE27F705EA001BDFA1 /* AuthViewController.swift in Sources */,
+				24CC4B1927F808B9001BDFA1 /* TermService.swift in Sources */,
 				24CC4AB027F553ED001BDFA1 /* UIFont.swift in Sources */,
 				24CC4AE727F5A9CA001BDFA1 /* VerificationService.swift in Sources */,
 				24CC4AEF27F5BC63001BDFA1 /* AllPolicy.swift in Sources */,

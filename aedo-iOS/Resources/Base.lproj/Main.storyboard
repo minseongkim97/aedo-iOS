@@ -706,6 +706,9 @@
                                             <imageReference key="image" image="arrow.left" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTappedBackButton:" destination="qPM-Rn-IHh" eventType="touchUpInside" id="u5b-oG-rjL"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인정보 이용 동의" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Iw4-L3-vIR">
                                         <rect key="frame" x="68.5" y="10.5" width="150.5" height="39"/>
@@ -817,6 +820,15 @@
                             <constraint firstAttribute="trailing" secondItem="lkS-F6-z6y" secondAttribute="trailing" id="pIS-dp-eE0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fifthTermLabel" destination="Khl-X2-cvh" id="fVl-hs-tvA"/>
+                        <outlet property="firstTermLabel" destination="A7v-nP-wbx" id="Ja3-R5-2Ih"/>
+                        <outlet property="fourthTermLabel" destination="vmj-Al-PyG" id="LPv-cL-Uvj"/>
+                        <outlet property="secondTermLabel" destination="0ZX-lL-a4E" id="bfB-ta-8sg"/>
+                        <outlet property="subTitleLabel" destination="U9b-Z1-dWL" id="bVa-1O-C7c"/>
+                        <outlet property="thirdTermLabel" destination="tLZ-KU-VpH" id="Roh-gw-dG6"/>
+                        <outlet property="titleLabel" destination="dbu-In-fXh" id="SeM-ft-hOA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0Y-4m-hro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
