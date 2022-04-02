@@ -206,7 +206,7 @@ class AuthViewController: UIViewController {
                 DispatchQueue.main.async {
                     UserDefaults.standard.set(response.Accesstoken, forKey: "logInAccessToken")
                     AccessToken.logInAceessToken = response.Accesstoken
-                    let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+                    let mainViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
                     let navVC = UINavigationController(rootViewController: mainViewController)
                     navVC.isNavigationBarHidden = true
                     self?.changeRootViewController(navVC)
@@ -237,7 +237,7 @@ class AuthViewController: UIViewController {
                 DispatchQueue.main.async {
                     UserDefaults.standard.set(response.Accesstoken, forKey: "signUpAccessToken")
                     AccessToken.signUpAceessToken = response.Accesstoken
-                    let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+                    let mainViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
                     let navVC = UINavigationController(rootViewController: mainViewController)
                     navVC.isNavigationBarHidden = true
                     self?.changeRootViewController(navVC)

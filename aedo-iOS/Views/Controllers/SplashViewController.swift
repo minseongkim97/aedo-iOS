@@ -173,7 +173,7 @@ class SplashViewController: UIViewController {
                 DispatchQueue.main.async {
                     UserDefaults.standard.set(response.accessToken, forKey: "logInAceessToken")
                     AccessToken.logInAceessToken = response.accessToken
-                    let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+                    let mainViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
                     self?.changeRootViewController(mainViewController)
                 }
                 
@@ -195,14 +195,8 @@ class SplashViewController: UIViewController {
                     
                 }
             
-            case .failure(.unableToComplete):
-                print("unabletocomplete")
-            case .failure(.invalidData):
-                print("data")
-            case .failure(.invalidURL):
-                print("url")
+            
             default:
-                print("@")
                 DispatchQueue.main.async {
                     self?.showSystemMaintenanceAlert()
                 }

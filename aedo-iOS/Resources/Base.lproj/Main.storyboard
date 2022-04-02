@@ -265,7 +265,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hFi-6y-V5f">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1033.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNY-1p-wIR">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
@@ -440,8 +440,8 @@
                                                     <constraint firstAttribute="height" constant="460" id="xYJ-Sn-qbe"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ync-K8-Iy9">
-                                                <rect key="frame" x="0.0" y="460" width="414" height="573.5"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ync-K8-Iy9">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="573.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xNO-jd-DqX">
                                                         <rect key="frame" x="30" y="30" width="110.5" height="66.5"/>
@@ -834,22 +834,6 @@
             </objects>
             <point key="canvasLocation" x="3768" y="46"/>
         </scene>
-        <!--Main View Controller-->
-        <scene sceneID="yVF-ZX-68m">
-            <objects>
-                <viewController storyboardIdentifier="MainViewController" id="8cQ-6U-Gnj" customClass="MainViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="a6k-zj-kWe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="xlh-KF-Aws"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="XkS-Su-WFO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="46Y-DN-id7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1844.9275362318842" y="851.78571428571422"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="XLg-fL-8vz">
             <objects>
@@ -867,23 +851,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEl-jD-wLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1845" y="46"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="JO7-np-jAM">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="pJ2-ch-Wty" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1iH-Ze-fp3">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8cQ-6U-Gnj" kind="relationship" relationship="rootViewController" id="ULl-SN-sb6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d43-92-Lt2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="934.78260869565224" y="851.78571428571422"/>
         </scene>
     </scenes>
     <resources>
