@@ -13,6 +13,6 @@ struct AutoLogInResponse: Codable {
     
     enum CodingKeys: String, CodingKey {
         case status
-        case accessToken = "AccessToken"
+        case accessToken = "Accesstoken"
     }
 }
