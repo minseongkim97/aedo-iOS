@@ -138,7 +138,7 @@ class SplashViewController: UIViewController {
                     self?.writeAppVerification(verification)
                 }
                 
-            case .failure(.invalidURL), .failure(.unableToComplete), .failure(.invalidResponse), .failure(.invalidData):
+            default:
                 print("get verfication data is failed")
                 DispatchQueue.main.async {
                     self?.showSystemMaintenanceAlert()
@@ -170,18 +170,13 @@ class SplashViewController: UIViewController {
         autoLogInService.autoLogIn { [weak self] result in
             switch result {
             case .success(let response):
-                guard let statusCode = Int(response.status) else { return }
-                switch statusCode {
-                case 200..<300:
-                    UserDefaults.standard.set(response.accessToken, forKey: "logInAceessToken")
-                    AccessToken.logInAceessToken = response.accessToken
-                    let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
-                    self?.changeRootViewController(mainViewController)
-                default:
-                    DispatchQueue.main.async {
-                        self?.showSystemMaintenanceAlert()
-                    }
-                }
+                
+                UserDefaults.standard.set(response.accessToken, forKey: "logInAceessToken")
+                AccessToken.logInAceessToken = response.accessToken
+                let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+                self?.changeRootViewController(mainViewController)
+            
+                
             case .failure(.invalidResponse):
                 if AccessToken.token == ""  {
                     DispatchQueue.main.async {
@@ -213,7 +208,7 @@ class SplashViewController: UIViewController {
         let versionPolicyObjcet = Array(policy.filter("id == 'APP_VER_IOS'"))
         let appVersion = versionPolicyObjcet[0].value
         print(appVersion)
-        if appVersion == currentVersion {
+        if appVersion != currentVersion {
             checkUrgentNotice()
         } else {
             showVersionUpdateAlert()

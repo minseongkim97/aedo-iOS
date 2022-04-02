@@ -265,7 +265,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hFi-6y-V5f">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1033.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNY-1p-wIR">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
@@ -294,7 +294,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eGJ-Zq-z6h">
                                                                 <rect key="frame" x="0.0" y="29" width="354" height="30"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="‘-’ 없이 입력해주세요." textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="rPS-xG-0IR" customClass="CustomTextField" customModule="edo" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="‘-’ 없이 입력해주세요." textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="rPS-xG-0IR" customClass="CustomTextField" customModule="aedo_iOS" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="304" height="30"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="nMV-bP-ghC"/>
@@ -311,6 +311,9 @@
                                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="didTappedRemovePhoneNumberButton:" destination="aFD-a8-G3X" eventType="touchUpInside" id="Ewq-mn-SOS"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -340,7 +343,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ldk-jT-I4n">
                                                                 <rect key="frame" x="0.0" y="29" width="354" height="30"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pb-hs-QU2" customClass="CustomTextField" customModule="edo" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pb-hs-QU2" customClass="CustomTextField" customModule="aedo_iOS" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="304" height="30"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="hpg-Vd-nuT"/>
@@ -356,6 +359,9 @@
                                                                         <state key="normal" title="확인">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="didTappedCheckAuthenticationNumberButton:" destination="aFD-a8-G3X" eventType="touchUpInside" id="THv-LP-NfC"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -428,8 +434,8 @@
                                                     <constraint firstAttribute="height" constant="460" id="xYJ-Sn-qbe"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ync-K8-Iy9">
-                                                <rect key="frame" x="0.0" y="460" width="414" height="573.5"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ync-K8-Iy9">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="573.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xNO-jd-DqX">
                                                         <rect key="frame" x="30" y="30" width="110.5" height="66.5"/>
@@ -460,7 +466,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kf6-5A-OkJ">
                                                                 <rect key="frame" x="0.0" y="29" width="354" height="30"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="6자리 생년월일을 입력해주세요." textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Jbz-tl-pTI" customClass="CustomTextField" customModule="edo" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="6자리 생년월일을 입력해주세요." textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Jbz-tl-pTI" customClass="CustomTextField" customModule="aedo_iOS" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="lwH-sg-e4N"/>
@@ -497,7 +503,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eID-kY-OIE">
                                                                 <rect key="frame" x="0.0" y="29" width="354" height="30"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이름을 입력해주세요." textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ts3-Gk-qgS" customClass="CustomTextField" customModule="edo" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이름을 입력해주세요." textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ts3-Gk-qgS" customClass="CustomTextField" customModule="aedo_iOS" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="Wo7-EF-5Lq"/>
@@ -549,7 +555,7 @@
                                                                 <color key="textColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tva-jl-oXt" customClass="CustomCheckButton" customModule="edo" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tva-jl-oXt" customClass="CustomCheckButton" customModule="aedo_iOS" customModuleProvider="target">
                                                                 <rect key="frame" x="25" y="151" width="364" height="50"/>
                                                                 <color key="backgroundColor" red="0.95294117649999999" green="0.70196078429999997" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                 <constraints>
@@ -608,7 +614,7 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="cwN-H7-hXY"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="MnF-og-Gd4"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-4A-PuL" customClass="CustomCheckButton" customModule="edo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-4A-PuL" customClass="CustomCheckButton" customModule="aedo_iOS" customModuleProvider="target">
                                 <rect key="frame" x="30" y="1066" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.70196078429999997" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
@@ -619,6 +625,9 @@
                                 <state key="normal" title="인증번호 전송">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTappedSendAuthNumberButton:" destination="aFD-a8-G3X" eventType="touchUpInside" id="Wed-bV-fqd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Oi-fs-cAk"/>
@@ -635,6 +644,29 @@
                     </view>
                     <navigationItem key="navigationItem" id="mgC-9n-Z4w"/>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="agreeCheckButton" destination="JhC-Ot-6Ba" id="350-F1-Whb"/>
+                        <outlet property="authView" destination="pNY-1p-wIR" id="4iN-pQ-0ql"/>
+                        <outlet property="authenticationNumberLine" destination="w1T-Mq-UnY" id="qvS-iw-PpN"/>
+                        <outlet property="authenticationNumberStack" destination="rn5-pe-Mrr" id="61c-Jy-wVv"/>
+                        <outlet property="authenticationNumberTextField" destination="1pb-hs-QU2" id="goZ-id-iUe"/>
+                        <outlet property="birthdayLine" destination="Ttr-Hh-W2x" id="zOM-m8-cO0"/>
+                        <outlet property="birthdayTextField" destination="Jbz-tl-pTI" id="2Pv-yc-KdB"/>
+                        <outlet property="checkAuthenticationNumberButton" destination="va1-t3-dTp" id="ydQ-Sf-PWc"/>
+                        <outlet property="nameLine" destination="UTJ-1K-9sp" id="ucw-zL-jfh"/>
+                        <outlet property="nameTextField" destination="ts3-Gk-qgS" id="DqA-LY-cWn"/>
+                        <outlet property="phoneNumberLabel" destination="uhN-6C-TQa" id="6oh-6v-KY6"/>
+                        <outlet property="phoneNumberLine" destination="JY5-Ml-5tI" id="20s-Ek-ypb"/>
+                        <outlet property="phoneNumberTextField" destination="rPS-xG-0IR" id="Bh5-9j-4io"/>
+                        <outlet property="refunctionStack" destination="Gj5-ej-LdL" id="VtM-ZH-Tz5"/>
+                        <outlet property="removePhoneNumberButton" destination="snL-tw-oXr" id="YZb-mU-ucq"/>
+                        <outlet property="scriptLabel" destination="kKg-nk-E56" id="kCU-gP-cVv"/>
+                        <outlet property="sendAuthenticationNumberButton" destination="M3b-4A-PuL" id="UDG-uL-9Hr"/>
+                        <outlet property="signUpCheckButton" destination="tva-jl-oXt" id="ohc-LS-1Z4"/>
+                        <outlet property="signUpView" destination="ync-K8-Iy9" id="qGm-10-O6w"/>
+                        <outlet property="termLabel" destination="fzw-aZ-Z1b" id="wxh-hN-4FO"/>
+                        <outlet property="titleLabel" destination="61q-uP-su0" id="XXA-eT-zlf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEY-GY-ci6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
