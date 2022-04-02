@@ -96,6 +96,30 @@ class AuthViewController: UIViewController {
         sendAuthNumber()
     }
     
+    @IBAction private func didTappedAgreeAppTermsButton(_ sender: UIButton) {
+        if !sender.isSelected {
+            sender.isSelected = true
+            sender.tintColor = .mainBrown
+        } else {
+            sender.isSelected = false
+            sender.setImage(UIImage(systemName: "square"), for: .normal)
+            sender.tintColor = UIColor(hex: 0x878787)
+        }
+    }
+    
+    @IBAction func didTappedSignUpButton(_ sender: UIButton) {
+        var alertTitle = ""
+        if !isValidBirthday(birthday: birthdayTextField.text) {
+            alertTitle = "생년월일을 다시 확인해 주세요"
+            showCustomAlert(alertType: .none, alertTitle: alertTitle, isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+        } else if !agreeCheckButton.isSelected {
+            alertTitle = "약관 동의를 다시 확인해 주세요"
+            showCustomAlert(alertType: .none, alertTitle: alertTitle, isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+        } else {
+            signUp()
+        }
+    }
+    
     //MARK: - @objc functions
 
     @objc func didTappedTermLabel(sender: UIPanGestureRecognizer) {
@@ -137,6 +161,16 @@ class AuthViewController: UIViewController {
         return pred.evaluate(with: phone)
     }
     
+    
+    private func isValidBirthday(birthday: String?) -> Bool {
+        guard birthday != nil else { return false }
+        
+        let birthdayRegEx = "[0-9]{6}"
+        let pred = NSPredicate(format:"SELF MATCHES %@", birthdayRegEx)
+        return pred.evaluate(with: birthday)
+    }
+    
+    
     private func sendAuthNumber() {
         authService.sendAuthNumber(at: phoneNumberTextField.text!) { [weak self] result in
             switch result {
@@ -166,7 +200,7 @@ class AuthViewController: UIViewController {
     }
     
     private func login() {
-        authService.login(at: phoneNumberTextField.text!) { [weak self] result in
+        authService.login(with: phoneNumberTextField.text!) { [weak self] result in
             switch result {
             case .success(let response):
                 DispatchQueue.main.async {
@@ -188,6 +222,29 @@ class AuthViewController: UIViewController {
                     self?.signUpView.isHidden = false
                     self?.phoneNumberLabel.text = self?.phoneNumberTextField.text
                     self?.birthdayTextField.becomeFirstResponder()
+                }
+            }
+        }
+    }
+    
+    private func signUp() {
+        authService.signUp(phone: phoneNumberTextField.text!,
+                           birth: birthdayTextField.text!,
+                           name: nameTextField.text!,
+                           terms: agreeCheckButton.isSelected) { [weak self] result in
+            switch result {
+            case .success(let response):
+                DispatchQueue.main.async {
+                    UserDefaults.standard.set(response.Accesstoken, forKey: "signUpAccessToken")
+                    AccessToken.signUpAceessToken = response.Accesstoken
+                    let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+                    let navVC = UINavigationController(rootViewController: mainViewController)
+                    navVC.isNavigationBarHidden = true
+                    self?.changeRootViewController(navVC)
+                }
+            default:
+                DispatchQueue.main.async {
+                    self?.showNetworkErrorAlert()
                 }
             }
         }

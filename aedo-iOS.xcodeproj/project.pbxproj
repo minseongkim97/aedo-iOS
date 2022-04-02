@@ -48,6 +48,8 @@
 		24CC4B0F27F7CEF5001BDFA1 /* SendAuthNumberRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4B0E27F7CEF5001BDFA1 /* SendAuthNumberRequest.swift */; };
 		24CC4B1127F7D7DD001BDFA1 /* LogInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4B1027F7D7DD001BDFA1 /* LogInResponse.swift */; };
 		24CC4B1327F7D7E4001BDFA1 /* LogInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4B1227F7D7E3001BDFA1 /* LogInRequest.swift */; };
+		24CC4B1527F80330001BDFA1 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4B1427F80330001BDFA1 /* SignUpResponse.swift */; };
+		24CC4B1727F80337001BDFA1 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4B1627F80337001BDFA1 /* SignUpRequest.swift */; };
 		C5B5AD7A472A7775F082E432 /* Pods_aedo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,8 @@
 		24CC4B0E27F7CEF5001BDFA1 /* SendAuthNumberRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAuthNumberRequest.swift; sourceTree = "<group>"; };
 		24CC4B1027F7D7DD001BDFA1 /* LogInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInResponse.swift; sourceTree = "<group>"; };
 		24CC4B1227F7D7E3001BDFA1 /* LogInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRequest.swift; sourceTree = "<group>"; };
+		24CC4B1427F80330001BDFA1 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		24CC4B1627F80337001BDFA1 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		3CB04653FAB6734767AA1362 /* Pods-aedo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		55F49DF30242C1A7C859A53F /* Pods-aedo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.release.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aedo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +224,8 @@
 				24CC4B0E27F7CEF5001BDFA1 /* SendAuthNumberRequest.swift */,
 				24CC4B1027F7D7DD001BDFA1 /* LogInResponse.swift */,
 				24CC4B1227F7D7E3001BDFA1 /* LogInRequest.swift */,
+				24CC4B1427F80330001BDFA1 /* SignUpResponse.swift */,
+				24CC4B1627F80337001BDFA1 /* SignUpRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 				24CC4B0027F705F7001BDFA1 /* MainViewController.swift in Sources */,
 				24CC4B0227F75E06001BDFA1 /* PrivateInfoAccessViewController.swift in Sources */,
 				24CC4AFC27F700A2001BDFA1 /* PermissionViewController.swift in Sources */,
+				24CC4B1727F80337001BDFA1 /* SignUpRequest.swift in Sources */,
 				24CC4B0F27F7CEF5001BDFA1 /* SendAuthNumberRequest.swift in Sources */,
 				24CC4AE927F5A9D1001BDFA1 /* Verification.swift in Sources */,
 				24CC4B0627F76678001BDFA1 /* CustomTextField.swift in Sources */,
@@ -434,6 +441,7 @@
 				24CC4AD027F57219001BDFA1 /* JailBrokenHelper.swift in Sources */,
 				24CC4B1327F7D7E4001BDFA1 /* LogInRequest.swift in Sources */,
 				24CC4AF327F6F813001BDFA1 /* AutoLogInService.swift in Sources */,
+				24CC4B1527F80330001BDFA1 /* SignUpResponse.swift in Sources */,
 				24CC4AE427F57B7A001BDFA1 /* Constant.swift in Sources */,
 				24CC4AE227F579FA001BDFA1 /* UIViewController.swift in Sources */,
 				24CC4AFE27F705EA001BDFA1 /* AuthViewController.swift in Sources */,
