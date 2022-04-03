@@ -40,6 +40,10 @@ class MainViewController: UIViewController {
         
     }
     //MARK: - Actions
+    @IBAction func didTappedMenuButton(_ sender: UIButton) {
+        let mainSubMenuViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainSubMenuViewController.identifier)
+        self.navigationController?.pushViewController(mainSubMenuViewController, animated: true)
+    }
     
     //MARK: - Helpers
     private func getAllAnnouncement() {
@@ -67,7 +71,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.announcementTilteLabel.text = announcement[indexPath.row].title
         cell.announcementCreatedDateLabel.text = announcement[indexPath.row].created
-        
         
         return cell
     }

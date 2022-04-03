@@ -174,7 +174,7 @@ class SplashViewController: UIViewController {
                     UserDefaults.standard.set(response.accessToken, forKey: "logInAceessToken")
                     AccessToken.logInAceessToken = response.accessToken
                     print(AccessToken.token)
-                    let mainViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+                    let mainViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainViewController.identifier) 
                     let navVC = UINavigationController(rootViewController: mainViewController)
                     navVC.isNavigationBarHidden = true
                     self?.changeRootViewController(navVC)
