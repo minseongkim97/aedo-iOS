@@ -92,12 +92,6 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="6Bp-Vi-WVG"/>
                             </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="5"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBound" value="YES"/>
-                            </userDefinedRuntimeAttributes>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -126,7 +120,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a2r-gU-uLG" secondAttribute="trailing" constant="20" id="CN4-so-KuZ"/>
                 <constraint firstItem="a2r-gU-uLG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="IaO-aW-TTx"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="76"/>
+            <point key="canvasLocation" x="131.8840579710145" y="75.669642857142847"/>
         </view>
     </objects>
     <resources>
