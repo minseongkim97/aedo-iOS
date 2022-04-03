@@ -9,7 +9,6 @@ import Foundation
 
 enum GFError: String, Error {
     case invalidURL
-    case invalidRequest
     case unableToComplete
     case invalidResponse
     case invalidData
