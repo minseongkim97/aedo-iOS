@@ -207,7 +207,7 @@
                                         <rect key="frame" x="0.0" y="77.5" width="354" height="191.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnounceTableViewCell" rowHeight="40" id="Yvd-lY-92H" customClass="AnnounceTableViewCell" customModule="edo" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnounceTableViewCell" rowHeight="40" id="Yvd-lY-92H" customClass="AnnouncementTableViewCell" customModule="aedo_iOS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="44.5" width="354" height="40"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yvd-lY-92H" id="5qy-cS-31y">
@@ -246,7 +246,8 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="announcementCreatedDateLabel" destination="GhR-Jm-yBR" id="l3T-0t-dUW"/>
+                                                    <outlet property="announcementCreatedDateLabel" destination="GhR-Jm-yBR" id="eTV-cp-vZx"/>
+                                                    <outlet property="announcementTilteLabel" destination="vPB-tV-fZM" id="EA4-3h-4gA"/>
                                                     <outlet property="announcementTitleLabel" destination="vPB-tV-fZM" id="1iN-2h-ZoL"/>
                                                 </connections>
                                             </tableViewCell>
@@ -311,6 +312,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tJI-Vo-5Mz"/>
+                    <connections>
+                        <outlet property="announcementTableView" destination="ngy-5t-y9D" id="ZsW-DE-WlR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

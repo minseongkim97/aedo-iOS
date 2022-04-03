@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct LogInRequest: Codable {
+    var phone: String
+}
+
 struct LogInResponse: Codable {
     var status: String
     var Accesstoken: String

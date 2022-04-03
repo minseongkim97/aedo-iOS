@@ -1,5 +1,5 @@
 //
-//  SignUpRequest.swift
+//  SignUpResponse.swift
 //  aedo-iOS
 //
 //  Created by MIN SEONG KIM on 2022/04/02.
@@ -12,4 +12,9 @@ struct SignUpRequest: Codable {
     var birth: String
     var name: String
     var terms: Bool
+}
+
+struct SignUpResponse: Codable {
+    var status: String
+    var Accesstoken: String
 }
