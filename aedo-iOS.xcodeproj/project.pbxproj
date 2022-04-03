@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2425FB8127F810A00062E597 /* Announcemnet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8027F810A00062E597 /* Announcemnet.swift */; };
 		2425FB8727F811C40062E597 /* AnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8527F811C40062E597 /* AnnouncementTableViewCell.swift */; };
+		2425FB8A27F93A5C0062E597 /* AnnouncementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8927F93A5C0062E597 /* AnnouncementService.swift */; };
 		24CC4A9127F551CA001BDFA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4A9027F551CA001BDFA1 /* AppDelegate.swift */; };
 		24CC4A9327F551CA001BDFA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4A9227F551CA001BDFA1 /* SceneDelegate.swift */; };
 		24CC4A9827F551CA001BDFA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24CC4A9627F551CA001BDFA1 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		2425FB8027F810A00062E597 /* Announcemnet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcemnet.swift; sourceTree = "<group>"; };
 		2425FB8527F811C40062E597 /* AnnouncementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewCell.swift; sourceTree = "<group>"; };
+		2425FB8927F93A5C0062E597 /* AnnouncementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementService.swift; sourceTree = "<group>"; };
 		24CC4A8D27F551CA001BDFA1 /* aedo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aedo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CC4A9027F551CA001BDFA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CC4A9227F551CA001BDFA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				24CC4B1827F808B9001BDFA1 /* TermService.swift */,
 				24CC4AF227F6F813001BDFA1 /* AutoLogInService.swift */,
 				24CC4B0A27F7CDE2001BDFA1 /* AuthService.swift */,
+				2425FB8927F93A5C0062E597 /* AnnouncementService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				24CC4B1527F80330001BDFA1 /* SignUp.swift in Sources */,
 				24CC4AE427F57B7A001BDFA1 /* Constant.swift in Sources */,
 				24CC4AE227F579FA001BDFA1 /* UIViewController.swift in Sources */,
+				2425FB8A27F93A5C0062E597 /* AnnouncementService.swift in Sources */,
 				24CC4AFE27F705EA001BDFA1 /* AuthViewController.swift in Sources */,
 				24CC4B1927F808B9001BDFA1 /* TermService.swift in Sources */,
 				24CC4AB027F553ED001BDFA1 /* UIFont.swift in Sources */,

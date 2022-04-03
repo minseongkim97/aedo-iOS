@@ -10,8 +10,8 @@ import UIKit
 class AnnouncementTableViewCell: UITableViewCell {
     static var identifier: String = "AnnounceTableViewCell"
 
-    @IBOutlet private weak var announcementTilteLabel: UILabel!
-    @IBOutlet private weak var announcementCreatedDateLabel: UILabel!
+    @IBOutlet weak var announcementTilteLabel: UILabel!
+    @IBOutlet weak var announcementCreatedDateLabel: UILabel!
     
 
     override func awakeFromNib() {

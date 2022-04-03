@@ -246,9 +246,8 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="announcementCreatedDateLabel" destination="GhR-Jm-yBR" id="eTV-cp-vZx"/>
-                                                    <outlet property="announcementTilteLabel" destination="vPB-tV-fZM" id="EA4-3h-4gA"/>
-                                                    <outlet property="announcementTitleLabel" destination="vPB-tV-fZM" id="1iN-2h-ZoL"/>
+                                                    <outlet property="announcementCreatedDateLabel" destination="GhR-Jm-yBR" id="I6e-Jg-MZF"/>
+                                                    <outlet property="announcementTilteLabel" destination="vPB-tV-fZM" id="y7L-CD-6KQ"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>

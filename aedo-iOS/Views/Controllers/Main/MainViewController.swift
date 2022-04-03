@@ -11,6 +11,7 @@ class MainViewController: UIViewController {
     //MARK: - Properties
     static let identifier = "MainViewController"
     
+    let announcementService = AnnouncementService()
     private var announcement = [Announcement]()
     
     @IBOutlet private weak var announcementTableView: UITableView! {
@@ -24,12 +25,24 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getAllAnnouncement()
         
     }
     //MARK: - Actions
     
     //MARK: - Helpers
-    
+    private func getAllAnnouncement() {
+        announcementService.getAllAnnouncement { [weak self] result in
+            switch result {
+            case .success(let response):
+                self?.announcement = response.result
+            default:
+                DispatchQueue.main.async {
+                    self?.showNetworkErrorAlert()
+                }
+            }
+        }
+    }
 }
 
 //MARK: - Extension
@@ -41,8 +54,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AnnouncementTableViewCell.identifier, for: indexPath) as? AnnouncementTableViewCell else { return UITableViewCell() }
         
-//        cell.announcementTitleLabel.text = announcement[indexPath.row].title
-//        cell.announcementCreatedDateLabel.text = announcement[indexPath.row].created
+        cell.announcementTilteLabel.text = announcement[indexPath.row].title
+        cell.announcementCreatedDateLabel.text = announcement[indexPath.row].created
         
         
         return cell
