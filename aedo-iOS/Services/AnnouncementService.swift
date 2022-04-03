@@ -17,7 +17,6 @@ class AnnouncementService {
         }
         
         var request = URLRequest(url: url)
-        request.httpMethod = HTTPMethod.GET.rawValue
         request.setValue(AccessToken.token, forHTTPHeaderField: Constant.ACCESSTOKEN_HEADERFIELD)
         
         URLSession.shared.dataTask(with: request) { data, response, error in

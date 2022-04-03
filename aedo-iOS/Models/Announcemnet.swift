@@ -9,12 +9,12 @@ import Foundation
 
 struct AllAnnouncementResponse: Codable {
     var status: String
-    var result: [Announcement]
+    var announcement: [Announcement]
 }
 
 struct AnnouncementResponse: Codable {
     var status: String
-    var result: Announcement
+    var announcement: Announcement
 }
 
 struct Announcement: Codable {
@@ -22,9 +22,4 @@ struct Announcement: Codable {
     var title: String
     var content: String
     var created: String
-
-    enum CodingKeys: String, CodingKey {
-        case id = "_id"
-        case title, content, created
-    }
 }
