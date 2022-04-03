@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct SendAuthNumberRequest: Codable {
+    var phone: String
+}
+
 struct SendAuthNumberResponse: Codable {
     var userAuthNumber: Int
     

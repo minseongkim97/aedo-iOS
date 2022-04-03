@@ -548,6 +548,9 @@
                                                                 <state key="normal" image="square" catalog="system">
                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="didTappedAgreeAppTermsButton:" destination="aFD-a8-G3X" eventType="touchUpInside" id="Ohu-J6-u90"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="이용약관 동의, 개인정보이용 동의, 제3자정보제공 동의, 위치 정보이용 동의의 모든 약관을 확인하였으며, 충분히 숙지하였고 동의합니다." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzw-aZ-Z1b">
                                                                 <rect key="frame" x="60" y="25" width="334" height="58"/>
@@ -572,6 +575,9 @@
                                                                 <state key="normal" title="확인">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="didTappedSignUpButton:" destination="aFD-a8-G3X" eventType="touchUpInside" id="O7h-vl-YBb"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -700,6 +706,9 @@
                                             <imageReference key="image" image="arrow.left" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTappedBackButton:" destination="qPM-Rn-IHh" eventType="touchUpInside" id="u5b-oG-rjL"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인정보 이용 동의" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Iw4-L3-vIR">
                                         <rect key="frame" x="68.5" y="10.5" width="150.5" height="39"/>
@@ -811,26 +820,19 @@
                             <constraint firstAttribute="trailing" secondItem="lkS-F6-z6y" secondAttribute="trailing" id="pIS-dp-eE0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fifthTermLabel" destination="Khl-X2-cvh" id="fVl-hs-tvA"/>
+                        <outlet property="firstTermLabel" destination="A7v-nP-wbx" id="Ja3-R5-2Ih"/>
+                        <outlet property="fourthTermLabel" destination="vmj-Al-PyG" id="LPv-cL-Uvj"/>
+                        <outlet property="secondTermLabel" destination="0ZX-lL-a4E" id="bfB-ta-8sg"/>
+                        <outlet property="subTitleLabel" destination="U9b-Z1-dWL" id="bVa-1O-C7c"/>
+                        <outlet property="thirdTermLabel" destination="tLZ-KU-VpH" id="Roh-gw-dG6"/>
+                        <outlet property="titleLabel" destination="dbu-In-fXh" id="SeM-ft-hOA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0Y-4m-hro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3768" y="46"/>
-        </scene>
-        <!--Main View Controller-->
-        <scene sceneID="yVF-ZX-68m">
-            <objects>
-                <viewController storyboardIdentifier="MainViewController" id="8cQ-6U-Gnj" customClass="MainViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="a6k-zj-kWe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="xlh-KF-Aws"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="XkS-Su-WFO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="46Y-DN-id7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1844.9275362318842" y="851.78571428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XLg-fL-8vz">
@@ -849,23 +851,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEl-jD-wLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1845" y="46"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="JO7-np-jAM">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="pJ2-ch-Wty" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1iH-Ze-fp3">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8cQ-6U-Gnj" kind="relationship" relationship="rootViewController" id="ULl-SN-sb6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d43-92-Lt2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="934.78260869565224" y="851.78571428571422"/>
         </scene>
     </scenes>
     <resources>
