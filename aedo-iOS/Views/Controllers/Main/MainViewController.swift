@@ -11,8 +11,20 @@ class MainViewController: UIViewController {
     //MARK: - Properties
     static let identifier = "MainViewController"
     
-    private var announcement = [Announcement]()
+    let announcementService = AnnouncementService()
+    private var announcement = [Announcement]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.announcementTableView.reloadData()
+            }
+        }
+    }
     
+    @IBOutlet private weak var announcementView: UIView! {
+        didSet {
+            announcementView.layer.shadowPath = UIBezierPath(roundedRect: announcementView.bounds, cornerRadius: announcementView.layer.cornerRadius).cgPath
+        }
+    }
     @IBOutlet private weak var announcementTableView: UITableView! {
         didSet {
             announcementTableView.delegate = self
@@ -24,29 +36,42 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getAllAnnouncement()
         
     }
     //MARK: - Actions
+    @IBAction func didTappedMenuButton(_ sender: UIButton) {
+        let mainSubMenuViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainSubMenuViewController.identifier)
+        self.navigationController?.pushViewController(mainSubMenuViewController, animated: true)
+    }
     
     //MARK: - Helpers
-    
+    private func getAllAnnouncement() {
+        announcementService.getAllAnnouncement { [weak self] result in
+            switch result {
+            case .success(let response):
+                self?.announcement = response.announcement
+            default:
+                DispatchQueue.main.async {
+                    self?.showNetworkErrorAlert()
+                }
+            }
+        }
+    }
 }
 
 //MARK: - Extension
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return announcement.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AnnouncementTableViewCell.identifier, for: indexPath) as? AnnouncementTableViewCell else { return UITableViewCell() }
         
-//        cell.announcementTitleLabel.text = announcement[indexPath.row].title
-//        cell.announcementCreatedDateLabel.text = announcement[indexPath.row].created
-        
+        cell.announcementTilteLabel.text = announcement[indexPath.row].title
+        cell.announcementCreatedDateLabel.text = announcement[indexPath.row].created
         
         return cell
     }
-    
-    
 }
