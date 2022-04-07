@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AllAnnouncementResponse: Codable {
+struct AnnouncementList: Codable {
     var status: String
     var announcement: [Announcement]
 }

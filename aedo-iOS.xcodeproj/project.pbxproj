@@ -11,6 +11,11 @@
 		2425FB8727F811C40062E597 /* AnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8527F811C40062E597 /* AnnouncementTableViewCell.swift */; };
 		2425FB8A27F93A5C0062E597 /* AnnouncementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8927F93A5C0062E597 /* AnnouncementService.swift */; };
 		2425FB8C27F949520062E597 /* MainSubMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8B27F949520062E597 /* MainSubMenuViewController.swift */; };
+		2425FB8F27FB62090062E597 /* CustomerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8E27FB62090062E597 /* CustomerMainViewController.swift */; };
+		2425FB9127FB62600062E597 /* CustomerNav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2425FB9027FB62600062E597 /* CustomerNav.storyboard */; };
+		2425FB9327FB76CC0062E597 /* CustomerNoticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9227FB76CC0062E597 /* CustomerNoticeListViewController.swift */; };
+		2425FB9527FB7B540062E597 /* CustomerNoticeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */; };
+		2425FB9727FFA8500062E597 /* AnnouncementListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9627FFA84F0062E597 /* AnnouncementListViewModel.swift */; };
 		24CC4A9127F551CA001BDFA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4A9027F551CA001BDFA1 /* AppDelegate.swift */; };
 		24CC4A9327F551CA001BDFA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4A9227F551CA001BDFA1 /* SceneDelegate.swift */; };
 		24CC4A9827F551CA001BDFA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24CC4A9627F551CA001BDFA1 /* Main.storyboard */; };
@@ -62,6 +67,11 @@
 		2425FB8527F811C40062E597 /* AnnouncementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewCell.swift; sourceTree = "<group>"; };
 		2425FB8927F93A5C0062E597 /* AnnouncementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementService.swift; sourceTree = "<group>"; };
 		2425FB8B27F949520062E597 /* MainSubMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSubMenuViewController.swift; sourceTree = "<group>"; };
+		2425FB8E27FB62090062E597 /* CustomerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerMainViewController.swift; sourceTree = "<group>"; };
+		2425FB9027FB62600062E597 /* CustomerNav.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomerNav.storyboard; sourceTree = "<group>"; };
+		2425FB9227FB76CC0062E597 /* CustomerNoticeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerNoticeListViewController.swift; sourceTree = "<group>"; };
+		2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerNoticeListTableViewCell.swift; sourceTree = "<group>"; };
+		2425FB9627FFA84F0062E597 /* AnnouncementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementListViewModel.swift; sourceTree = "<group>"; };
 		24CC4A8D27F551CA001BDFA1 /* aedo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aedo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CC4A9027F551CA001BDFA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CC4A9227F551CA001BDFA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,8 +147,19 @@
 			isa = PBXGroup;
 			children = (
 				2425FB8527F811C40062E597 /* AnnouncementTableViewCell.swift */,
+				2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		2425FB8D27FB61F80062E597 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				2425FB8E27FB62090062E597 /* CustomerMainViewController.swift */,
+				2425FB9227FB76CC0062E597 /* CustomerNoticeListViewController.swift */,
+				2425FB9027FB62600062E597 /* CustomerNav.storyboard */,
+			);
+			path = Customer;
 			sourceTree = "<group>";
 		};
 		24CC4A8427F551CA001BDFA1 = {
@@ -259,6 +280,7 @@
 		24CC4AD427F57279001BDFA1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				2425FB9627FFA84F0062E597 /* AnnouncementListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -266,6 +288,7 @@
 		24CC4AD527F5728B001BDFA1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2425FB8D27FB61F80062E597 /* Customer */,
 				24CC4B1C27F80B7F001BDFA1 /* Main */,
 				24CC4AD627F57458001BDFA1 /* SplashViewController.swift */,
 				24CC4AFB27F700A2001BDFA1 /* PermissionViewController.swift */,
@@ -391,6 +414,7 @@
 				24CC4ADE27F57605001BDFA1 /* CustomAlertViewController.xib in Resources */,
 				24CC4B1E27F80B9B001BDFA1 /* MainNav.storyboard in Resources */,
 				24CC4AA927F552E2001BDFA1 /* NotoSansCJKkr-Bold.otf in Resources */,
+				2425FB9127FB62600062E597 /* CustomerNav.storyboard in Resources */,
 				24CC4A9A27F551CB001BDFA1 /* Assets.xcassets in Resources */,
 				24CC4A9827F551CA001BDFA1 /* Main.storyboard in Resources */,
 				24CC4AAB27F552E2001BDFA1 /* NotoSansCJKkr-Medium.otf in Resources */,
@@ -449,17 +473,21 @@
 				24CC4B1127F7D7DD001BDFA1 /* LogIn.swift in Sources */,
 				24CC4AEB27F5B3C0001BDFA1 /* GFError.swift in Sources */,
 				24CC4B0027F705F7001BDFA1 /* MainViewController.swift in Sources */,
+				2425FB9527FB7B540062E597 /* CustomerNoticeListTableViewCell.swift in Sources */,
 				24CC4B0227F75E06001BDFA1 /* PrivateInfoAccessViewController.swift in Sources */,
 				24CC4AFC27F700A2001BDFA1 /* PermissionViewController.swift in Sources */,
 				24CC4AE927F5A9D1001BDFA1 /* Verification.swift in Sources */,
 				24CC4B0627F76678001BDFA1 /* CustomTextField.swift in Sources */,
 				24CC4AC927F571B2001BDFA1 /* AppVerification.swift in Sources */,
 				2425FB8C27F949520062E597 /* MainSubMenuViewController.swift in Sources */,
+				2425FB9727FFA8500062E597 /* AnnouncementListViewModel.swift in Sources */,
 				24CC4AB227F55565001BDFA1 /* UIDevice.swift in Sources */,
+				2425FB8F27FB62090062E597 /* CustomerMainViewController.swift in Sources */,
 				24CC4B0427F76665001BDFA1 /* CustomCheckButton.swift in Sources */,
 				24CC4ACB27F571B7001BDFA1 /* AppPolicy.swift in Sources */,
 				24CC4AAE27F553CB001BDFA1 /* UIColor.swift in Sources */,
 				24CC4AE027F5789E001BDFA1 /* UIView.swift in Sources */,
+				2425FB9327FB76CC0062E597 /* CustomerNoticeListViewController.swift in Sources */,
 				24CC4AED27F5BC48001BDFA1 /* PolicyService.swift in Sources */,
 				24CC4AF127F5C1FE001BDFA1 /* HTTPMethod.swift in Sources */,
 				24CC4B0D27F7CEC9001BDFA1 /* SendAuthNumber.swift in Sources */,
@@ -637,6 +665,11 @@
 				DEVELOPMENT_TEAM = GZCWDPJJ9Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "aedo-iOS/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진촬영을 위해 카메라 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 권한이 필요합니다.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "사진저장을 위해 앨범 접근권한이 필요합니다.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진을 가져오기 위해 앨범 접근권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -668,6 +701,11 @@
 				DEVELOPMENT_TEAM = GZCWDPJJ9Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "aedo-iOS/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진촬영을 위해 카메라 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 권한이 필요합니다.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "사진저장을 위해 앨범 접근권한이 필요합니다.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진을 가져오기 위해 앨범 접근권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
