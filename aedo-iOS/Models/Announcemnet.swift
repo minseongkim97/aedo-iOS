@@ -8,12 +8,10 @@
 import Foundation
 
 struct AnnouncementList: Codable {
-    var status: String
     var announcement: [Announcement]
 }
 
 struct AnnouncementResponse: Codable {
-    var status: String
     var announcement: Announcement
 }
 
@@ -22,4 +20,8 @@ struct Announcement: Codable {
     var title: String
     var content: String
     var created: String
+}
+
+extension AnnouncementList {
+    static let EMPTY = AnnouncementList(announcement: [])
 }
