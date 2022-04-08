@@ -9,6 +9,7 @@ import UIKit
 
 class AnnouncementTableViewCell: UITableViewCell {
     static var identifier: String = "AnnounceTableViewCell"
+    var announcement: Announcement?
 
     @IBOutlet weak var announcementTilteLabel: UILabel!
     @IBOutlet weak var announcementCreatedDateLabel: UILabel!
@@ -16,14 +17,12 @@ class AnnouncementTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setAnnouncement(_ announcement: Announcement) {
+        self.announcement = announcement
+        announcementTilteLabel.text = announcement.title
+        announcementCreatedDateLabel.text = announcement.created
     }
 
 }

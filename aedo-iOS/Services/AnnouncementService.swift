@@ -9,7 +9,7 @@ import Foundation
 
 class AnnouncementService {
     
-    func getAllAnnouncement(completion: @escaping ((Result<AllAnnouncementResponse, GFError>) -> Void)) {
+    func getAllAnnouncement(completion: @escaping ((Result<AnnouncementList, GFError>) -> Void)) {
         
         guard let url = URL(string:  "\(Constant.BASE_URL)v1/center/announcement") else {
             completion(.failure(.invalidURL))
@@ -30,7 +30,7 @@ class AnnouncementService {
                 return
             }
             
-            if let data = data, let allAnnouncement = try? JSONDecoder().decode(AllAnnouncementResponse.self, from: data) {
+            if let data = data, let allAnnouncement = try? JSONDecoder().decode(AnnouncementList.self, from: data) {
                 completion(.success(allAnnouncement))
                 return
             }
