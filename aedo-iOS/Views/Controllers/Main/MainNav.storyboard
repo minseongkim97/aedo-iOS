@@ -178,6 +178,7 @@
                                 <state key="normal" image="main_menuBar"/>
                                 <connections>
                                     <action selector="didTappedMenuButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Bix-jv-0o7"/>
+                                    <segue destination="ayb-C5-fYR" kind="show" identifier="MainSubMenu" id="aH6-lQ-kpM"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2bo-QG-nqv">
@@ -301,6 +302,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="4Ae-S8-UvX">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -331,8 +335,10 @@
                             <constraint firstItem="nEG-UO-OMQ" firstAttribute="height" secondItem="w2D-8m-jtD" secondAttribute="height" multiplier="0.07" id="ezo-Di-02M"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="w2D-8m-jtD" secondAttribute="trailing" id="gum-Il-rPG"/>
                             <constraint firstItem="cQ9-UW-NtW" firstAttribute="height" secondItem="w2D-8m-jtD" secondAttribute="height" multiplier="0.07" id="kVB-Ey-9Ub"/>
+                            <constraint firstItem="4Ae-S8-UvX" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ko9-vO-ZJH"/>
                             <constraint firstItem="3eR-YY-hHD" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.18" id="m1o-n1-ZGq"/>
                             <constraint firstItem="4ns-Gd-CfB" firstAttribute="width" secondItem="4ns-Gd-CfB" secondAttribute="height" multiplier="11:5" id="npm-Fk-qvL"/>
+                            <constraint firstItem="4Ae-S8-UvX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="odu-Ez-sOU"/>
                             <constraint firstItem="Xmr-iV-Dsx" firstAttribute="width" secondItem="w2D-8m-jtD" secondAttribute="width" multiplier="0.0603865" id="pVK-N4-zkg"/>
                             <constraint firstItem="3eR-YY-hHD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" multiplier="0.2" id="rMx-Uj-GbE"/>
                             <constraint firstItem="Wav-yr-mW6" firstAttribute="height" secondItem="w2D-8m-jtD" secondAttribute="height" multiplier="0.07" id="shQ-F9-ay5"/>
@@ -342,6 +348,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="tJI-Vo-5Mz"/>
                     <connections>
+                        <outlet property="activity" destination="4Ae-S8-UvX" id="CAs-xY-FIp"/>
                         <outlet property="announcementTableView" destination="ngy-5t-y9D" id="ZsW-DE-WlR"/>
                         <outlet property="announcementView" destination="baf-X3-ZIe" id="lPG-An-YW7"/>
                     </connections>
@@ -647,6 +654,7 @@
                             <constraint firstItem="f5V-0R-Q6H" firstAttribute="trailing" secondItem="X5g-Pq-fmA" secondAttribute="trailing" id="ldj-Q2-Be1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dGO-uP-q8d"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7T-xc-7tm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
