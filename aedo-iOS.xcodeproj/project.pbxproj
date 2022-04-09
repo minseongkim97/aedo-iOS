@@ -15,8 +15,8 @@
 		2425FB9127FB62600062E597 /* CustomerNav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2425FB9027FB62600062E597 /* CustomerNav.storyboard */; };
 		2425FB9327FB76CC0062E597 /* CustomerNoticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9227FB76CC0062E597 /* CustomerNoticeListViewController.swift */; };
 		2425FB9527FB7B540062E597 /* CustomerNoticeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */; };
-		2425FB9D27FFDFA20062E597 /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */; };
 		2425FB9B27FFABD50062E597 /* AnnouncementListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9A27FFABD50062E597 /* AnnouncementListViewModel.swift */; };
+		2425FB9D27FFDFA20062E597 /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */; };
 		24CC4A9127F551CA001BDFA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4A9027F551CA001BDFA1 /* AppDelegate.swift */; };
 		24CC4A9327F551CA001BDFA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4A9227F551CA001BDFA1 /* SceneDelegate.swift */; };
 		24CC4A9827F551CA001BDFA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24CC4A9627F551CA001BDFA1 /* Main.storyboard */; };
@@ -72,8 +72,8 @@
 		2425FB9027FB62600062E597 /* CustomerNav.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomerNav.storyboard; sourceTree = "<group>"; };
 		2425FB9227FB76CC0062E597 /* CustomerNoticeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerNoticeListViewController.swift; sourceTree = "<group>"; };
 		2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerNoticeListTableViewCell.swift; sourceTree = "<group>"; };
-		2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
 		2425FB9A27FFABD50062E597 /* AnnouncementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnouncementListViewModel.swift; path = "aedo-iOS/AnnouncementListViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
 		24CC4A8D27F551CA001BDFA1 /* aedo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aedo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CC4A9027F551CA001BDFA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CC4A9227F551CA001BDFA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };

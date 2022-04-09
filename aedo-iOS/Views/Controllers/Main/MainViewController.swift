@@ -29,8 +29,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUI()
         announcementListViewModel.loadingStarted = { [weak self] in
-            print("loading start")
             self?.activity.isHidden = false
             self?.activity.startAnimating()
         }
@@ -40,13 +40,28 @@ class MainViewController: UIViewController {
         }
         
         announcementListViewModel.announcementListUpdated = { [weak self] in
-                self?.announcementTableView.reloadData()
+            self?.announcementTableView.reloadData()
+        }
+        
+        announcementListViewModel.showNetworkErrorAlert = { [weak self] in
+            self?.showNetworkErrorAlert()
         }
         
         announcementListViewModel.list()
     }
     //MARK: - Actions
     @IBAction func didTappedMenuButton(_ sender: UIButton) {
+    }
+    
+    //MARK: - Helpers
+    private func setUI() {
+        announcementView.layer.cornerRadius = 10
+        announcementView.layer.shadowOpacity = 0.25
+        announcementView.layer.shadowColor = UIColor.black.cgColor
+        announcementView.layer.shadowOffset = CGSize(width: 4, height: 15)
+        announcementView.layer.shadowRadius = 10
+        announcementView.layer.shadowPath = UIBezierPath(roundedRect: announcementView.bounds, cornerRadius: announcementView.layer.cornerRadius).cgPath
+        announcementView.layer.masksToBounds = false
     }
 }
 

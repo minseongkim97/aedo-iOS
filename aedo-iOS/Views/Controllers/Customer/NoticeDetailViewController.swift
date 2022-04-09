@@ -10,6 +10,8 @@ import UIKit
 class NoticeDetailViewController: UIViewController {
     //MARK: - Properties
     @IBOutlet private weak var noticeView: UIView!
+    @IBOutlet private weak var noticeTitleLabel: UILabel!
+    @IBOutlet private weak var noticeCreatedDateLabel: UILabel!
     
     //MARK: - Lifecycle
     override func viewDidLoad() {

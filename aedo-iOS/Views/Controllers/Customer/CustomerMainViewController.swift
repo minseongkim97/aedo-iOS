@@ -10,7 +10,7 @@ import UIKit
 class CustomerMainViewController: UIViewController {
     //MARK: - Properties
     static let identifier = "CustomerMainViewController"
-    
+
     @IBOutlet private weak var customerCenterVeiw: UIView!
     @IBOutlet private weak var customerServicesStackView: UIStackView!
     
