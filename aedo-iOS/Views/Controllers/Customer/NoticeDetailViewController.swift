@@ -29,7 +29,6 @@ class NoticeDetailViewController: UIViewController {
         noticeView.layer.shadowColor = UIColor.black.cgColor
         noticeView.layer.shadowOffset = CGSize(width: 0, height: 10)
         noticeView.layer.shadowRadius = 10
-        noticeView.layer.shadowPath = UIBezierPath(roundedRect: noticeView.bounds, cornerRadius: noticeView.layer.cornerRadius).cgPath
         noticeView.layer.masksToBounds = false
     }
 }
