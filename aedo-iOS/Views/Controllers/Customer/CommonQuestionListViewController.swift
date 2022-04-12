@@ -17,18 +17,21 @@ struct Answer {
     }
 }
 
-//class IntrinsicTableView: UITableView {
-//    override var intrinsicContentSize: CGSize {
-//        let number = numberOfSections
-//        var height: CGFloat = 0
-//
-//        for i in 0..<number {
-//            guard let cell = cellForRow(at: IndexPath(row: 0, section: i)) else {
-//                continue
-//            }
-//            height += cell.bounds.height
-//        }
-//        return CGSize(width: contentSize.width, height: height)
+class DynamicHeightTableView: UITableView {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.invalidateIntrinsicContentSize()
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        return contentSize
+    }
+}
+
+//class DynamicHeightView: UIView {
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        self.invalidateIntrinsicContentSize()
 //    }
 //}
 
@@ -42,7 +45,8 @@ class CommonQuestionListViewController: UIViewController {
         Answer(question: "Q. 부고는 어떻게 작성하나요?", answer: "장례식 어플 애도", isOpen: false)
     ]
     
-    @IBOutlet private weak var commonQuestionListTableView: UITableView! {
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var commonQuestionListTableView: DynamicHeightTableView! {
         didSet {
             commonQuestionListTableView.delegate = self
             commonQuestionListTableView.dataSource = self
@@ -52,15 +56,16 @@ class CommonQuestionListViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        containerView.layer.shadowOpacity = 0.05
+        containerView.layer.shadowColor = UIColor.black.cgColor
+        containerView.layer.shadowOffset = CGSize(width: 0, height: 10)
+        containerView.layer.shadowRadius = 10
         
         commonQuestionListTableView.layer.borderWidth = 0.5
-        commonQuestionListTableView.layer.borderColor = UIColor(hex: 0xDDDDDD).cgColor
         commonQuestionListTableView.layer.cornerRadius = 10
-        commonQuestionListTableView.layer.shadowOpacity = 0.05
-        commonQuestionListTableView.layer.shadowColor = UIColor.black.cgColor
-        commonQuestionListTableView.layer.shadowOffset = CGSize(width: 0, height: 10)
-        commonQuestionListTableView.layer.shadowRadius = 10
-        commonQuestionListTableView.layer.masksToBounds = false
+        commonQuestionListTableView.layer.borderColor = UIColor(hex: 0xDDDDDD).cgColor
+        commonQuestionListTableView.layer.masksToBounds = true
+        
     }
     //MARK: - Helpers
 }
@@ -84,11 +89,11 @@ extension CommonQuestionListViewController: UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: CommonQuestionTableViewCell.identifier, for: indexPath) as! CommonQuestionTableViewCell
             cell.questionLabel.text = answers[indexPath.section].question
             if answers[indexPath.section].isOpen {
-                cell.backgroundColor = UIColor(hex: 0xF6F6F6)
+                cell.contentView.backgroundColor = UIColor(hex: 0xF6F6F6)
                 cell.chevronImageView.image = UIImage(systemName: "chevron.up")
                 cell.separateLine.isHidden = true
             } else {
-                cell.backgroundColor = .systemBackground
+                cell.contentView.backgroundColor = .systemBackground
                 cell.chevronImageView.image = UIImage(systemName: "chevron.down")
                 cell.separateLine.isHidden = false
             }
@@ -101,7 +106,6 @@ extension CommonQuestionListViewController: UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
         if answers[indexPath.section].isOpen {
             answers[indexPath.section].isOpen = false
         } else {
