@@ -9,6 +9,8 @@ import UIKit
 
 class NoticeDetailViewController: UIViewController {
     //MARK: - Properties
+    static let identifier = "NoticeDetailViewController"
+    
     @IBOutlet private weak var noticeView: UIView!
     @IBOutlet private weak var noticeTitleLabel: UILabel!
     @IBOutlet private weak var noticeCreatedDateLabel: UILabel!

@@ -1,44 +1,44 @@
 //
-//  AnnouncementListViewModel.swift
+//  InquiryListViewModel.swift
 //  aedo-iOS
 //
-//  Created by MIN SEONG KIM on 2022/04/08.
+//  Created by MIN SEONG KIM on 2022/04/12.
 //
 
 import Foundation
 
-class AnnouncementListViewModel {
-    let announcementService = AnnouncementService()
+class InquiryListViewModel {
+    let inquiryServcie = InquiryService()
     
-    private var announcementList = AnnouncementList.EMPTY
+    private var inquiryList = InquiryList.EMPTY()
     private var loading = false
     
     var loadingStarted: () -> Void = {}
     var loadingEnded: () -> Void = {}
-    var announcementListUpdated: () -> Void = {}
+    var inquiryListUpdated: () -> Void = {}
     var showNetworkErrorAlert: () -> Void = {}
     
-    func announcementsCount() -> Int {
-        return announcementList.announcement.count
+    func inquiriesCount() -> Int {
+        return inquiryList.userRequest.count
     }
     
-    func announcement(at index: Int) -> Announcement {
-        return announcementList.announcement[index]
+    func inquiry(at index: Int) -> Inquiry {
+        return inquiryList.userRequest[index]
     }
+    
     
     func list() {
         loading = true
         loadingStarted()
-        announcementService.getAllAnnouncement { [weak self] result in
+        inquiryServcie.getInquiryList { [weak self] result in
             switch result {
             case .success(let response):
-                self?.announcementList = response
+                self?.inquiryList = response
                 DispatchQueue.main.async {
-                    self?.announcementListUpdated()
+                    self?.inquiryListUpdated()
                     self?.loadingEnded()
                     self?.loading = false
                 }
-                
             default:
                 DispatchQueue.main.async {
                     self?.showNetworkErrorAlert()
