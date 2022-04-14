@@ -17,6 +17,15 @@
 		2425FB9527FB7B540062E597 /* CustomerNoticeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */; };
 		2425FB9B27FFABD50062E597 /* AnnouncementListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9A27FFABD50062E597 /* AnnouncementListViewModel.swift */; };
 		2425FB9D27FFDFA20062E597 /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */; };
+		24550A892807B6B000853B58 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24550A882807B6B000853B58 /* SettingViewController.swift */; };
+		2479859F280420C700A8100C /* CommonQuestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2479859E280420C700A8100C /* CommonQuestionListViewController.swift */; };
+		247985A12804214900A8100C /* CommonQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247985A02804214900A8100C /* CommonQuestionTableViewCell.swift */; };
+		247985A3280423EB00A8100C /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247985A2280423EB00A8100C /* AnswerTableViewCell.swift */; };
+		247985A52805327100A8100C /* InquiryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247985A42805327100A8100C /* InquiryListViewController.swift */; };
+		247985A72805330300A8100C /* InquiryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247985A62805330300A8100C /* InquiryListTableViewCell.swift */; };
+		247985A9280534C800A8100C /* InquiryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247985A8280534C800A8100C /* InquiryListViewModel.swift */; };
+		247985AB2805360B00A8100C /* Inquiry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247985AA2805360B00A8100C /* Inquiry.swift */; };
+		247985AD2805377900A8100C /* InquiryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247985AC2805377900A8100C /* InquiryService.swift */; };
 		24CC4A9127F551CA001BDFA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4A9027F551CA001BDFA1 /* AppDelegate.swift */; };
 		24CC4A9327F551CA001BDFA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4A9227F551CA001BDFA1 /* SceneDelegate.swift */; };
 		24CC4A9827F551CA001BDFA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24CC4A9627F551CA001BDFA1 /* Main.storyboard */; };
@@ -74,6 +83,15 @@
 		2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerNoticeListTableViewCell.swift; sourceTree = "<group>"; };
 		2425FB9A27FFABD50062E597 /* AnnouncementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnouncementListViewModel.swift; path = "aedo-iOS/AnnouncementListViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
+		24550A882807B6B000853B58 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		2479859E280420C700A8100C /* CommonQuestionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonQuestionListViewController.swift; sourceTree = "<group>"; };
+		247985A02804214900A8100C /* CommonQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonQuestionTableViewCell.swift; sourceTree = "<group>"; };
+		247985A2280423EB00A8100C /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
+		247985A42805327100A8100C /* InquiryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryListViewController.swift; sourceTree = "<group>"; };
+		247985A62805330300A8100C /* InquiryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryListTableViewCell.swift; sourceTree = "<group>"; };
+		247985A8280534C800A8100C /* InquiryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryListViewModel.swift; sourceTree = "<group>"; };
+		247985AA2805360B00A8100C /* Inquiry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inquiry.swift; sourceTree = "<group>"; };
+		247985AC2805377900A8100C /* InquiryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryService.swift; sourceTree = "<group>"; };
 		24CC4A8D27F551CA001BDFA1 /* aedo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aedo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24CC4A9027F551CA001BDFA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24CC4A9227F551CA001BDFA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +168,9 @@
 			children = (
 				2425FB8527F811C40062E597 /* AnnouncementTableViewCell.swift */,
 				2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */,
+				247985A02804214900A8100C /* CommonQuestionTableViewCell.swift */,
+				247985A2280423EB00A8100C /* AnswerTableViewCell.swift */,
+				247985A62805330300A8100C /* InquiryListTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -160,6 +181,9 @@
 				2425FB8E27FB62090062E597 /* CustomerMainViewController.swift */,
 				2425FB9227FB76CC0062E597 /* CustomerNoticeListViewController.swift */,
 				2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */,
+				2479859E280420C700A8100C /* CommonQuestionListViewController.swift */,
+				247985A42805327100A8100C /* InquiryListViewController.swift */,
+				24550A882807B6B000853B58 /* SettingViewController.swift */,
 				2425FB9027FB62600062E597 /* CustomerNav.storyboard */,
 			);
 			path = Customer;
@@ -265,6 +289,7 @@
 				24CC4B1027F7D7DD001BDFA1 /* LogIn.swift */,
 				24CC4B1427F80330001BDFA1 /* SignUp.swift */,
 				2425FB8027F810A00062E597 /* Announcemnet.swift */,
+				247985AA2805360B00A8100C /* Inquiry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -284,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				2425FB9A27FFABD50062E597 /* AnnouncementListViewModel.swift */,
+				247985A8280534C800A8100C /* InquiryListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -321,6 +347,7 @@
 				24CC4AF227F6F813001BDFA1 /* AutoLogInService.swift */,
 				24CC4B0A27F7CDE2001BDFA1 /* AuthService.swift */,
 				2425FB8927F93A5C0062E597 /* AnnouncementService.swift */,
+				247985AC2805377900A8100C /* InquiryService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -474,14 +501,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				24CC4B1127F7D7DD001BDFA1 /* LogIn.swift in Sources */,
+				247985AD2805377900A8100C /* InquiryService.swift in Sources */,
 				24CC4AEB27F5B3C0001BDFA1 /* GFError.swift in Sources */,
 				24CC4B0027F705F7001BDFA1 /* MainViewController.swift in Sources */,
 				2425FB9527FB7B540062E597 /* CustomerNoticeListTableViewCell.swift in Sources */,
 				24CC4B0227F75E06001BDFA1 /* PrivateInfoAccessViewController.swift in Sources */,
 				24CC4AFC27F700A2001BDFA1 /* PermissionViewController.swift in Sources */,
+				247985A52805327100A8100C /* InquiryListViewController.swift in Sources */,
 				24CC4AE927F5A9D1001BDFA1 /* Verification.swift in Sources */,
 				24CC4B0627F76678001BDFA1 /* CustomTextField.swift in Sources */,
 				24CC4AC927F571B2001BDFA1 /* AppVerification.swift in Sources */,
+				247985A72805330300A8100C /* InquiryListTableViewCell.swift in Sources */,
 				2425FB8C27F949520062E597 /* MainSubMenuViewController.swift in Sources */,
 				24CC4AB227F55565001BDFA1 /* UIDevice.swift in Sources */,
 				2425FB8F27FB62090062E597 /* CustomerMainViewController.swift in Sources */,
@@ -489,10 +519,14 @@
 				24CC4ACB27F571B7001BDFA1 /* AppPolicy.swift in Sources */,
 				24CC4AAE27F553CB001BDFA1 /* UIColor.swift in Sources */,
 				24CC4AE027F5789E001BDFA1 /* UIView.swift in Sources */,
+				247985A12804214900A8100C /* CommonQuestionTableViewCell.swift in Sources */,
 				2425FB9327FB76CC0062E597 /* CustomerNoticeListViewController.swift in Sources */,
+				247985A9280534C800A8100C /* InquiryListViewModel.swift in Sources */,
 				24CC4AED27F5BC48001BDFA1 /* PolicyService.swift in Sources */,
+				247985A3280423EB00A8100C /* AnswerTableViewCell.swift in Sources */,
 				24CC4AF127F5C1FE001BDFA1 /* HTTPMethod.swift in Sources */,
 				24CC4B0D27F7CEC9001BDFA1 /* SendAuthNumber.swift in Sources */,
+				247985AB2805360B00A8100C /* Inquiry.swift in Sources */,
 				24CC4AFA27F6FBEA001BDFA1 /* AccessToken.swift in Sources */,
 				24CC4AF627F6F889001BDFA1 /* AutoLogIn.swift in Sources */,
 				24CC4A9127F551CA001BDFA1 /* AppDelegate.swift in Sources */,
@@ -501,11 +535,13 @@
 				24CC4AF327F6F813001BDFA1 /* AutoLogInService.swift in Sources */,
 				2425FB8727F811C40062E597 /* AnnouncementTableViewCell.swift in Sources */,
 				24CC4B1527F80330001BDFA1 /* SignUp.swift in Sources */,
+				2479859F280420C700A8100C /* CommonQuestionListViewController.swift in Sources */,
 				24CC4AE427F57B7A001BDFA1 /* Constant.swift in Sources */,
 				24CC4AE227F579FA001BDFA1 /* UIViewController.swift in Sources */,
 				2425FB8A27F93A5C0062E597 /* AnnouncementService.swift in Sources */,
 				24CC4AFE27F705EA001BDFA1 /* AuthViewController.swift in Sources */,
 				2425FB9B27FFABD50062E597 /* AnnouncementListViewModel.swift in Sources */,
+				24550A892807B6B000853B58 /* SettingViewController.swift in Sources */,
 				24CC4B1927F808B9001BDFA1 /* TermService.swift in Sources */,
 				24CC4AB027F553ED001BDFA1 /* UIFont.swift in Sources */,
 				2425FB8127F810A00062E597 /* Announcemnet.swift in Sources */,

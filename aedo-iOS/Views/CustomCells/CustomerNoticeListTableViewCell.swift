@@ -8,7 +8,7 @@
 import UIKit
 
 class CustomerNoticeListTableViewCell: UITableViewCell {
-    static var identifier: String = "CustomerNoticeListTableViewCell"
+    static let identifier: String = "CustomerNoticeListTableViewCell"
     var notice: Announcement?
     
     @IBOutlet weak var cellContentView: UIView! {

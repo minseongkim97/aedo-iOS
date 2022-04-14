@@ -8,7 +8,7 @@
 import UIKit
 
 class AnnouncementTableViewCell: UITableViewCell {
-    static var identifier: String = "AnnounceTableViewCell"
+    static let identifier: String = "AnnounceTableViewCell"
     var announcement: Announcement?
 
     @IBOutlet weak var announcementTilteLabel: UILabel!
