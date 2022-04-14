@@ -9,6 +9,7 @@ import UIKit
 
 class InquiryListViewController: UIViewController {
     //MARK: - Properties
+    static let identifier = "InquiryListViewController"
     let inquiryListViewModel = InquiryListViewModel()
     @IBOutlet weak var inquiryListTableView: UITableView! {
         didSet {

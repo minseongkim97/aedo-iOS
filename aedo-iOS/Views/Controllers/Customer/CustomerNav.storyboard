@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ueP-Ei-Llx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sHi-Ne-X0D">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -438,7 +438,7 @@
         <!--Inquiry List View Controller-->
         <scene sceneID="m7j-bq-SQC">
             <objects>
-                <viewController id="hmF-dm-gcC" customClass="InquiryListViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InquiryListViewController" id="hmF-dm-gcC" customClass="InquiryListViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jog-Xv-uBx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -584,25 +584,76 @@
             </objects>
             <point key="canvasLocation" x="1852.1739130434785" y="1478.5714285714284"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="V6N-iY-0Hs">
             <objects>
-                <viewController id="sHi-Ne-X0D" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingViewController" id="sHi-Ne-X0D" customClass="SettingViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kqC-RC-iqJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imh-ZT-H4k">
+                                <rect key="frame" x="0.0" y="44" width="414" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APz-MO-rpu">
+                                        <rect key="frame" x="15" y="15" width="29" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="APz-MO-rpu" secondAttribute="height" multiplier="1:1" id="qB0-Bg-Gn4"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="arrow.left" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4f1-X5-zSj">
+                                        <rect key="frame" x="15" y="59" width="46" height="37"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.70196078429999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="4f1-X5-zSj" firstAttribute="leading" secondItem="imh-ZT-H4k" secondAttribute="leading" constant="15" id="GmT-P0-IZy"/>
+                                    <constraint firstItem="APz-MO-rpu" firstAttribute="top" secondItem="imh-ZT-H4k" secondAttribute="top" constant="15" id="a8F-oG-5gN"/>
+                                    <constraint firstItem="APz-MO-rpu" firstAttribute="height" secondItem="imh-ZT-H4k" secondAttribute="height" multiplier="0.12" id="uNw-sB-VUS"/>
+                                    <constraint firstItem="4f1-X5-zSj" firstAttribute="top" secondItem="APz-MO-rpu" secondAttribute="bottom" constant="15" id="uhe-9P-Qjk"/>
+                                    <constraint firstItem="APz-MO-rpu" firstAttribute="leading" secondItem="imh-ZT-H4k" secondAttribute="leading" constant="15" id="yel-8n-PLe"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JQQ-4b-KZR">
+                                <rect key="frame" x="0.0" y="155" width="414" height="741"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rlp-pr-3Xr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="imh-ZT-H4k" firstAttribute="top" secondItem="rlp-pr-3Xr" secondAttribute="top" id="Anf-WI-4mS"/>
+                            <constraint firstItem="imh-ZT-H4k" firstAttribute="leading" secondItem="rlp-pr-3Xr" secondAttribute="leading" id="Bho-hm-SJV"/>
+                            <constraint firstItem="JQQ-4b-KZR" firstAttribute="bottom" secondItem="kqC-RC-iqJ" secondAttribute="bottom" id="EbW-3F-ghg"/>
+                            <constraint firstItem="imh-ZT-H4k" firstAttribute="width" secondItem="imh-ZT-H4k" secondAttribute="height" multiplier="69:40" id="ctr-bZ-pCy"/>
+                            <constraint firstAttribute="trailing" secondItem="imh-ZT-H4k" secondAttribute="trailing" id="lkb-GI-wuj"/>
+                            <constraint firstItem="JQQ-4b-KZR" firstAttribute="leading" secondItem="rlp-pr-3Xr" secondAttribute="leading" id="pt9-5l-dhA"/>
+                            <constraint firstItem="JQQ-4b-KZR" firstAttribute="top" secondItem="4f1-X5-zSj" secondAttribute="bottom" constant="15" id="rEB-J9-EpS"/>
+                            <constraint firstItem="rlp-pr-3Xr" firstAttribute="trailing" secondItem="JQQ-4b-KZR" secondAttribute="trailing" id="tOI-cv-2Zz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingTableView" destination="JQQ-4b-KZR" id="DdU-Tj-B7L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8De-40-baR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1852" y="2160"/>
+            <point key="canvasLocation" x="1850.7246376811595" y="2159.5982142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Withdrawal View Controller-->
         <scene sceneID="hnA-1n-fLD">
             <objects>
-                <viewController id="6HG-7s-Yo3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WithdrawalViewController" id="6HG-7s-Yo3" customClass="WithdrawalViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uq8-gI-Yyn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -829,12 +880,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVe-cz-QAW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2904.347826086957" y="2164.2857142857142"/>
+            <point key="canvasLocation" x="2870" y="2194"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Inquiry View Controller-->
         <scene sceneID="40h-ee-OtY">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="GkW-aT-MSR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailInquiryViewController" modalPresentationStyle="fullScreen" id="GkW-aT-MSR" customClass="DetailInquiryViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kmp-QE-0jI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -855,7 +906,7 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:1문의" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kuR-UT-yT6">
-                                        <rect key="frame" x="68.5" y="10.5" width="62.5" height="39"/>
+                                        <rect key="frame" x="68.5" y="10.5" width="59.5" height="39"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
