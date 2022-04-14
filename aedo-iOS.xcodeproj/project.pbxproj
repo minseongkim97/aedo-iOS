@@ -17,6 +17,7 @@
 		2425FB9527FB7B540062E597 /* CustomerNoticeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */; };
 		2425FB9B27FFABD50062E597 /* AnnouncementListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9A27FFABD50062E597 /* AnnouncementListViewModel.swift */; };
 		2425FB9D27FFDFA20062E597 /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */; };
+		24550A892807B6B000853B58 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24550A882807B6B000853B58 /* SettingViewController.swift */; };
 		2479859F280420C700A8100C /* CommonQuestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2479859E280420C700A8100C /* CommonQuestionListViewController.swift */; };
 		247985A12804214900A8100C /* CommonQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247985A02804214900A8100C /* CommonQuestionTableViewCell.swift */; };
 		247985A3280423EB00A8100C /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247985A2280423EB00A8100C /* AnswerTableViewCell.swift */; };
@@ -82,6 +83,7 @@
 		2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerNoticeListTableViewCell.swift; sourceTree = "<group>"; };
 		2425FB9A27FFABD50062E597 /* AnnouncementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnouncementListViewModel.swift; path = "aedo-iOS/AnnouncementListViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
+		24550A882807B6B000853B58 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		2479859E280420C700A8100C /* CommonQuestionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonQuestionListViewController.swift; sourceTree = "<group>"; };
 		247985A02804214900A8100C /* CommonQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		247985A2280423EB00A8100C /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */,
 				2479859E280420C700A8100C /* CommonQuestionListViewController.swift */,
 				247985A42805327100A8100C /* InquiryListViewController.swift */,
+				24550A882807B6B000853B58 /* SettingViewController.swift */,
 				2425FB9027FB62600062E597 /* CustomerNav.storyboard */,
 			);
 			path = Customer;
@@ -538,6 +541,7 @@
 				2425FB8A27F93A5C0062E597 /* AnnouncementService.swift in Sources */,
 				24CC4AFE27F705EA001BDFA1 /* AuthViewController.swift in Sources */,
 				2425FB9B27FFABD50062E597 /* AnnouncementListViewModel.swift in Sources */,
+				24550A892807B6B000853B58 /* SettingViewController.swift in Sources */,
 				24CC4B1927F808B9001BDFA1 /* TermService.swift in Sources */,
 				24CC4AB027F553ED001BDFA1 /* UIFont.swift in Sources */,
 				2425FB8127F810A00062E597 /* Announcemnet.swift in Sources */,

@@ -343,7 +343,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ldk-jT-I4n">
                                                                 <rect key="frame" x="0.0" y="29" width="354" height="30"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pb-hs-QU2" customClass="CustomTextField" customModule="aedo_iOS" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="인증번호를 입력해주세요." textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1pb-hs-QU2" customClass="CustomTextField" customModule="aedo_iOS" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="304" height="30"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="hpg-Vd-nuT"/>
