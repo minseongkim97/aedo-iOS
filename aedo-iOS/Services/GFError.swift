@@ -13,4 +13,5 @@ enum GFError: String, Error {
     case unableToComplete
     case invalidResponse
     case invalidData
+    case unknown
 }

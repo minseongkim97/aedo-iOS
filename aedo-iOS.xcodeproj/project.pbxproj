@@ -17,6 +17,12 @@
 		2425FB9527FB7B540062E597 /* CustomerNoticeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */; };
 		2425FB9B27FFABD50062E597 /* AnnouncementListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9A27FFABD50062E597 /* AnnouncementListViewModel.swift */; };
 		2425FB9D27FFDFA20062E597 /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */; };
+		24455B0E280C1C9D00D23358 /* ObituaryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455B0C280C1C9D00D23358 /* ObituaryListTableViewCell.swift */; };
+		24455B0F280C1C9D00D23358 /* ObituaryListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24455B0D280C1C9D00D23358 /* ObituaryListTableViewCell.xib */; };
+		24455B11280C217100D23358 /* ObituaryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455B10280C217100D23358 /* ObituaryListViewController.swift */; };
+		24455B13280C8AFF00D23358 /* ObituaryMessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455B12280C8AFF00D23358 /* ObituaryMessageListViewController.swift */; };
+		24455B16280C8B7200D23358 /* ObituaryMessageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24455B14280C8B7200D23358 /* ObituaryMessageListTableViewCell.swift */; };
+		24455B17280C8B7200D23358 /* ObituaryMessageListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24455B15280C8B7200D23358 /* ObituaryMessageListTableViewCell.xib */; };
 		24550A892807B6B000853B58 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24550A882807B6B000853B58 /* SettingViewController.swift */; };
 		24550A8B2807D0B500853B58 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24550A8A2807D0B500853B58 /* WithdrawalViewController.swift */; };
 		24550A8D2807D13600853B58 /* DetailInquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24550A8C2807D13600853B58 /* DetailInquiryViewController.swift */; };
@@ -26,6 +32,7 @@
 		24550A9D2807EEE900853B58 /* SettingSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24550A9B2807EEE900853B58 /* SettingSwitchTableViewCell.xib */; };
 		24550AA02807FA5C00853B58 /* SettingVersionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24550A9E2807FA5C00853B58 /* SettingVersionTableViewCell.swift */; };
 		24550AA12807FA5C00853B58 /* SettingVersionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24550A9F2807FA5C00853B58 /* SettingVersionTableViewCell.xib */; };
+		24550AA428095FA700853B58 /* ObituaryListNav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24550AA328095FA700853B58 /* ObituaryListNav.storyboard */; };
 		2479859F280420C700A8100C /* CommonQuestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2479859E280420C700A8100C /* CommonQuestionListViewController.swift */; };
 		247985A12804214900A8100C /* CommonQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247985A02804214900A8100C /* CommonQuestionTableViewCell.swift */; };
 		247985A3280423EB00A8100C /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247985A2280423EB00A8100C /* AnswerTableViewCell.swift */; };
@@ -91,6 +98,12 @@
 		2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerNoticeListTableViewCell.swift; sourceTree = "<group>"; };
 		2425FB9A27FFABD50062E597 /* AnnouncementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnouncementListViewModel.swift; path = "aedo-iOS/AnnouncementListViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
+		24455B0C280C1C9D00D23358 /* ObituaryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObituaryListTableViewCell.swift; sourceTree = "<group>"; };
+		24455B0D280C1C9D00D23358 /* ObituaryListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObituaryListTableViewCell.xib; sourceTree = "<group>"; };
+		24455B10280C217100D23358 /* ObituaryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObituaryListViewController.swift; sourceTree = "<group>"; };
+		24455B12280C8AFF00D23358 /* ObituaryMessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObituaryMessageListViewController.swift; sourceTree = "<group>"; };
+		24455B14280C8B7200D23358 /* ObituaryMessageListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObituaryMessageListTableViewCell.swift; sourceTree = "<group>"; };
+		24455B15280C8B7200D23358 /* ObituaryMessageListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObituaryMessageListTableViewCell.xib; sourceTree = "<group>"; };
 		24550A882807B6B000853B58 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		24550A8A2807D0B500853B58 /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
 		24550A8C2807D13600853B58 /* DetailInquiryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInquiryViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +113,7 @@
 		24550A9B2807EEE900853B58 /* SettingSwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingSwitchTableViewCell.xib; sourceTree = "<group>"; };
 		24550A9E2807FA5C00853B58 /* SettingVersionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVersionTableViewCell.swift; sourceTree = "<group>"; };
 		24550A9F2807FA5C00853B58 /* SettingVersionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVersionTableViewCell.xib; sourceTree = "<group>"; };
+		24550AA328095FA700853B58 /* ObituaryListNav.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ObituaryListNav.storyboard; sourceTree = "<group>"; };
 		2479859E280420C700A8100C /* CommonQuestionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonQuestionListViewController.swift; sourceTree = "<group>"; };
 		247985A02804214900A8100C /* CommonQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		247985A2280423EB00A8100C /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
@@ -211,6 +225,20 @@
 				2425FB9027FB62600062E597 /* CustomerNav.storyboard */,
 			);
 			path = Customer;
+			sourceTree = "<group>";
+		};
+		24550AA228095F5E00853B58 /* ObituaryList */ = {
+			isa = PBXGroup;
+			children = (
+				24550AA328095FA700853B58 /* ObituaryListNav.storyboard */,
+				24455B10280C217100D23358 /* ObituaryListViewController.swift */,
+				24455B0C280C1C9D00D23358 /* ObituaryListTableViewCell.swift */,
+				24455B0D280C1C9D00D23358 /* ObituaryListTableViewCell.xib */,
+				24455B12280C8AFF00D23358 /* ObituaryMessageListViewController.swift */,
+				24455B14280C8B7200D23358 /* ObituaryMessageListTableViewCell.swift */,
+				24455B15280C8B7200D23358 /* ObituaryMessageListTableViewCell.xib */,
+			);
+			path = ObituaryList;
 			sourceTree = "<group>";
 		};
 		24CC4A8427F551CA001BDFA1 = {
@@ -341,6 +369,7 @@
 		24CC4AD527F5728B001BDFA1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				24550AA228095F5E00853B58 /* ObituaryList */,
 				2425FB8D27FB61F80062E597 /* Customer */,
 				24CC4B1C27F80B7F001BDFA1 /* Main */,
 				24CC4AD627F57458001BDFA1 /* SplashViewController.swift */,
@@ -465,7 +494,10 @@
 			files = (
 				24CC4AAA27F552E2001BDFA1 /* NotoSansCJKkr-Regular.otf in Resources */,
 				24CC4A9D27F551CB001BDFA1 /* LaunchScreen.storyboard in Resources */,
+				24455B17280C8B7200D23358 /* ObituaryMessageListTableViewCell.xib in Resources */,
+				24455B0F280C1C9D00D23358 /* ObituaryListTableViewCell.xib in Resources */,
 				24550A992807EEDE00853B58 /* SettingStaticTableViewCell.xib in Resources */,
+				24550AA428095FA700853B58 /* ObituaryListNav.storyboard in Resources */,
 				24550AA12807FA5C00853B58 /* SettingVersionTableViewCell.xib in Resources */,
 				24CC4ADE27F57605001BDFA1 /* CustomAlertViewController.xib in Resources */,
 				24CC4B1E27F80B9B001BDFA1 /* MainNav.storyboard in Resources */,
@@ -541,14 +573,17 @@
 				24CC4AC927F571B2001BDFA1 /* AppVerification.swift in Sources */,
 				247985A72805330300A8100C /* InquiryListTableViewCell.swift in Sources */,
 				2425FB8C27F949520062E597 /* MainSubMenuViewController.swift in Sources */,
+				24455B11280C217100D23358 /* ObituaryListViewController.swift in Sources */,
 				24CC4AB227F55565001BDFA1 /* UIDevice.swift in Sources */,
 				2425FB8F27FB62090062E597 /* CustomerMainViewController.swift in Sources */,
 				24CC4B0427F76665001BDFA1 /* CustomCheckButton.swift in Sources */,
 				24CC4ACB27F571B7001BDFA1 /* AppPolicy.swift in Sources */,
 				24CC4AAE27F553CB001BDFA1 /* UIColor.swift in Sources */,
+				24455B0E280C1C9D00D23358 /* ObituaryListTableViewCell.swift in Sources */,
 				24CC4AE027F5789E001BDFA1 /* UIView.swift in Sources */,
 				247985A12804214900A8100C /* CommonQuestionTableViewCell.swift in Sources */,
 				2425FB9327FB76CC0062E597 /* CustomerNoticeListViewController.swift in Sources */,
+				24455B16280C8B7200D23358 /* ObituaryMessageListTableViewCell.swift in Sources */,
 				247985A9280534C800A8100C /* InquiryListViewModel.swift in Sources */,
 				24CC4AED27F5BC48001BDFA1 /* PolicyService.swift in Sources */,
 				24550A982807EEDE00853B58 /* SettingStaticTableViewCell.swift in Sources */,
@@ -572,6 +607,7 @@
 				24550A9C2807EEE900853B58 /* SettingSwitchTableViewCell.swift in Sources */,
 				24CC4AFE27F705EA001BDFA1 /* AuthViewController.swift in Sources */,
 				2425FB9B27FFABD50062E597 /* AnnouncementListViewModel.swift in Sources */,
+				24455B13280C8AFF00D23358 /* ObituaryMessageListViewController.swift in Sources */,
 				24550AA02807FA5C00853B58 /* SettingVersionTableViewCell.swift in Sources */,
 				24550A892807B6B000853B58 /* SettingViewController.swift in Sources */,
 				24CC4B1927F808B9001BDFA1 /* TermService.swift in Sources */,

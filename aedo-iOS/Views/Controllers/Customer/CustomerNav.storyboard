@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GkW-aT-MSR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -119,7 +119,7 @@
                             <constraint firstItem="Asz-c4-zZN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TtC-xB-4Q9"/>
                             <constraint firstItem="Asz-c4-zZN" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.35" id="a4N-gl-4vx"/>
                             <constraint firstItem="NS9-Kq-T2h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="iJ6-Gm-8ho"/>
-                            <constraint firstItem="Asz-c4-zZN" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="kGO-wf-li0"/>
+                            <constraint firstItem="Asz-c4-zZN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-44" id="kGO-wf-li0"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Asz-c4-zZN" secondAttribute="trailing" id="l62-Nz-jLR"/>
                             <constraint firstItem="MgK-d8-zpG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="lWF-A9-ec0"/>
                         </constraints>
