@@ -53,6 +53,14 @@ extension UIViewController: CustomAlertDelegate {
         showCustomAlert(alertType: .NetworkError, alertTitle: "네트워크 연결이 원활하지 않습니다.", alertMessage: "다시 시도해주세요.", isRightButtonHidden: true)
     }
     
+    func showVersionUpdateAlert() {
+        showCustomAlert(alertType: .AppVersionUpdate, alertTitle: "앱 업데이트가 필요합니다.", alertMessage: "업데이트를 진행해주세요.", isRightButtonHidden: false)
+    }
+    
+    func showPermissionAlert() {
+        showCustomAlert(alertType: .PermissionError, alertTitle: "필수 접근 권한을 동의하셔야 앱을 사용하실 수 있습니다.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+    }
+    
     //MARK: - 앱스토어로 이동
     func openAppstore(to appleID: String) {
         // UIApplication 은 Main Thread 에서 처리
