@@ -193,6 +193,10 @@
                     </view>
                     <connections>
                         <outlet property="floatingButton" destination="fkr-8A-tgw" id="V1m-LM-ntN"/>
+                        <outlet property="headerView" destination="gb7-7D-of2" id="hAq-Ba-Ccp"/>
+                        <outlet property="headerViewHeightConstraint" destination="iSm-7r-Kob" id="tCe-jh-Br0"/>
+                        <outlet property="headerViewStack" destination="h0A-JS-rP6" id="skX-wK-Enj"/>
+                        <outlet property="headerViewTopConstraint" destination="VWv-WP-I6k" id="33p-Ag-RMQ"/>
                         <outlet property="obituaryMessageListTableView" destination="l5G-kW-lec" id="eXu-02-b3P"/>
                     </connections>
                 </viewController>

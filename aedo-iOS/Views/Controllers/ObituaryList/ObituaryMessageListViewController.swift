@@ -11,6 +11,10 @@ class ObituaryMessageListViewController: UIViewController {
     //MARK: - Properties
     static let identifier = "ObituaryMessageListViewController"
     
+    @IBOutlet private weak var headerViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var headerViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var headerView: UIView!
+    @IBOutlet private weak var headerViewStack: UIStackView!
     @IBOutlet private weak var floatingButton: UIButton!
     @IBOutlet private weak var obituaryMessageListTableView: UITableView! {
         didSet {
@@ -46,6 +50,23 @@ extension ObituaryMessageListViewController: UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let y = scrollView.contentOffset.y
+        
+        let swipingDown = y <= 0
+        let shouldSnap = y > 30
+        
+        UIView.animate(withDuration: 0.3) {
+            self.headerViewStack.alpha = swipingDown ? 1.0 : 0.0
+        }
+        
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.3, delay: 0, options: []) {
+            self.headerViewHeightConstraint.constant = shouldSnap ? 0 : 140
+            self.view.layoutIfNeeded()
+        }
+
     }
     
 }
