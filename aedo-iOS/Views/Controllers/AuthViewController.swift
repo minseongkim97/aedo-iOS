@@ -12,7 +12,6 @@ class AuthViewController: UIViewController {
     //MARK: - Properties
     static let identifier = "AuthViewController"
     
-    private var authNumber: Int = 0
     let authService = AuthService()
     
     @IBOutlet private weak var authView: UIView!
@@ -62,14 +61,14 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction private func didTappedCheckAuthenticationNumberButton(_ sender: UIButton) {
-        if Int(authenticationNumberTextField.text!)! == authNumber {
-            print("인증번호 맞음")
-            checkAuthenticationNumberButton.isUserInteractionEnabled = false
-            login()
-        } else {
-            print("인증번호 아님")
-            showCustomAlert(alertType: .none, alertTitle: "전화번호 또는 인증번호를 다시 확인해 주세요.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
-        }
+//        if Int(authenticationNumberTextField.text!)! == authNumber {
+//            print("인증번호 맞음")
+//            checkAuthenticationNumberButton.isUserInteractionEnabled = false
+//            login()
+//        } else {
+//            print("인증번호 아님")
+//            showCustomAlert(alertType: .none, alertTitle: "전화번호 또는 인증번호를 다시 확인해 주세요.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+//        }
     }
     
     
@@ -121,7 +120,6 @@ class AuthViewController: UIViewController {
     }
     
     //MARK: - @objc functions
-
     @objc func didTappedTermLabel(sender: UIPanGestureRecognizer) {
         let termViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "PrivateInfoAccessViewController")
         termViewController.modalPresentationStyle = .fullScreen
@@ -175,8 +173,8 @@ class AuthViewController: UIViewController {
         authService.sendAuthNumber(at: phoneNumberTextField.text!) { [weak self] result in
             switch result {
             case .success(let response):
+                print(response)
                 DispatchQueue.main.async {
-                    self?.authNumber = response.userAuthNumber
                     
                     self?.titleLabel.text =  "인증번호를 \n입력해주세요."
                     self?.scriptLabel.text = "휴대전화로 전송된 4자리의 \n인증번호를 입력해주세요."
@@ -191,7 +189,7 @@ class AuthViewController: UIViewController {
                     self?.authenticationNumberTextField.becomeFirstResponder()
                 }
                
-            default:
+            case .failure(_):
                 DispatchQueue.main.async {
                     self?.showNetworkErrorAlert()
                 }

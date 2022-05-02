@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import RxSwift
 
 class ObituaryListViewController: UIViewController {
     //MARK: - Properties
+    let disposeBag = DisposeBag()
+    
     static let identifier = "ObituaryListViewController"
+  
     @IBOutlet private weak var ObituaryListTableView: UITableView! {
         didSet {
             ObituaryListTableView.delegate = self

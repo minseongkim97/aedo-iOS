@@ -12,9 +12,9 @@ struct SendAuthNumberRequest: Codable {
 }
 
 struct SendAuthNumberResponse: Codable {
-    var userAuthNumber: Int
-    
-    enum CodingKeys: String, CodingKey {
-        case userAuthNumber = "user_auth_number"
-    }
+//    var userAuthNumber: Int
+//
+//    enum CodingKeys: String, CodingKey {
+//        case userAuthNumber = "user_auth_number"
+//    }
 }
