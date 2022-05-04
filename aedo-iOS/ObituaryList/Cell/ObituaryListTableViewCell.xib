@@ -134,6 +134,10 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="containerView" destination="omP-6H-5Ht" id="4Ac-tu-vUY"/>
+                <outlet property="dateLabel" destination="8Al-H5-IH1" id="BmU-u7-IHj"/>
+                <outlet property="funeralNameLabel" destination="m7o-Vl-fsO" id="Hcu-2Q-8ZZ"/>
+                <outlet property="nameLabel" destination="GA0-F8-mny" id="AU4-oU-N22"/>
+                <outlet property="residentLabel" destination="Pmv-LZ-blm" id="goY-sT-CRi"/>
                 <outlet property="seeObituaryButton" destination="nSS-vT-Csp" id="CaI-qh-uob"/>
                 <outlet property="sendObituaryButton" destination="auM-9k-iM4" id="V4t-s7-9qw"/>
             </connections>

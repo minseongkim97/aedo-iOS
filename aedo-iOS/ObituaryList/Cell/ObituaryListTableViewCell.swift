@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class ObituaryListTableViewCell: UITableViewCell {
     //MARK: - Properties
@@ -13,17 +14,31 @@ class ObituaryListTableViewCell: UITableViewCell {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var sendObituaryButton: UIButton!
     @IBOutlet weak var seeObituaryButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var residentLabel: UILabel!
+    @IBOutlet weak var funeralNameLabel: UILabel!
+    
+    var disposeBag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setUI()
+        setAttribute()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
     }
     
-    func setUI() {
+    func updateUI(item: ObituaryResponse) {
+        nameLabel.text = item.deceased.name
+        dateLabel.text = item.created
+        residentLabel.text = item.resident.name
+        funeralNameLabel.text = item.place
+    }
+    
+    private func setAttribute() {
         containerView.layer.borderWidth = 0.5
         containerView.layer.borderColor = UIColor(hex: 0xDDDDDD).cgColor
         containerView.layer.cornerRadius = 10
