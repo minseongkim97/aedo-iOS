@@ -91,7 +91,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ObituaryListTableView" destination="zC5-9x-V6M" id="S99-gE-knD"/>
+                        <outlet property="obituaryListTableView" destination="zC5-9x-V6M" id="C12-J4-MYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

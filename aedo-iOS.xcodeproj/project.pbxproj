@@ -25,9 +25,7 @@
 		24455B17280C8B7200D23358 /* ObituaryMessageListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24455B15280C8B7200D23358 /* ObituaryMessageListTableViewCell.xib */; };
 		244D43BA281F085F0034D5C7 /* ObituaryListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D43B9281F085F0034D5C7 /* ObituaryListResponse.swift */; };
 		244D43BC281F099C0034D5C7 /* ObituaryListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D43BB281F099C0034D5C7 /* ObituaryListService.swift */; };
-		244D43BE281F0BB60034D5C7 /* Obituary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D43BD281F0BB60034D5C7 /* Obituary.swift */; };
 		244D43C0281F0BCA0034D5C7 /* ObituaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D43BF281F0BCA0034D5C7 /* ObituaryListViewModel.swift */; };
-		244D43C2281F14D00034D5C7 /* ObituaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D43C1281F14D00034D5C7 /* ObituaryViewModel.swift */; };
 		24550A892807B6B000853B58 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24550A882807B6B000853B58 /* SettingViewController.swift */; };
 		24550A8B2807D0B500853B58 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24550A8A2807D0B500853B58 /* WithdrawalViewController.swift */; };
 		24550A8D2807D13600853B58 /* DetailInquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24550A8C2807D13600853B58 /* DetailInquiryViewController.swift */; };
@@ -111,9 +109,7 @@
 		24455B15280C8B7200D23358 /* ObituaryMessageListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObituaryMessageListTableViewCell.xib; sourceTree = "<group>"; };
 		244D43B9281F085F0034D5C7 /* ObituaryListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObituaryListResponse.swift; sourceTree = "<group>"; };
 		244D43BB281F099C0034D5C7 /* ObituaryListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObituaryListService.swift; sourceTree = "<group>"; };
-		244D43BD281F0BB60034D5C7 /* Obituary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obituary.swift; sourceTree = "<group>"; };
 		244D43BF281F0BCA0034D5C7 /* ObituaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObituaryListViewModel.swift; sourceTree = "<group>"; };
-		244D43C1281F14D00034D5C7 /* ObituaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObituaryViewModel.swift; sourceTree = "<group>"; };
 		24550A882807B6B000853B58 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		24550A8A2807D0B500853B58 /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
 		24550A8C2807D13600853B58 /* DetailInquiryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInquiryViewController.swift; sourceTree = "<group>"; };
@@ -252,7 +248,6 @@
 		244D43B3281F08170034D5C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				244D43BD281F0BB60034D5C7 /* Obituary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,7 +256,6 @@
 			isa = PBXGroup;
 			children = (
 				244D43BF281F0BCA0034D5C7 /* ObituaryListViewModel.swift */,
-				244D43C1281F14D00034D5C7 /* ObituaryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -667,10 +661,8 @@
 				24CC4AF627F6F889001BDFA1 /* AutoLogIn.swift in Sources */,
 				24CC4A9127F551CA001BDFA1 /* AppDelegate.swift in Sources */,
 				24CC4AD027F57219001BDFA1 /* JailBrokenHelper.swift in Sources */,
-				244D43C2281F14D00034D5C7 /* ObituaryViewModel.swift in Sources */,
 				24550A8B2807D0B500853B58 /* WithdrawalViewController.swift in Sources */,
 				24CC4B1B27F808F8001BDFA1 /* Term.swift in Sources */,
-				244D43BE281F0BB60034D5C7 /* Obituary.swift in Sources */,
 				24CC4AF327F6F813001BDFA1 /* AutoLogInService.swift in Sources */,
 				2425FB8727F811C40062E597 /* AnnouncementTableViewCell.swift in Sources */,
 				24CC4B1527F80330001BDFA1 /* SignUp.swift in Sources */,

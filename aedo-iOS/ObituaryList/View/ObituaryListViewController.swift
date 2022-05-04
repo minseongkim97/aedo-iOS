@@ -7,41 +7,42 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class ObituaryListViewController: UIViewController {
     //MARK: - Properties
     let disposeBag = DisposeBag()
-    
+    private var obituaryListViewModel: ObituaryListViewModel!
+
     static let identifier = "ObituaryListViewController"
-  
-    @IBOutlet private weak var ObituaryListTableView: UITableView! {
-        didSet {
-            ObituaryListTableView.delegate = self
-            ObituaryListTableView.dataSource = self
-            ObituaryListTableView.register(UINib(nibName: ObituaryListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ObituaryListTableViewCell.identifier)
-        }
-    }
+    
+    @IBOutlet private weak var obituaryListTableView: UITableView!
     
     //MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBinding()
+    }
+    
+    //MARK: - Helpers
+    private func setBinding() {
+        obituaryListTableView.rx
+            .setDelegate(self)
+            .disposed(by: disposeBag)
+        
+        obituaryListViewModel.obituaryList
+            .observe(on: MainScheduler.instance)
+            .filter { !$0.isEmpty }
+            .bind(to: obituaryListTableView.rx.items(cellIdentifier: ObituaryListTableViewCell.identifier, cellType: ObituaryListTableViewCell.self)) { (index, item, cell) in
+                cell.updateUI(item: item)
+            }
+            .disposed(by: disposeBag)
     }
 }
 
 //MARK: - Extension: UITableViewDelegate
-extension ObituaryListViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ObituaryListTableViewCell.identifier, for: indexPath) as? ObituaryListTableViewCell else { return UITableViewCell() }
-        
-        return cell
-    }
-    
+extension ObituaryListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 270
     }
-    
 }

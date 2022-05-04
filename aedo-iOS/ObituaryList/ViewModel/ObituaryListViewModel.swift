@@ -7,15 +7,18 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
-//final class ObituaryListViewModel {
-//    private let obituaryListService: ObituaryListServiceProtocol
-//
-//    init(obituaryService: ObituaryListServiceProtocol = ObituaryListService()) {
-//        self.obituaryListService = obituaryService
-//    }
-//
-//    func fetchObituaryListViewModel() -> Observable<[ObituaryViewModel]> {
-//
-//    }
-//}
+final class ObituaryListViewModel {
+    private let obituaryListService = ObituaryListService()
+    var obituaryList = BehaviorSubject<[ObituaryResponse]>(value: [])
+
+    init(name: String) {
+        reloadData(of: name)
+    }
+
+    func reloadData(of name: String) {
+        _ = obituaryListService.fetchObituaryList(of: name)
+            .bind(to: obituaryList)
+    }
+}
