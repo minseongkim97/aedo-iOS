@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="44.615384615384613" y="50.473933649289094"/>
         </scene>
-        <!--Obituary Message List View Controller-->
+        <!--Condole Message List View Controller-->
         <scene sceneID="D8K-sa-hbZ">
             <objects>
-                <viewController storyboardIdentifier="ObituaryMessageListViewController" id="GL9-av-95L" customClass="ObituaryMessageListViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ObituaryMessageListViewController" id="GL9-av-95L" customClass="CondoleMessageListViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gXS-A6-qbD">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,12 +192,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="condoleCountLabel" destination="Y49-9U-Ahq" id="bxT-3u-AEI"/>
+                        <outlet property="condoleMessageListTableView" destination="l5G-kW-lec" id="DTm-mg-P4c"/>
                         <outlet property="floatingButton" destination="fkr-8A-tgw" id="V1m-LM-ntN"/>
                         <outlet property="headerView" destination="gb7-7D-of2" id="hAq-Ba-Ccp"/>
                         <outlet property="headerViewHeightConstraint" destination="iSm-7r-Kob" id="tCe-jh-Br0"/>
                         <outlet property="headerViewStack" destination="h0A-JS-rP6" id="skX-wK-Enj"/>
                         <outlet property="headerViewTopConstraint" destination="VWv-WP-I6k" id="33p-Ag-RMQ"/>
-                        <outlet property="obituaryMessageListTableView" destination="l5G-kW-lec" id="eXu-02-b3P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBF-01-AXv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

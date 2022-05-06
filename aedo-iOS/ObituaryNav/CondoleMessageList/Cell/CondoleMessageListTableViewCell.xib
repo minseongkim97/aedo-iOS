@@ -15,7 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="ObituaryMessageListTableViewCell" customModule="aedo_iOS" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CondoleMessageListTableViewCell" rowHeight="120" id="KGk-i7-Jjw" customClass="CondoleMessageListTableViewCell" customModule="aedo_iOS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="356" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -30,20 +30,20 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="삼가 고인의 명복을 빕니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTe-5l-ktD">
-                        <rect key="frame" x="115" y="27.5" width="169" height="23"/>
-                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="15"/>
+                        <rect key="frame" x="115" y="27.5" width="180" height="24"/>
+                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from. 애도 임직원 일동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytt-0T-pxH">
-                        <rect key="frame" x="115" y="60.5" width="107.5" height="16.5"/>
-                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="11"/>
+                        <rect key="frame" x="115" y="58.5" width="117" height="18"/>
+                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="12"/>
                         <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000-00-00 00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgj-rb-p6t">
-                        <rect key="frame" x="115" y="82" width="102" height="16.5"/>
-                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="11"/>
+                        <rect key="frame" x="115" y="79.5" width="111" height="18"/>
+                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="12"/>
                         <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -51,10 +51,10 @@
                 <constraints>
                     <constraint firstItem="qgj-rb-p6t" firstAttribute="leading" secondItem="ytt-0T-pxH" secondAttribute="leading" id="2WW-No-juf"/>
                     <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="ytt-0T-pxH" secondAttribute="trailing" constant="20" id="592-KI-SFT"/>
-                    <constraint firstItem="ytt-0T-pxH" firstAttribute="top" secondItem="FTe-5l-ktD" secondAttribute="bottom" constant="10" id="5ip-GQ-cDb"/>
+                    <constraint firstItem="ytt-0T-pxH" firstAttribute="top" secondItem="FTe-5l-ktD" secondAttribute="bottom" constant="7" id="5ip-GQ-cDb"/>
                     <constraint firstItem="Ur0-Uu-jWp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="763-Ji-QGG"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FTe-5l-ktD" secondAttribute="trailing" constant="20" id="IU8-by-KLK"/>
-                    <constraint firstItem="qgj-rb-p6t" firstAttribute="top" secondItem="ytt-0T-pxH" secondAttribute="bottom" constant="5" id="L7K-Xd-i75"/>
+                    <constraint firstItem="qgj-rb-p6t" firstAttribute="top" secondItem="ytt-0T-pxH" secondAttribute="bottom" constant="3" id="L7K-Xd-i75"/>
                     <constraint firstItem="ytt-0T-pxH" firstAttribute="leading" secondItem="FTe-5l-ktD" secondAttribute="leading" id="LbG-tY-uAU"/>
                     <constraint firstItem="FTe-5l-ktD" firstAttribute="top" secondItem="Ur0-Uu-jWp" secondAttribute="top" id="O4q-7F-Uvk"/>
                     <constraint firstItem="Ur0-Uu-jWp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="ORn-Jg-mNn"/>
@@ -64,10 +64,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="contentLabel" destination="FTe-5l-ktD" id="0Pf-ze-w1I"/>
-                <outlet property="dateLabel" destination="qgj-rb-p6t" id="KEa-CK-VZN"/>
-                <outlet property="messageImageView" destination="Ur0-Uu-jWp" id="oTX-N3-4S7"/>
-                <outlet property="senderLabel" destination="ytt-0T-pxH" id="uXa-g8-flP"/>
+                <outlet property="dateLabel" destination="qgj-rb-p6t" id="a1f-ka-JIx"/>
+                <outlet property="messageImageView" destination="Ur0-Uu-jWp" id="buL-ND-L6Y"/>
+                <outlet property="senderLabel" destination="ytt-0T-pxH" id="RaA-WZ-Mee"/>
+                <outlet property="titleLabel" destination="FTe-5l-ktD" id="Qf8-aA-7rW"/>
             </connections>
             <point key="canvasLocation" x="155.07246376811597" y="109.82142857142857"/>
         </tableViewCell>

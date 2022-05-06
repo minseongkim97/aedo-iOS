@@ -14,11 +14,11 @@ final class ObituaryListViewModel {
     var obituaryList = BehaviorSubject<[ObituaryResponse]>(value: [])
 
     init(name: String) {
-        reloadData(of: name)
+        reloadData()
     }
 
-    func reloadData(of name: String) {
-        _ = obituaryListService.fetchObituaryList(of: name)
+    func reloadData() {
+        _ = obituaryListService.fetchObituaryList()
             .bind(to: obituaryList)
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 struct Constant {
-    static let BASE_URL = "http://118.67.128.124:8080/"
+    static let BASE_URL = "https://www.aedo.co.kr/"
     static let APPLE_ID: String = ""
     static var ACCESSTOKEN_HEADERFIELD: String = "Accesstoken"
 }

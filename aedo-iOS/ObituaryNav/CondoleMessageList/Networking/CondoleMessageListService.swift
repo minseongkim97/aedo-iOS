@@ -1,19 +1,23 @@
 //
-//  ObituaryListNetworking.swift
+//  ObituaryMessageListService.swift
 //  aedo-iOS
 //
-//  Created by MIN SEONG KIM on 2022/05/02.
+//  Created by MIN SEONG KIM on 2022/05/05.
 //
 
 import Foundation
 import RxSwift
 
-class ObituaryListService {
-    func fetchObituaryList(of name: String) -> Observable<[ObituaryResponse]> {
+protocol CondoleMessageListServiceProtocol {
+    func fetchCondoleMessageList(of obId: String) -> Observable<[CondoleMessage]>
+}
+
+class CondoleMessageListService: CondoleMessageListServiceProtocol {
+    func fetchCondoleMessageList(of obId: String) -> Observable<[CondoleMessage]> {
         return Observable.create { observer in
-            var components = URLComponents(string: "\(Constant.BASE_URL)v1/obituary")
-            let name = URLQueryItem(name: name, value: name)
-            components?.queryItems = [name]
+            var components = URLComponents(string: "\(Constant.BASE_URL)v1/condole")
+            let id = URLQueryItem(name: "id", value: obId)
+            components?.queryItems = [id]
             guard let url = components?.url else {
                 observer.onError(GFError.invalidURL)
                 return Disposables.create {}
@@ -32,8 +36,9 @@ class ObituaryListService {
                     return
                 }
                 
-                if let data = data, let obituaryList = try? JSONDecoder().decode(ObituaryListResponse.self, from: data) {
-                    observer.onNext(obituaryList.result)
+                if let data = data, let condoleMessageList = try? JSONDecoder().decode(CondoleMessageListResponse.self, from: data) {
+                    observer.onNext(condoleMessageList.condoleMessage)
+                    observer.onCompleted()
                     return
                 }
                 observer.onError(GFError.invalidData)
@@ -46,3 +51,4 @@ class ObituaryListService {
         }
     }
 }
+

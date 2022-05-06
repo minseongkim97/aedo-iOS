@@ -11,12 +11,16 @@ import RxCocoa
 
 class ObituaryListViewController: UIViewController {
     //MARK: - Properties
-    let disposeBag = DisposeBag()
-    private var obituaryListViewModel: ObituaryListViewModel!
+    private let disposeBag = DisposeBag()
+    private let obituaryListViewModel = ObituaryListViewModel(name: "")
 
     static let identifier = "ObituaryListViewController"
     
-    @IBOutlet private weak var obituaryListTableView: UITableView!
+    @IBOutlet private weak var obituaryListTableView: UITableView! {
+        didSet {
+            obituaryListTableView.register(UINib(nibName: ObituaryListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ObituaryListTableViewCell.identifier)
+        }
+    }
     
     //MARK: - Lifecycles
     override func viewDidLoad() {

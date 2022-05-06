@@ -6,25 +6,25 @@
 //
 
 import UIKit
+import RxSwift
 
-class ObituaryMessageListTableViewCell: UITableViewCell {
+class CondoleMessageListTableViewCell: UITableViewCell {
     //MARK: - Properties
-    static let identifier = "ObituaryMessageListTableViewCell"
+    static let identifier = "CondoleMessageListTableViewCell"
     
     @IBOutlet weak var messageImageView: UIImageView!
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var senderLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    var disposeBag = DisposeBag()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
     }
-    
 }
