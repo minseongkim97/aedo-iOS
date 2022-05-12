@@ -14,5 +14,6 @@ enum GFError: String, Error {
     case invalidResponse
     case invalidData
     case networkError
+    case notUser    // 404
     case unknown
 }

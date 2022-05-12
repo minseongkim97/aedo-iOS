@@ -35,10 +35,8 @@ class PermissionViewController: UIViewController, UNUserNotificationCenterDelega
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setDelegate()
         setUI()
-        
     }
     
     //MARK: - Actions
@@ -118,7 +116,6 @@ class PermissionViewController: UIViewController, UNUserNotificationCenterDelega
 
 //MARK: - Extension
 extension PermissionViewController: CLLocationManagerDelegate {
-
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .authorizedAlways, .authorizedWhenInUse:
@@ -126,7 +123,6 @@ extension PermissionViewController: CLLocationManagerDelegate {
         case .notDetermined:
             requestLocationPermission()
         case .restricted, .denied:
-            print(2)
             isPermission = false
         default:
             break

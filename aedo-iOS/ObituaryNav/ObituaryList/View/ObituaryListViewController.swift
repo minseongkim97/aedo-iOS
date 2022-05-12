@@ -12,7 +12,7 @@ import RxCocoa
 class ObituaryListViewController: UIViewController {
     //MARK: - Properties
     private let disposeBag = DisposeBag()
-    private let obituaryListViewModel = ObituaryListViewModel(name: "")
+    private let obituaryListViewModel = ObituaryListViewModel()
 
     static let identifier = "ObituaryListViewController"
     

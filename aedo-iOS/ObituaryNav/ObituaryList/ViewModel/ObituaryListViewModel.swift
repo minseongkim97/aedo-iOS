@@ -13,7 +13,7 @@ final class ObituaryListViewModel {
     private let obituaryListService = ObituaryListService()
     var obituaryList = BehaviorSubject<[ObituaryResponse]>(value: [])
 
-    init(name: String) {
+    init() {
         reloadData()
     }
 

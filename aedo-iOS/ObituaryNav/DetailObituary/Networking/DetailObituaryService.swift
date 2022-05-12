@@ -1,17 +1,23 @@
 //
-//  ObituaryListNetworking.swift
+//  DetailObituaryService.swift
 //  aedo-iOS
 //
-//  Created by MIN SEONG KIM on 2022/05/02.
+//  Created by MIN SEONG KIM on 2022/05/08.
 //
 
 import Foundation
 import RxSwift
 
-class ObituaryListService {
-    func fetchObituaryList() -> Observable<[ObituaryResponse]> {
+protocol DetailObituaryServiceProtocol {
+    func fetchDetailObituaryList(name: String) -> Observable<[ObituaryResponse]>
+}
+
+class DetailObituaryService: DetailObituaryServiceProtocol {
+    func fetchDetailObituaryList(name: String) -> Observable<[ObituaryResponse]> {
         return Observable.create { observer in
-            let components = URLComponents(string: "\(Constant.BASE_URL)v1/obituary")
+            var components = URLComponents(string: "\(Constant.BASE_URL)v1/obituary")
+            let name = URLQueryItem(name: "name", value: name)
+            components?.queryItems = [name]
             guard let url = components?.url else {
                 observer.onError(GFError.invalidURL)
                 return Disposables.create {}
@@ -45,3 +51,4 @@ class ObituaryListService {
         }
     }
 }
+

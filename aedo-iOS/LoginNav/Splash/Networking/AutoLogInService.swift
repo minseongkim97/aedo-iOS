@@ -16,7 +16,7 @@ class AutoLogInService {
         
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethod.PUT.rawValue
-        request.setValue(AccessToken.token, forHTTPHeaderField: Constant.ACCESSTOKEN_HEADERFIELD)
+        request.setValue(UserDefaults.standard.string(forKey: "autoLogInAccessToken"), forHTTPHeaderField: Constant.ACCESSTOKEN_HEADERFIELD)
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let _ = error {

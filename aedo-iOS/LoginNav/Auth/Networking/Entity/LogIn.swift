@@ -9,6 +9,7 @@ import Foundation
 
 struct LogInRequest: Codable {
     var phone: String
+    var smsnumber: String
 }
 
 struct LogInResponse: Codable {

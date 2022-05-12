@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="44.615384615384613" y="50.473933649289094"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Obituary View Controller-->
         <scene sceneID="k50-W6-EwA">
             <objects>
-                <viewController id="EIc-aB-8t9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailObituaryViewController" id="EIc-aB-8t9" customClass="DetailObituaryViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ll9-BB-aPj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -476,6 +476,15 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="390" height="1000"/>
+                    <connections>
+                        <outlet property="coffinLabel" destination="gfd-pR-tIM" id="bp6-MX-Zgm"/>
+                        <outlet property="deceasedNameLabel" destination="71M-HX-PuQ" id="6Gv-OJ-nXU"/>
+                        <outlet property="dofpLabel" destination="tNO-GN-kib" id="5by-S3-o1P"/>
+                        <outlet property="eodLabel" destination="Jtq-Qh-Cek" id="inf-Mf-gt0"/>
+                        <outlet property="placeLabel" destination="a0L-FH-csp" id="gfS-QO-ei5"/>
+                        <outlet property="residentNameLabel" destination="uLI-Nk-EGD" id="ceK-6c-zOW"/>
+                        <outlet property="residentRelationLabel" destination="01v-c2-New" id="71j-u4-4nR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eri-ja-mAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

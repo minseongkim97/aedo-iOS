@@ -20,7 +20,7 @@ class TermService {
                 return
             }
                            
-            guard let response = response as? HTTPURLResponse, (200..<300) ~= response.statusCode else {
+            guard let response = response as? HTTPURLResponse, ((200..<300) ~= response.statusCode || response.statusCode == 403) else {
                 completion(.failure(.invalidResponse))
                 return
             }

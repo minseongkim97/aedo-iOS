@@ -30,6 +30,9 @@
 		244D43DE282348930034D5C7 /* CondoleMessageListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D43DD282348930034D5C7 /* CondoleMessageListResponse.swift */; };
 		244D43E02824C2F70034D5C7 /* CondoleMessageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D43DF2824C2F70034D5C7 /* CondoleMessageListViewModel.swift */; };
 		244D43E2282597E10034D5C7 /* CondoleMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D43E1282597E10034D5C7 /* CondoleMessageViewModel.swift */; };
+		244D43EB2826F0160034D5C7 /* DetailObituaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D43EA2826F0160034D5C7 /* DetailObituaryViewController.swift */; };
+		244D43ED2826F14E0034D5C7 /* DetailObituaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D43EC2826F14E0034D5C7 /* DetailObituaryViewModel.swift */; };
+		244D43EF2826F1FC0034D5C7 /* DetailObituaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D43EE2826F1FB0034D5C7 /* DetailObituaryService.swift */; };
 		24550A892807B6B000853B58 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24550A882807B6B000853B58 /* SettingViewController.swift */; };
 		24550A8B2807D0B500853B58 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24550A8A2807D0B500853B58 /* WithdrawalViewController.swift */; };
 		24550A8D2807D13600853B58 /* DetailInquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24550A8C2807D13600853B58 /* DetailInquiryViewController.swift */; };
@@ -118,6 +121,9 @@
 		244D43DD282348930034D5C7 /* CondoleMessageListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CondoleMessageListResponse.swift; sourceTree = "<group>"; };
 		244D43DF2824C2F70034D5C7 /* CondoleMessageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CondoleMessageListViewModel.swift; sourceTree = "<group>"; };
 		244D43E1282597E10034D5C7 /* CondoleMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CondoleMessageViewModel.swift; sourceTree = "<group>"; };
+		244D43EA2826F0160034D5C7 /* DetailObituaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailObituaryViewController.swift; sourceTree = "<group>"; };
+		244D43EC2826F14E0034D5C7 /* DetailObituaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailObituaryViewModel.swift; sourceTree = "<group>"; };
+		244D43EE2826F1FB0034D5C7 /* DetailObituaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailObituaryService.swift; sourceTree = "<group>"; };
 		24550A882807B6B000853B58 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		24550A8A2807D0B500853B58 /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
 		24550A8C2807D13600853B58 /* DetailInquiryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInquiryViewController.swift; sourceTree = "<group>"; };
@@ -369,9 +375,205 @@
 			children = (
 				24550AA328095FA700853B58 /* ObituaryListNav.storyboard */,
 				244D43B2281F07F70034D5C7 /* ObituaryList */,
+				244D43E32826EF680034D5C7 /* DetailObituary */,
 				244D43D3282346F40034D5C7 /* CondoleMessageList */,
+				244D43E42826EF790034D5C7 /* WriteCondole */,
 			);
 			path = ObituaryNav;
+			sourceTree = "<group>";
+		};
+		244D43E32826EF680034D5C7 /* DetailObituary */ = {
+			isa = PBXGroup;
+			children = (
+				244D43E52826EFA20034D5C7 /* Networking */,
+				244D43E72826EFAF0034D5C7 /* Model */,
+				244D43E82826EFB20034D5C7 /* View */,
+				244D43E92826EFB50034D5C7 /* ViewModel */,
+			);
+			path = DetailObituary;
+			sourceTree = "<group>";
+		};
+		244D43E42826EF790034D5C7 /* WriteCondole */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WriteCondole;
+			sourceTree = "<group>";
+		};
+		244D43E52826EFA20034D5C7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				244D43EE2826F1FB0034D5C7 /* DetailObituaryService.swift */,
+				244D43E62826EFA90034D5C7 /* Entity */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		244D43E62826EFA90034D5C7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		244D43E72826EFAF0034D5C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		244D43E82826EFB20034D5C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				244D43EA2826F0160034D5C7 /* DetailObituaryViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		244D43E92826EFB50034D5C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				244D43EC2826F14E0034D5C7 /* DetailObituaryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		244D43F6282C9EEC0034D5C7 /* LoginNav */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4A9627F551CA001BDFA1 /* Main.storyboard */,
+				244D4401282CA05F0034D5C7 /* Splash */,
+				244D43F7282C9F300034D5C7 /* Permission */,
+				244D43FC282CA00B0034D5C7 /* Auth */,
+			);
+			path = LoginNav;
+			sourceTree = "<group>";
+		};
+		244D43F7282C9F300034D5C7 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				244D43FA282C9F500034D5C7 /* View */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
+		244D43FA282C9F500034D5C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4AFB27F700A2001BDFA1 /* PermissionViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		244D43FC282CA00B0034D5C7 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				244D4400282CA0200034D5C7 /* Networking */,
+				244D43FF282CA01E0034D5C7 /* Model */,
+				244D43FE282CA01C0034D5C7 /* View */,
+				244D43FD282CA0180034D5C7 /* ViewModel */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		244D43FD282CA0180034D5C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		244D43FE282CA01C0034D5C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4AFD27F705EA001BDFA1 /* AuthViewController.swift */,
+				24CC4B0127F75E06001BDFA1 /* PrivateInfoAccessViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		244D43FF282CA01E0034D5C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		244D4400282CA0200034D5C7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4B1827F808B9001BDFA1 /* TermService.swift */,
+				24CC4B0A27F7CDE2001BDFA1 /* AuthService.swift */,
+				244D4407282CA27C0034D5C7 /* Entity */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		244D4401282CA05F0034D5C7 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4AC727F571A5001BDFA1 /* RealmDataModel */,
+				244D4402282CA06E0034D5C7 /* Networking */,
+				244D4403282CA07D0034D5C7 /* Model */,
+				244D4404282CA0810034D5C7 /* View */,
+				244D4405282CA0830034D5C7 /* ViewModel */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		244D4402282CA06E0034D5C7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4AE627F5A9CA001BDFA1 /* VerificationService.swift */,
+				24CC4AF227F6F813001BDFA1 /* AutoLogInService.swift */,
+				24CC4AEC27F5BC48001BDFA1 /* PolicyService.swift */,
+				244D4406282CA0AB0034D5C7 /* Entity */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		244D4403282CA07D0034D5C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		244D4404282CA0810034D5C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4AD627F57458001BDFA1 /* SplashViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		244D4405282CA0830034D5C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		244D4406282CA0AB0034D5C7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4AE827F5A9D1001BDFA1 /* Verification.swift */,
+				24CC4AF527F6F889001BDFA1 /* AutoLogIn.swift */,
+				24CC4AEE27F5BC63001BDFA1 /* AllPolicy.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		244D4407282CA27C0034D5C7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4B1A27F808F8001BDFA1 /* Term.swift */,
+				24CC4B1027F7D7DD001BDFA1 /* LogIn.swift */,
+				24CC4B1427F80330001BDFA1 /* SignUp.swift */,
+				24CC4B0C27F7CEC9001BDFA1 /* SendAuthNumber.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		24CC4A8427F551CA001BDFA1 = {
@@ -395,8 +597,8 @@
 		24CC4A8F27F551CA001BDFA1 /* aedo-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				244D43F6282C9EEC0034D5C7 /* LoginNav */,
 				244D43DA2823473C0034D5C7 /* ObituaryNav */,
-				24CC4AC727F571A5001BDFA1 /* RealmDataModel */,
 				24CC4ACC27F571F6001BDFA1 /* CommonClass */,
 				24CC4AAC27F553BD001BDFA1 /* Extension */,
 				24CC4AA527F552BC001BDFA1 /* Fonts */,
@@ -415,7 +617,6 @@
 		24CC4AA427F55215001BDFA1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				24CC4A9627F551CA001BDFA1 /* Main.storyboard */,
 				24CC4A9927F551CB001BDFA1 /* Assets.xcassets */,
 				24CC4A9B27F551CB001BDFA1 /* LaunchScreen.storyboard */,
 			);
@@ -467,13 +668,6 @@
 		24CC4AD227F57274001BDFA1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				24CC4AE827F5A9D1001BDFA1 /* Verification.swift */,
-				24CC4AEE27F5BC63001BDFA1 /* AllPolicy.swift */,
-				24CC4B1A27F808F8001BDFA1 /* Term.swift */,
-				24CC4AF527F6F889001BDFA1 /* AutoLogIn.swift */,
-				24CC4B0C27F7CEC9001BDFA1 /* SendAuthNumber.swift */,
-				24CC4B1027F7D7DD001BDFA1 /* LogIn.swift */,
-				24CC4B1427F80330001BDFA1 /* SignUp.swift */,
 				2425FB8027F810A00062E597 /* Announcemnet.swift */,
 				247985AA2805360B00A8100C /* Inquiry.swift */,
 			);
@@ -505,10 +699,6 @@
 			children = (
 				2425FB8D27FB61F80062E597 /* Customer */,
 				24CC4B1C27F80B7F001BDFA1 /* Main */,
-				24CC4AD627F57458001BDFA1 /* SplashViewController.swift */,
-				24CC4AFB27F700A2001BDFA1 /* PermissionViewController.swift */,
-				24CC4AFD27F705EA001BDFA1 /* AuthViewController.swift */,
-				24CC4B0127F75E06001BDFA1 /* PrivateInfoAccessViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -527,11 +717,6 @@
 			children = (
 				24CC4AEA27F5B3C0001BDFA1 /* GFError.swift */,
 				24CC4AF027F5C1FE001BDFA1 /* HTTPMethod.swift */,
-				24CC4AE627F5A9CA001BDFA1 /* VerificationService.swift */,
-				24CC4AEC27F5BC48001BDFA1 /* PolicyService.swift */,
-				24CC4B1827F808B9001BDFA1 /* TermService.swift */,
-				24CC4AF227F6F813001BDFA1 /* AutoLogInService.swift */,
-				24CC4B0A27F7CDE2001BDFA1 /* AuthService.swift */,
 				2425FB8927F93A5C0062E597 /* AnnouncementService.swift */,
 				247985AC2805377900A8100C /* InquiryService.swift */,
 			);
@@ -709,6 +894,7 @@
 				247985A72805330300A8100C /* InquiryListTableViewCell.swift in Sources */,
 				2425FB8C27F949520062E597 /* MainSubMenuViewController.swift in Sources */,
 				24455B11280C217100D23358 /* ObituaryListViewController.swift in Sources */,
+				244D43EF2826F1FC0034D5C7 /* DetailObituaryService.swift in Sources */,
 				24CC4AB227F55565001BDFA1 /* UIDevice.swift in Sources */,
 				2425FB8F27FB62090062E597 /* CustomerMainViewController.swift in Sources */,
 				24CC4B0427F76665001BDFA1 /* CustomCheckButton.swift in Sources */,
@@ -719,6 +905,7 @@
 				247985A12804214900A8100C /* CommonQuestionTableViewCell.swift in Sources */,
 				2425FB9327FB76CC0062E597 /* CustomerNoticeListViewController.swift in Sources */,
 				244D43DE282348930034D5C7 /* CondoleMessageListResponse.swift in Sources */,
+				244D43ED2826F14E0034D5C7 /* DetailObituaryViewModel.swift in Sources */,
 				24455B16280C8B7200D23358 /* CondoleMessageListTableViewCell.swift in Sources */,
 				247985A9280534C800A8100C /* InquiryListViewModel.swift in Sources */,
 				24CC4AED27F5BC48001BDFA1 /* PolicyService.swift in Sources */,
@@ -754,6 +941,7 @@
 				24CC4AB027F553ED001BDFA1 /* UIFont.swift in Sources */,
 				2425FB8127F810A00062E597 /* Announcemnet.swift in Sources */,
 				24CC4AE727F5A9CA001BDFA1 /* VerificationService.swift in Sources */,
+				244D43EB2826F0160034D5C7 /* DetailObituaryViewController.swift in Sources */,
 				24CC4AEF27F5BC63001BDFA1 /* AllPolicy.swift in Sources */,
 				2425FB9D27FFDFA20062E597 /* NoticeDetailViewController.swift in Sources */,
 				24CC4ACE27F5720E001BDFA1 /* NetworkMonitor.swift in Sources */,

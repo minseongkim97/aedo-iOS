@@ -19,7 +19,6 @@ class SplashViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // 네트워크 연결 확인
         if NetworkMonitor.shared.isConnected {
             print("network connected")
@@ -35,8 +34,6 @@ class SplashViewController: UIViewController {
             showNetworkErrorAlert()
         }
     }
-    
-    //MARK: - Actions
     
     //MARK: - Helpers
     private func writeAppPolicy(_ allPolicy: AllPolicy) {
@@ -88,7 +85,6 @@ class SplashViewController: UIViewController {
                 realm.add(appPolicy)
             }
         } catch {
-            print("realm write error")
             showSystemMaintenanceAlert()
         }
     }
@@ -99,8 +95,7 @@ class SplashViewController: UIViewController {
         let verification = AppVerification()
         verification.result = appVerfication.result
         verification._id = appVerfication.id
-        
-
+    
         appVerfication.appToken.forEach { token in
             let appToken = AppToken()
             appToken.appToken = token.appToken
@@ -156,7 +151,6 @@ class SplashViewController: UIViewController {
                     self?.checkAppVersion()
                 }
                 
-                
             default:
                 print("get policy data is failed")
                 DispatchQueue.main.async {
@@ -171,33 +165,18 @@ class SplashViewController: UIViewController {
             switch result {
             case .success(let response):
                 DispatchQueue.main.async {
-                    UserDefaults.standard.set(response.accessToken, forKey: "logInAceessToken")
-                    AccessToken.logInAceessToken = response.accessToken
-                    print(AccessToken.token)
+                    AccessToken.autoLogInAccessToken = response.accessToken
                     let mainViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainViewController.identifier) 
                     let navVC = UINavigationController(rootViewController: mainViewController)
                     navVC.isNavigationBarHidden = true
                     self?.changeRootViewController(navVC)
                 }
                 
-                
             case .failure(.invalidResponse):
-                if AccessToken.token == ""  {
-                    DispatchQueue.main.async {
-                        let permissionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: PermissionViewController.identifier)
-                        self?.changeRootViewController(permissionViewController)
-                    }
-                    
-                } else {
-                    DispatchQueue.main.async {
-                        let authViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: AuthViewController.identifier)
-                        let navVC = UINavigationController(rootViewController: authViewController)
-                        navVC.isNavigationBarHidden = true
-                        self?.changeRootViewController(navVC)
-                    }
-                    
+                DispatchQueue.main.async {
+                    let permissionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: PermissionViewController.identifier)
+                    self?.changeRootViewController(permissionViewController)
                 }
-            
             
             default:
                 DispatchQueue.main.async {
@@ -207,14 +186,12 @@ class SplashViewController: UIViewController {
         }
     }
     
-    
     private func checkAppVersion() {
         guard let info = Bundle.main.infoDictionary, let currentVersion = info["CFBundleShortVersionString"] as? String, let _ = info["CFBundleIdentifier"] as? String else { return }
 
         let policy = realm.objects(Policy.self)
         let versionPolicyObjcet = Array(policy.filter("id == 'APP_VER_IOS'"))
         let appVersion = versionPolicyObjcet[0].value
-        print(appVersion)
         if appVersion != currentVersion {
             checkUrgentNotice()
         } else {
@@ -236,6 +213,5 @@ class SplashViewController: UIViewController {
             // 긴급공지가 다를 때 - 긴급공지 다이얼로그를 띄워준다.
             showCustomAlert(alertType: .none, alertTitle: noticeContent, isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
         }
-        
     }
 }

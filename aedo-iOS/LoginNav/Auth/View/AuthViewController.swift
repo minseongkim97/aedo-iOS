@@ -25,18 +25,15 @@ class AuthViewController: UIViewController {
     @IBOutlet private weak var checkAuthenticationNumberButton: UIButton!
     @IBOutlet private weak var authenticationNumberStack: UIStackView!
     @IBOutlet private weak var refunctionStack: UIStackView!
-    
     @IBOutlet private weak var signUpView: UIView!
     @IBOutlet private weak var phoneNumberLabel: UILabel!
     @IBOutlet private weak var birthdayTextField: CustomTextField!
     @IBOutlet private weak var birthdayLine: UIView!
     @IBOutlet private weak var nameTextField: CustomTextField!
     @IBOutlet private weak var nameLine: UIView!
-    
     @IBOutlet private weak var termLabel: UILabel!
     @IBOutlet private weak var agreeCheckButton: UIButton!
     @IBOutlet private weak var signUpCheckButton: CustomCheckButton!
-    
     
     @IBOutlet private weak var sendAuthenticationNumberButton: CustomCheckButton!
     
@@ -52,23 +49,14 @@ class AuthViewController: UIViewController {
     
     @IBAction func didTappedSendAuthNumberButton(_ sender: CustomCheckButton) {
         if isValidPhone(phone: phoneNumberTextField.text) {
-            print("전화번호 형식 맞음")
             sendAuthNumber()
         } else {
-            print("전화번호 형식 아님")
             showCustomAlert(alertType: .none, alertTitle: "전화번호를 다시 확인해 주세요.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
         }
     }
     
     @IBAction private func didTappedCheckAuthenticationNumberButton(_ sender: UIButton) {
-//        if Int(authenticationNumberTextField.text!)! == authNumber {
-//            print("인증번호 맞음")
-//            checkAuthenticationNumberButton.isUserInteractionEnabled = false
-//            login()
-//        } else {
-//            print("인증번호 아님")
-//            showCustomAlert(alertType: .none, alertTitle: "전화번호 또는 인증번호를 다시 확인해 주세요.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
-//        }
+        login()
     }
     
     
@@ -98,6 +86,7 @@ class AuthViewController: UIViewController {
     @IBAction private func didTappedAgreeAppTermsButton(_ sender: UIButton) {
         if !sender.isSelected {
             sender.isSelected = true
+            sender.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
             sender.tintColor = .mainBrown
         } else {
             sender.isSelected = false
@@ -172,8 +161,7 @@ class AuthViewController: UIViewController {
     private func sendAuthNumber() {
         authService.sendAuthNumber(at: phoneNumberTextField.text!) { [weak self] result in
             switch result {
-            case .success(let response):
-                print(response)
+            case .success(_):
                 DispatchQueue.main.async {
                     
                     self?.titleLabel.text =  "인증번호를 \n입력해주세요."
@@ -198,19 +186,19 @@ class AuthViewController: UIViewController {
     }
     
     private func login() {
-        authService.login(with: phoneNumberTextField.text!) { [weak self] result in
+        authService.login(with: phoneNumberTextField.text!, smsnumber: authenticationNumberTextField.text!) { [weak self] result in
             switch result {
             case .success(let response):
                 DispatchQueue.main.async {
-                    UserDefaults.standard.set(response.Accesstoken, forKey: "logInAccessToken")
-                    AccessToken.logInAceessToken = response.Accesstoken
+                    AccessToken.logInAccessToken = response.Accesstoken
+                    AccessToken.autoLogInAccessToken = response.Accesstoken
                     let mainViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
                     let navVC = UINavigationController(rootViewController: mainViewController)
                     navVC.isNavigationBarHidden = true
                     self?.changeRootViewController(navVC)
                 }
                 
-            default:
+            case .failure(.notUser):
                 DispatchQueue.main.async {
                     self?.titleLabel.text =  "인증번호를 \n입력해주세요."
                     self?.scriptLabel.text = "휴대전화로 전송된 4자리의 \n인증번호를 입력해주세요."
@@ -220,6 +208,16 @@ class AuthViewController: UIViewController {
                     self?.signUpView.isHidden = false
                     self?.phoneNumberLabel.text = self?.phoneNumberTextField.text
                     self?.birthdayTextField.becomeFirstResponder()
+                }
+                
+            case .failure(.invalidResponse):
+                DispatchQueue.main.async {
+                    self?.showCustomAlert(alertType: .none, alertTitle: "전화번호 또는 인증번호를 다시 확인해 주세요.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+                }
+                
+            default:
+                DispatchQueue.main.async {
+                    self?.showNetworkErrorAlert()
                 }
             }
         }
@@ -232,14 +230,15 @@ class AuthViewController: UIViewController {
                            terms: agreeCheckButton.isSelected) { [weak self] result in
             switch result {
             case .success(let response):
-                DispatchQueue.main.async {
-                    UserDefaults.standard.set(response.Accesstoken, forKey: "signUpAccessToken")
-                    AccessToken.signUpAceessToken = response.Accesstoken
-                    let mainViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
-                    let navVC = UINavigationController(rootViewController: mainViewController)
-                    navVC.isNavigationBarHidden = true
-                    self?.changeRootViewController(navVC)
-                }
+                AccessToken.signUpAccessToken = response.Accesstoken
+                self?.login()
+//                DispatchQueue.main.async {
+                   
+//                    let mainViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+//                    let navVC = UINavigationController(rootViewController: mainViewController)
+//                    navVC.isNavigationBarHidden = true
+//                    self?.changeRootViewController(navVC)
+//                }
             default:
                 DispatchQueue.main.async {
                     self?.showNetworkErrorAlert()

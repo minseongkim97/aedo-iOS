@@ -49,14 +49,14 @@ class AuthService {
         }.resume()
     }
     
-    func login(with phoneNumber: String, completion: @escaping ((Result<LogInResponse, GFError>) -> Void)) {
+    func login(with phoneNumber: String, smsnumber: String, completion: @escaping ((Result<LogInResponse, GFError>) -> Void)) {
         guard let url = URL(string: "\(Constant.BASE_URL)v1/user") else {
             completion(.failure(.invalidURL))
             return
         }
         
         // 실제 업로드할 (데이터)인스턴스 생성
-        let loginRequest = LogInRequest(phone: phoneNumber)
+        let loginRequest = LogInRequest(phone: phoneNumber, smsnumber: smsnumber)
         
         // 모델을 JSON data 형태로 변환
         guard let jsonData = try? JSONEncoder().encode(loginRequest) else {
@@ -78,6 +78,10 @@ class AuthService {
             }
             
             guard let response = response as? HTTPURLResponse, (200..<300) ~= response.statusCode else {
+                if (response as! HTTPURLResponse).statusCode == 404 {
+                    completion(.failure(.notUser))
+                    return
+                }
                 completion(.failure(.invalidResponse))
                 return
             }

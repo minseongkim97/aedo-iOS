@@ -8,21 +8,26 @@
 import Foundation
 
 class AccessToken {
+    static var token = ""
     
-//    static var token: String = UserDefaults.standard.string(forKey: "AceessToken") ?? ""
-    static var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNzQ4NDAzMTYwNzgxZDI3OWVkZTYzMyIsImlhdCI6MTY1MTg2MDcxNiwiZXhwIjoxNjUxODY0MzE2fQ.-mRdG_Aw5hl9MwWl7zM_BZAb8ptUCcvY-ugUl0gAZZs"
-    
-    static var signUpAceessToken: String = UserDefaults.standard.string(forKey: "signUpAceessToken") ?? "" {
+    static var signUpAccessToken: String = UserDefaults.standard.string(forKey: "signUpAccessToken") ?? "" {
         didSet {
-            AccessToken.token = signUpAceessToken
-            UserDefaults.standard.set(signUpAceessToken, forKey: "AceessToken")
+            AccessToken.token = signUpAccessToken
+            UserDefaults.standard.set(signUpAccessToken, forKey: "signUpAccessToken")
         }
     }
     
-    static var logInAceessToken: String = UserDefaults.standard.string(forKey: "logInAceessToken") ?? "" {
+    static var logInAccessToken: String = UserDefaults.standard.string(forKey: "logInAccessToken") ?? "" {
         didSet {
-            AccessToken.token = logInAceessToken
-            UserDefaults.standard.set(logInAceessToken, forKey: "AceessToken")
+            AccessToken.token = logInAccessToken
+            UserDefaults.standard.set(logInAccessToken, forKey: "logInAccessToken")
+        }
+    }
+    
+    static var autoLogInAccessToken: String = UserDefaults.standard.string(forKey: "autoLogInAccessToken") ?? "" {
+        didSet {
+            AccessToken.token = autoLogInAccessToken
+            UserDefaults.standard.set(autoLogInAccessToken, forKey: "autoLogInAccessToken")
         }
     }
 }

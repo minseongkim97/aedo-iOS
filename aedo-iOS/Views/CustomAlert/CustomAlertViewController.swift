@@ -73,8 +73,9 @@ class CustomAlertViewController: UIViewController {
     
     //MARK: - Helper
     func show() {
-        UIApplication.shared.windows.first?.rootViewController?.present(self, animated: true, completion: nil)
-
+        DispatchQueue.main.async {
+            UIApplication.shared.windows.first?.rootViewController?.present(self, animated: true, completion: nil)
+        }
     }
 
     
