@@ -227,7 +227,9 @@ class AuthViewController: UIViewController {
         authService.signUp(phone: phoneNumberTextField.text!,
                            birth: birthdayTextField.text!,
                            name: nameTextField.text!,
-                           terms: agreeCheckButton.isSelected) { [weak self] result in
+                           terms: agreeCheckButton.isSelected,
+                           smsnumber: authenticationNumberTextField.text!
+        ) { [weak self] result in
             switch result {
             case .success(let response):
                 AccessToken.signUpAccessToken = response.Accesstoken

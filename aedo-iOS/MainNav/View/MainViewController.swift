@@ -13,11 +13,11 @@ class MainViewController: UIViewController {
     let announcementListViewModel = AnnouncementListViewModel()
     
     @IBOutlet private weak var activity: UIActivityIndicatorView!
-    @IBOutlet private weak var announcementView: UIView! {
-        didSet {
-            announcementView.layer.shadowPath = UIBezierPath(roundedRect: announcementView.bounds, cornerRadius: announcementView.layer.cornerRadius).cgPath
-        }
-    }
+    @IBOutlet private weak var announcementView: UIView!
+//        didSet {
+//            announcementView.layer.shadowPath = UIBezierPath(roundedRect: announcementView.bounds, cornerRadius: announcementView.layer.cornerRadius).cgPath
+//        }
+//    }
     @IBOutlet private weak var announcementTableView: UITableView! {
         didSet {
             announcementTableView.delegate = self
@@ -51,6 +51,12 @@ class MainViewController: UIViewController {
     }
     //MARK: - Actions
     @IBAction func didTappedMenuButton(_ sender: UIButton) {
+        let mainSubMenuViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainSubMenuViewController.identifier)
+        self.navigationController?.pushViewController(mainSubMenuViewController, animated: true)
+    }
+    
+    @IBAction func didTappedRegisterObituaryButton(_ sender: UIButton) {
+        
     }
     
     //MARK: - Helpers
@@ -60,7 +66,7 @@ class MainViewController: UIViewController {
         announcementView.layer.shadowColor = UIColor.black.cgColor
         announcementView.layer.shadowOffset = CGSize(width: 4, height: 15)
         announcementView.layer.shadowRadius = 10
-        announcementView.layer.shadowPath = UIBezierPath(roundedRect: announcementView.bounds, cornerRadius: announcementView.layer.cornerRadius).cgPath
+//        announcementView.layer.shadowPath = UIBezierPath(roundedRect: announcementView.bounds, cornerRadius: announcementView.layer.cornerRadius).cgPath
         announcementView.layer.masksToBounds = false
     }
 }

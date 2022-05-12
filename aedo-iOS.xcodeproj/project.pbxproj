@@ -94,6 +94,9 @@
 		24CC4B1927F808B9001BDFA1 /* TermService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4B1827F808B9001BDFA1 /* TermService.swift */; };
 		24CC4B1B27F808F8001BDFA1 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4B1A27F808F8001BDFA1 /* Term.swift */; };
 		24CC4B1E27F80B9B001BDFA1 /* MainNav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24CC4B1D27F80B9B001BDFA1 /* MainNav.storyboard */; };
+		24E8206F282CE70900EC50F4 /* RegisterObituaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8206E282CE70900EC50F4 /* RegisterObituaryViewController.swift */; };
+		24E82071282CF60000EC50F4 /* RegisterObituaryCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E82070282CF60000EC50F4 /* RegisterObituaryCustomTextField.swift */; };
+		24E82074282D151600EC50F4 /* OrderWreathNav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E82073282D151600EC50F4 /* OrderWreathNav.storyboard */; };
 		C5B5AD7A472A7775F082E432 /* Pods_aedo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -187,6 +190,9 @@
 		24CC4B1827F808B9001BDFA1 /* TermService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermService.swift; sourceTree = "<group>"; };
 		24CC4B1A27F808F8001BDFA1 /* Term.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
 		24CC4B1D27F80B9B001BDFA1 /* MainNav.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainNav.storyboard; sourceTree = "<group>"; };
+		24E8206E282CE70900EC50F4 /* RegisterObituaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterObituaryViewController.swift; sourceTree = "<group>"; };
+		24E82070282CF60000EC50F4 /* RegisterObituaryCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterObituaryCustomTextField.swift; sourceTree = "<group>"; };
+		24E82073282D151600EC50F4 /* OrderWreathNav.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderWreathNav.storyboard; sourceTree = "<group>"; };
 		3CB04653FAB6734767AA1362 /* Pods-aedo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		55F49DF30242C1A7C859A53F /* Pods-aedo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.release.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aedo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -374,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				24550AA328095FA700853B58 /* ObituaryListNav.storyboard */,
+				24E82068282CE6D100EC50F4 /* RegisterObituary */,
 				244D43B2281F07F70034D5C7 /* ObituaryList */,
 				244D43E32826EF680034D5C7 /* DetailObituary */,
 				244D43D3282346F40034D5C7 /* CondoleMessageList */,
@@ -576,6 +583,58 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		244D4408282CD7CA0034D5C7 /* MainNav */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4B1D27F80B9B001BDFA1 /* MainNav.storyboard */,
+				244D440D282CD7F30034D5C7 /* ViewModel */,
+				244D440C282CD7F00034D5C7 /* Model */,
+				244D440B282CD7EB0034D5C7 /* View */,
+				244D4409282CD7D90034D5C7 /* Networking */,
+			);
+			path = MainNav;
+			sourceTree = "<group>";
+		};
+		244D4409282CD7D90034D5C7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2425FB8927F93A5C0062E597 /* AnnouncementService.swift */,
+				244D440A282CD7E40034D5C7 /* Entity */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		244D440A282CD7E40034D5C7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2425FB8027F810A00062E597 /* Announcemnet.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		244D440B282CD7EB0034D5C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24CC4AFF27F705F7001BDFA1 /* MainViewController.swift */,
+				2425FB8B27F949520062E597 /* MainSubMenuViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		244D440C282CD7F00034D5C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		244D440D282CD7F30034D5C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		24CC4A8427F551CA001BDFA1 = {
 			isa = PBXGroup;
 			children = (
@@ -598,7 +657,9 @@
 			isa = PBXGroup;
 			children = (
 				244D43F6282C9EEC0034D5C7 /* LoginNav */,
+				244D4408282CD7CA0034D5C7 /* MainNav */,
 				244D43DA2823473C0034D5C7 /* ObituaryNav */,
+				24E82072282D14E900EC50F4 /* OrderWreathNav */,
 				24CC4ACC27F571F6001BDFA1 /* CommonClass */,
 				24CC4AAC27F553BD001BDFA1 /* Extension */,
 				24CC4AA527F552BC001BDFA1 /* Fonts */,
@@ -668,7 +729,6 @@
 		24CC4AD227F57274001BDFA1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2425FB8027F810A00062E597 /* Announcemnet.swift */,
 				247985AA2805360B00A8100C /* Inquiry.swift */,
 			);
 			path = Models;
@@ -717,7 +777,6 @@
 			children = (
 				24CC4AEA27F5B3C0001BDFA1 /* GFError.swift */,
 				24CC4AF027F5C1FE001BDFA1 /* HTTPMethod.swift */,
-				2425FB8927F93A5C0062E597 /* AnnouncementService.swift */,
 				247985AC2805377900A8100C /* InquiryService.swift */,
 			);
 			path = Services;
@@ -728,6 +787,7 @@
 			children = (
 				24CC4B0327F76665001BDFA1 /* CustomCheckButton.swift */,
 				24CC4B0527F76678001BDFA1 /* CustomTextField.swift */,
+				24E82070282CF60000EC50F4 /* RegisterObituaryCustomTextField.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -735,11 +795,64 @@
 		24CC4B1C27F80B7F001BDFA1 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				24CC4AFF27F705F7001BDFA1 /* MainViewController.swift */,
-				2425FB8B27F949520062E597 /* MainSubMenuViewController.swift */,
-				24CC4B1D27F80B9B001BDFA1 /* MainNav.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		24E82068282CE6D100EC50F4 /* RegisterObituary */ = {
+			isa = PBXGroup;
+			children = (
+				24E82069282CE6E300EC50F4 /* Networking */,
+				24E8206D282CE6F900EC50F4 /* Model */,
+				24E8206C282CE6F600EC50F4 /* View */,
+				24E8206A282CE6E800EC50F4 /* ViewModel */,
+			);
+			path = RegisterObituary;
+			sourceTree = "<group>";
+		};
+		24E82069282CE6E300EC50F4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				24E8206B282CE6E900EC50F4 /* Entity */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		24E8206A282CE6E800EC50F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		24E8206B282CE6E900EC50F4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		24E8206C282CE6F600EC50F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24E8206E282CE70900EC50F4 /* RegisterObituaryViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24E8206D282CE6F900EC50F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24E82072282D14E900EC50F4 /* OrderWreathNav */ = {
+			isa = PBXGroup;
+			children = (
+				24E82073282D151600EC50F4 /* OrderWreathNav.storyboard */,
+			);
+			path = OrderWreathNav;
 			sourceTree = "<group>";
 		};
 		7C4245A03A8820329133AF7E /* Frameworks */ = {
@@ -822,6 +935,7 @@
 				24CC4AA927F552E2001BDFA1 /* NotoSansCJKkr-Bold.otf in Resources */,
 				24550A9D2807EEE900853B58 /* SettingSwitchTableViewCell.xib in Resources */,
 				2425FB9127FB62600062E597 /* CustomerNav.storyboard in Resources */,
+				24E82074282D151600EC50F4 /* OrderWreathNav.storyboard in Resources */,
 				24CC4A9A27F551CB001BDFA1 /* Assets.xcassets in Resources */,
 				24CC4A9827F551CA001BDFA1 /* Main.storyboard in Resources */,
 				24CC4AAB27F552E2001BDFA1 /* NotoSansCJKkr-Medium.otf in Resources */,
@@ -885,6 +999,7 @@
 				2425FB9527FB7B540062E597 /* CustomerNoticeListTableViewCell.swift in Sources */,
 				24CC4B0227F75E06001BDFA1 /* PrivateInfoAccessViewController.swift in Sources */,
 				244D43E02824C2F70034D5C7 /* CondoleMessageListViewModel.swift in Sources */,
+				24E82071282CF60000EC50F4 /* RegisterObituaryCustomTextField.swift in Sources */,
 				24CC4AFC27F700A2001BDFA1 /* PermissionViewController.swift in Sources */,
 				247985A52805327100A8100C /* InquiryListViewController.swift in Sources */,
 				24CC4AE927F5A9D1001BDFA1 /* Verification.swift in Sources */,
@@ -896,6 +1011,7 @@
 				24455B11280C217100D23358 /* ObituaryListViewController.swift in Sources */,
 				244D43EF2826F1FC0034D5C7 /* DetailObituaryService.swift in Sources */,
 				24CC4AB227F55565001BDFA1 /* UIDevice.swift in Sources */,
+				24E8206F282CE70900EC50F4 /* RegisterObituaryViewController.swift in Sources */,
 				2425FB8F27FB62090062E597 /* CustomerMainViewController.swift in Sources */,
 				24CC4B0427F76665001BDFA1 /* CustomCheckButton.swift in Sources */,
 				24CC4ACB27F571B7001BDFA1 /* AppPolicy.swift in Sources */,

@@ -265,7 +265,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hFi-6y-V5f">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1033.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNY-1p-wIR">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
@@ -440,11 +440,11 @@
                                                     <constraint firstAttribute="height" constant="460" id="xYJ-Sn-qbe"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ync-K8-Iy9">
-                                                <rect key="frame" x="0.0" y="460" width="414" height="573.5"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ync-K8-Iy9">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="573.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xNO-jd-DqX">
-                                                        <rect key="frame" x="30" y="30" width="110.5" height="66.5"/>
+                                                        <rect key="frame" x="30" y="30" width="81.5" height="91"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="휴대전화 번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0h-oz-PKh">
                                                                 <rect key="frame" x="0.0" y="0.0" width="81.5" height="21"/>
@@ -452,8 +452,8 @@
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01035123584" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhN-6C-TQa">
-                                                                <rect key="frame" x="0.0" y="41" width="110.5" height="25.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhN-6C-TQa">
+                                                                <rect key="frame" x="0.0" y="41" width="50" height="50"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="17"/>
                                                                 <color key="textColor" red="0.95294117649999999" green="0.70196078429999997" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -461,7 +461,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="60d-Ie-9T2">
-                                                        <rect key="frame" x="30" y="116.5" width="354" height="68"/>
+                                                        <rect key="frame" x="30" y="141" width="354" height="68"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생년월일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyO-se-VRZ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="52" height="21"/>
@@ -498,7 +498,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="abe-SC-g8T">
-                                                        <rect key="frame" x="30" y="204.5" width="354" height="68"/>
+                                                        <rect key="frame" x="30" y="229" width="354" height="68"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weF-y5-KY3">
                                                                 <rect key="frame" x="0.0" y="0.0" width="26" height="21"/>
@@ -535,7 +535,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFC-do-bLG">
-                                                        <rect key="frame" x="0.0" y="322.5" width="414" height="251"/>
+                                                        <rect key="frame" x="0.0" y="347" width="414" height="251"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhC-Ot-6Ba">
                                                                 <rect key="frame" x="20" y="25" width="25" height="25"/>

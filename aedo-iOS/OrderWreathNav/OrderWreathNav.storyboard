@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKkr-Bold.otf">
+            <string>NotoSansCJKkr-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dug-EU-a3d">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문 정보" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOJ-Hd-xJp">
+                                        <rect key="frame" x="171.5" y="15" width="71.5" height="27"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5a-hq-bLJ">
+                                        <rect key="frame" x="368" y="17.5" width="21" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="questionmark.circle" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feY-6e-96O">
+                                        <rect key="frame" x="25" y="17.5" width="13" height="22"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.left" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.70196078429999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56.670000000000002" id="02G-ec-hSx"/>
+                                    <constraint firstItem="z5a-hq-bLJ" firstAttribute="centerY" secondItem="GOJ-Hd-xJp" secondAttribute="centerY" id="Bvd-mc-6vA"/>
+                                    <constraint firstItem="GOJ-Hd-xJp" firstAttribute="centerY" secondItem="Dug-EU-a3d" secondAttribute="centerY" id="S9a-L6-zKa"/>
+                                    <constraint firstItem="GOJ-Hd-xJp" firstAttribute="centerX" secondItem="Dug-EU-a3d" secondAttribute="centerX" id="UMZ-iq-YlF"/>
+                                    <constraint firstItem="feY-6e-96O" firstAttribute="leading" secondItem="Dug-EU-a3d" secondAttribute="leading" constant="25" id="az6-rB-ik5"/>
+                                    <constraint firstAttribute="trailing" secondItem="z5a-hq-bLJ" secondAttribute="trailing" constant="25" id="mi2-Wi-qtD"/>
+                                    <constraint firstItem="feY-6e-96O" firstAttribute="centerY" secondItem="GOJ-Hd-xJp" secondAttribute="centerY" id="nfc-nf-Nkh"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UpU-VO-5cD">
+                                <rect key="frame" x="0.0" y="108" width="414" height="1269"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7b-oq-XjC">
+                                        <rect key="frame" x="0.0" y="143" width="414" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="d7b-oq-XjC" firstAttribute="bottom" secondItem="7Dt-6k-e8k" secondAttribute="bottom" id="BKu-Gu-CSt"/>
+                                    <constraint firstItem="d7b-oq-XjC" firstAttribute="trailing" secondItem="7Dt-6k-e8k" secondAttribute="trailing" id="IF4-kB-x91"/>
+                                    <constraint firstItem="d7b-oq-XjC" firstAttribute="top" secondItem="7Dt-6k-e8k" secondAttribute="top" id="Iz0-aI-PU7"/>
+                                    <constraint firstItem="d7b-oq-XjC" firstAttribute="width" secondItem="IcW-oG-fs7" secondAttribute="width" id="LK8-YD-X6J"/>
+                                    <constraint firstItem="d7b-oq-XjC" firstAttribute="leading" secondItem="7Dt-6k-e8k" secondAttribute="leading" id="exI-VR-zPU"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="7Dt-6k-e8k"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="IcW-oG-fs7"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="UpU-VO-5cD" secondAttribute="bottom" id="DG4-0M-AUo"/>
+                            <constraint firstItem="UpU-VO-5cD" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="NhP-6q-ZZ7"/>
+                            <constraint firstItem="Dug-EU-a3d" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Vez-Tu-eSw"/>
+                            <constraint firstItem="UpU-VO-5cD" firstAttribute="top" secondItem="Dug-EU-a3d" secondAttribute="bottom" id="hPY-SX-9B8"/>
+                            <constraint firstItem="UpU-VO-5cD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="lJl-gY-cTl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Dug-EU-a3d" secondAttribute="trailing" id="q2d-dg-X0D"/>
+                            <constraint firstItem="Dug-EU-a3d" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="vuw-zP-Zbh"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="1500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="50.892857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

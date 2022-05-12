@@ -78,7 +78,7 @@ class AuthService {
             }
             
             guard let response = response as? HTTPURLResponse, (200..<300) ~= response.statusCode else {
-                if (response as! HTTPURLResponse).statusCode == 404 {
+                if (response as! HTTPURLResponse).statusCode == 400 {
                     completion(.failure(.notUser))
                     return
                 }
@@ -94,7 +94,7 @@ class AuthService {
         }.resume()
     }
     
-    func signUp(phone: String, birth: String, name: String, terms: Bool, completion: @escaping ((Result<SignUpResponse, GFError>) -> Void)) {
+    func signUp(phone: String, birth: String, name: String, terms: Bool, smsnumber: String, completion: @escaping ((Result<SignUpResponse, GFError>) -> Void)) {
         guard let url = URL(string: "\(Constant.BASE_URL)v1/user") else {
             completion(.failure(.invalidURL))
             return
