@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GL9-av-95L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zpm-E1-nxZ">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -749,7 +749,7 @@
                                 <rect key="frame" x="0.0" y="100.66666666666663" width="390" height="1399.3333333333335"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0W-m1-YUU">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1354"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1310"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztu-Kb-4om">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="152"/>
@@ -773,7 +773,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XeP-n7-3I8" customClass="RegisterObituaryCustomTextField" customModule="aedo_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="25" y="63.999999999999986" width="240" height="34"/>
+                                                        <rect key="frame" x="25" y="63.999999999999986" width="220" height="34"/>
                                                         <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -781,7 +781,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PEs-Ro-tLX">
                                                         <rect key="frame" x="25" y="107.99999999999999" width="340" height="34.000000000000014"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSa-FS-OSr" customClass="RegisterObituaryCustomTextField" customModule="aedo_iOS" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSa-FS-OSr">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="Iza-Uo-2pf"/>
@@ -789,7 +789,7 @@
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="연락처" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4v7-qI-4dL" customClass="RegisterObituaryCustomTextField" customModule="aedo_iOS" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="연락처" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4v7-qI-4dL">
                                                                 <rect key="frame" x="105" y="0.0" width="235" height="34"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -797,9 +797,9 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwj-yC-Ig2">
-                                                        <rect key="frame" x="295" y="64.666666666666671" width="70" height="33"/>
+                                                        <rect key="frame" x="275" y="64.666666666666671" width="90" height="33"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="70" id="yB9-xI-OuH"/>
+                                                            <constraint firstAttribute="width" constant="90" id="yB9-xI-OuH"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -871,7 +871,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="장례식장 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mhv-GH-3yE" customClass="RegisterObituaryCustomTextField" customModule="aedo_iOS" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="장례식장 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mhv-GH-3yE">
                                                         <rect key="frame" x="25" y="108.00000000000003" width="340" height="34"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -891,7 +891,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Hk-vO-Gse">
-                                                <rect key="frame" x="0.0" y="304" width="390" height="152"/>
+                                                <rect key="frame" x="0.0" y="304" width="390" height="108"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CiP-86-Fp3">
                                                         <rect key="frame" x="25" y="25" width="74.666666666666671" height="24"/>
@@ -911,16 +911,10 @@
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tse-1i-Vus" customClass="RegisterObituaryCustomTextField" customModule="aedo_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="25" y="64" width="340" height="34"/>
-                                                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RbP-pW-cu1">
-                                                        <rect key="frame" x="25" y="107.99999999999994" width="247" height="34"/>
+                                                        <rect key="frame" x="25" y="64" width="247" height="34"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(필수) 고인 성함" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3xq-Rj-w00" customClass="RegisterObituaryCustomTextField" customModule="aedo_iOS" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(필수) 고인 성함" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3xq-Rj-w00">
                                                                 <rect key="frame" x="0.0" y="0.0" width="170" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="170" id="2uD-KY-Flk"/>
@@ -928,7 +922,7 @@
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RZy-MP-1BV" customClass="RegisterObituaryCustomTextField" customModule="aedo_iOS" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RZy-MP-1BV">
                                                                 <rect key="frame" x="175" y="0.0" width="54" height="34"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -945,17 +939,14 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="RbP-pW-cu1" secondAttribute="bottom" constant="10" id="Bef-zq-fW2"/>
-                                                    <constraint firstItem="Tse-1i-Vus" firstAttribute="leading" secondItem="7Hk-vO-Gse" secondAttribute="leading" constant="25" id="Bpx-AJ-wcl"/>
-                                                    <constraint firstItem="RbP-pW-cu1" firstAttribute="top" secondItem="Tse-1i-Vus" secondAttribute="bottom" constant="10" id="IMu-tE-OP2"/>
-                                                    <constraint firstItem="Tse-1i-Vus" firstAttribute="top" secondItem="CiP-86-Fp3" secondAttribute="bottom" constant="15" id="XhH-De-c2N"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Tse-1i-Vus" secondAttribute="trailing" constant="25" id="iPe-7H-Win"/>
+                                                    <constraint firstItem="RbP-pW-cu1" firstAttribute="top" secondItem="CiP-86-Fp3" secondAttribute="bottom" constant="15" id="GRo-0n-3JT"/>
                                                     <constraint firstItem="CiP-86-Fp3" firstAttribute="leading" secondItem="7Hk-vO-Gse" secondAttribute="leading" constant="25" id="mdJ-0b-QGW"/>
                                                     <constraint firstItem="CiP-86-Fp3" firstAttribute="top" secondItem="7Hk-vO-Gse" secondAttribute="top" constant="25" id="wih-vr-F1D"/>
                                                     <constraint firstItem="RbP-pW-cu1" firstAttribute="leading" secondItem="7Hk-vO-Gse" secondAttribute="leading" constant="25" id="xlh-Hn-um2"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bq6-n6-ySu">
-                                                <rect key="frame" x="0.0" y="456" width="390" height="179"/>
+                                                <rect key="frame" x="0.0" y="411.99999999999994" width="390" height="179.00000000000006"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="22z-Ye-6Mb">
                                                         <rect key="frame" x="25" y="25" width="74.666666666666671" height="24"/>
@@ -1009,7 +1000,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dS3-5Y-G86">
-                                                <rect key="frame" x="0.0" y="635" width="390" height="109"/>
+                                                <rect key="frame" x="0.0" y="591" width="390" height="109"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rJH-di-IMA">
                                                         <rect key="frame" x="25" y="25" width="70" height="24"/>
@@ -1029,7 +1020,7 @@
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-Me-RA9">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-Me-RA9" customClass="RegisterObituaryDateView" customModule="aedo_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="25" y="64" width="150" height="35"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="obituary_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="GI6-op-NGp">
@@ -1046,11 +1037,14 @@
                                                                     <constraint firstAttribute="width" constant="1" id="zJS-jf-QAY"/>
                                                                 </constraints>
                                                             </view>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2022-02-01" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ue1-jZ-qRd">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2022-02-01" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ue1-jZ-qRd">
                                                                 <rect key="frame" x="35" y="0.0" width="115" height="35"/>
                                                                 <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="didTappedDatePicker:" destination="zpm-E1-nxZ" eventType="editingDidBegin" id="byl-Sr-ZTM"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1068,8 +1062,8 @@
                                                             <constraint firstItem="GI6-op-NGp" firstAttribute="leading" secondItem="uuV-Me-RA9" secondAttribute="leading" constant="8" id="zTH-XS-Uz8"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9A-bY-Eb5">
-                                                        <rect key="frame" x="190" y="64" width="110" height="35"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9A-bY-Eb5" customClass="RegisterObituaryDateView" customModule="aedo_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="190" y="64" width="130" height="35"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="obituary_clock" translatesAutoresizingMaskIntoConstraints="NO" id="LXz-g1-IxE">
                                                                 <rect key="frame" x="8" y="8.6666666666667425" width="18" height="18"/>
@@ -1085,11 +1079,14 @@
                                                                     <constraint firstAttribute="width" constant="1" id="PyV-Gu-IVc"/>
                                                                 </constraints>
                                                             </view>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X99-pO-C1T">
-                                                                <rect key="frame" x="35" y="0.0" width="75" height="35"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X99-pO-C1T">
+                                                                <rect key="frame" x="35" y="0.0" width="95" height="35"/>
                                                                 <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="didTappedTimePicker:" destination="zpm-E1-nxZ" eventType="editingDidBegin" id="VZm-fp-dxD"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1098,7 +1095,7 @@
                                                             <constraint firstItem="LXz-g1-IxE" firstAttribute="centerY" secondItem="R9A-bY-Eb5" secondAttribute="centerY" id="LTx-Ue-RhC"/>
                                                             <constraint firstAttribute="height" constant="35" id="OWp-E1-TLN"/>
                                                             <constraint firstItem="5ah-PR-UgQ" firstAttribute="leading" secondItem="LXz-g1-IxE" secondAttribute="trailing" constant="8" id="X85-9c-w8j"/>
-                                                            <constraint firstAttribute="width" constant="110" id="bZi-YJ-vZ6"/>
+                                                            <constraint firstAttribute="width" constant="130" id="bZi-YJ-vZ6"/>
                                                             <constraint firstItem="LXz-g1-IxE" firstAttribute="leading" secondItem="R9A-bY-Eb5" secondAttribute="leading" constant="8" id="iOF-5m-Axd"/>
                                                             <constraint firstAttribute="bottom" secondItem="X99-pO-C1T" secondAttribute="bottom" id="n3f-ZF-4gI"/>
                                                             <constraint firstItem="X99-pO-C1T" firstAttribute="top" secondItem="R9A-bY-Eb5" secondAttribute="top" id="r5j-xE-qr2"/>
@@ -1120,7 +1117,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxF-hF-Lak">
-                                                <rect key="frame" x="0.0" y="744" width="390" height="109"/>
+                                                <rect key="frame" x="0.0" y="700" width="390" height="109"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vlK-Ds-HEI">
                                                         <rect key="frame" x="25" y="25" width="70" height="24"/>
@@ -1140,7 +1137,7 @@
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9M-8b-ek5">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9M-8b-ek5" customClass="RegisterObituaryDateView" customModule="aedo_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="25" y="64" width="150" height="35"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="obituary_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="lsN-Wz-u1t">
@@ -1157,11 +1154,14 @@
                                                                     <constraint firstAttribute="width" constant="1" id="cG6-wT-CxO"/>
                                                                 </constraints>
                                                             </view>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2022-02-01" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KAN-jP-Mb8">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2022-02-01" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KAN-jP-Mb8">
                                                                 <rect key="frame" x="35" y="0.0" width="115" height="35"/>
                                                                 <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="didTappedDatePicker:" destination="zpm-E1-nxZ" eventType="editingDidBegin" id="Gh7-mf-6th"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1179,8 +1179,8 @@
                                                             <constraint firstItem="KAN-jP-Mb8" firstAttribute="top" secondItem="u9M-8b-ek5" secondAttribute="top" id="zb0-LK-8yj"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFK-4b-1kl">
-                                                        <rect key="frame" x="190" y="64" width="110" height="35"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFK-4b-1kl" customClass="RegisterObituaryDateView" customModule="aedo_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="190" y="64" width="130" height="35"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="obituary_clock" translatesAutoresizingMaskIntoConstraints="NO" id="fQy-xK-k62">
                                                                 <rect key="frame" x="8" y="8.6666666666667425" width="18" height="18"/>
@@ -1196,11 +1196,14 @@
                                                                     <constraint firstAttribute="width" constant="1" id="RLQ-jc-LAb"/>
                                                                 </constraints>
                                                             </view>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lgL-DO-eld">
-                                                                <rect key="frame" x="35" y="0.0" width="75" height="35"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lgL-DO-eld">
+                                                                <rect key="frame" x="35" y="0.0" width="95" height="35"/>
                                                                 <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="didTappedTimePicker:" destination="zpm-E1-nxZ" eventType="editingDidBegin" id="DxA-xR-93g"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1210,7 +1213,7 @@
                                                             <constraint firstItem="01i-cb-ipf" firstAttribute="leading" secondItem="fQy-xK-k62" secondAttribute="trailing" constant="8" id="EDP-ic-85F"/>
                                                             <constraint firstItem="lgL-DO-eld" firstAttribute="leading" secondItem="01i-cb-ipf" secondAttribute="trailing" id="IpI-kj-HHQ"/>
                                                             <constraint firstItem="lgL-DO-eld" firstAttribute="top" secondItem="sFK-4b-1kl" secondAttribute="top" id="J2S-Kd-qhF"/>
-                                                            <constraint firstAttribute="width" constant="110" id="TbX-xr-QC0"/>
+                                                            <constraint firstAttribute="width" constant="130" id="TbX-xr-QC0"/>
                                                             <constraint firstItem="fQy-xK-k62" firstAttribute="centerY" secondItem="sFK-4b-1kl" secondAttribute="centerY" id="cru-Z4-z6I"/>
                                                             <constraint firstAttribute="bottom" secondItem="01i-cb-ipf" secondAttribute="bottom" id="htV-X5-nMZ"/>
                                                             <constraint firstAttribute="bottom" secondItem="lgL-DO-eld" secondAttribute="bottom" id="lJm-nr-YEg"/>
@@ -1231,7 +1234,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4In-Zm-glS">
-                                                <rect key="frame" x="0.0" y="853" width="390" height="109"/>
+                                                <rect key="frame" x="0.0" y="809" width="390" height="109"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TwV-lv-QLj">
                                                         <rect key="frame" x="25" y="25" width="70" height="24"/>
@@ -1251,11 +1254,11 @@
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sT-QP-fws">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sT-QP-fws" customClass="RegisterObituaryDateView" customModule="aedo_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="25" y="64" width="150" height="35"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="obituary_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="Qzx-7J-Ydg">
-                                                                <rect key="frame" x="8" y="8.6666666666666288" width="18" height="18"/>
+                                                                <rect key="frame" x="8" y="8.6666666666667425" width="18" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="18" id="Xlh-1c-j0J"/>
                                                                     <constraint firstAttribute="width" constant="18" id="gop-sz-gdq"/>
@@ -1268,11 +1271,14 @@
                                                                     <constraint firstAttribute="width" constant="1" id="azj-dk-v4J"/>
                                                                 </constraints>
                                                             </view>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2022-02-01" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i8S-7j-uLj">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2022-02-01" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i8S-7j-uLj">
                                                                 <rect key="frame" x="35" y="0.0" width="115" height="35"/>
                                                                 <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="didTappedDatePicker:" destination="zpm-E1-nxZ" eventType="editingDidBegin" id="wMy-M6-rQK"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1290,11 +1296,11 @@
                                                             <constraint firstAttribute="bottom" secondItem="WDg-j4-9Nt" secondAttribute="bottom" id="zrH-Cm-Xcd"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvU-B8-yHG">
-                                                        <rect key="frame" x="190" y="64" width="110" height="35"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvU-B8-yHG" customClass="RegisterObituaryDateView" customModule="aedo_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="190" y="64" width="130" height="35"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="obituary_clock" translatesAutoresizingMaskIntoConstraints="NO" id="YNI-lP-Cth">
-                                                                <rect key="frame" x="8" y="8.6666666666666288" width="18" height="18"/>
+                                                                <rect key="frame" x="8" y="8.6666666666667425" width="18" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="18" id="YYC-BF-Nr0"/>
                                                                     <constraint firstAttribute="width" constant="18" id="ZY8-fW-jcC"/>
@@ -1307,18 +1313,21 @@
                                                                     <constraint firstAttribute="width" constant="1" id="hd3-a9-Xq6"/>
                                                                 </constraints>
                                                             </view>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oxa-AL-vje">
-                                                                <rect key="frame" x="35" y="0.0" width="75" height="35"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00:00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oxa-AL-vje">
+                                                                <rect key="frame" x="35" y="0.0" width="95" height="35"/>
                                                                 <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="didTappedTimePicker:" destination="zpm-E1-nxZ" eventType="editingDidBegin" id="5pb-8c-qHR"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstItem="jPc-JY-uxc" firstAttribute="top" secondItem="xvU-B8-yHG" secondAttribute="top" id="9WG-W7-No7"/>
                                                             <constraint firstAttribute="bottom" secondItem="Oxa-AL-vje" secondAttribute="bottom" id="9mB-3D-oe3"/>
-                                                            <constraint firstAttribute="width" constant="110" id="Alc-ja-M7S"/>
+                                                            <constraint firstAttribute="width" constant="130" id="Alc-ja-M7S"/>
                                                             <constraint firstItem="Oxa-AL-vje" firstAttribute="top" secondItem="xvU-B8-yHG" secondAttribute="top" id="COu-1I-W2K"/>
                                                             <constraint firstItem="jPc-JY-uxc" firstAttribute="leading" secondItem="YNI-lP-Cth" secondAttribute="trailing" constant="8" id="NZr-Ml-ZVr"/>
                                                             <constraint firstAttribute="height" constant="35" id="WZj-nl-29s"/>
@@ -1342,16 +1351,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Se-tK-ds2">
-                                                <rect key="frame" x="0.0" y="962.00000000000011" width="390" height="107.99999999999989"/>
+                                                <rect key="frame" x="0.0" y="918" width="390" height="108"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeI-Fn-avy">
-                                                        <rect key="frame" x="25" y="25" width="29.666666666666671" height="24"/>
+                                                        <rect key="frame" x="25" y="25.000000000000114" width="29.666666666666671" height="24"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="장지를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dzJ-GR-hnC" customClass="RegisterObituaryCustomTextField" customModule="aedo_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="25" y="64" width="340" height="34"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="장지를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dzJ-GR-hnC">
+                                                        <rect key="frame" x="25" y="64.000000000000114" width="340" height="34"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1367,7 +1376,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fbc-W5-VVe">
-                                                <rect key="frame" x="0.0" y="1070" width="390" height="174"/>
+                                                <rect key="frame" x="0.0" y="1026" width="390" height="174"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상주말씀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7q-BO-xUA">
                                                         <rect key="frame" x="25" y="25" width="59" height="24"/>
@@ -1382,8 +1391,8 @@
                                                             <constraint firstAttribute="height" constant="100" id="2Nv-Hx-UjC"/>
                                                         </constraints>
                                                         <color key="textColor" systemColor="labelColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1397,7 +1406,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuV-YM-qrt" customClass="CustomCheckButton" customModule="aedo_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="1274" width="340" height="50"/>
+                                                <rect key="frame" x="25" y="1230" width="340" height="50"/>
                                                 <color key="backgroundColor" red="0.83137254901960778" green="0.67843137254901964" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="knD-gL-6QU"/>
@@ -1470,10 +1479,24 @@
                     </view>
                     <size key="freeformSize" width="390" height="1500"/>
                     <connections>
+                        <outlet property="buriedPlaceTextField" destination="dzJ-GR-hnC" id="PyB-73-URU"/>
+                        <outlet property="coffinDatePicker" destination="KAN-jP-Mb8" id="xnD-2v-eB6"/>
+                        <outlet property="coffinTimePicker" destination="lgL-DO-eld" id="Wla-kP-Ucr"/>
+                        <outlet property="deathbedDatePicker" destination="Ue1-jZ-qRd" id="TOc-Iv-FV6"/>
+                        <outlet property="deathbedTimePicker" destination="X99-pO-C1T" id="oWX-WR-Tks"/>
+                        <outlet property="deceasedAgeTextField" destination="RZy-MP-1BV" id="R1m-fM-Lgp"/>
+                        <outlet property="deceasedPortraitImageView" destination="OPz-y4-3Sc" id="CRR-eY-NYh"/>
+                        <outlet property="deceasedTextField" destination="3xq-Rj-w00" id="i6O-p3-Gii"/>
+                        <outlet property="dofpDatePicker" destination="i8S-7j-uLj" id="poS-xe-VWN"/>
+                        <outlet property="dofpTimePicker" destination="Oxa-AL-vje" id="wYD-Sr-OkB"/>
+                        <outlet property="imageUploadButton" destination="wuz-8y-zpS" id="EH8-ey-jGv"/>
+                        <outlet property="placeNamePicker" destination="1A2-gQ-RXZ" id="zFa-Du-8KK"/>
+                        <outlet property="placeNameTextField" destination="Mhv-GH-3yE" id="itn-rW-WE6"/>
                         <outlet property="relationPicker" destination="XeP-n7-3I8" id="qzm-oM-e8q"/>
                         <outlet property="relationTextButton" destination="Rwj-yC-Ig2" id="dr6-Ac-e1z"/>
                         <outlet property="residentNameTextField" destination="bSa-FS-OSr" id="xI4-YJ-9NX"/>
                         <outlet property="residentPhoneNumberTextField" destination="4v7-qI-4dL" id="rfj-5Y-NQ5"/>
+                        <outlet property="residentWordTextView" destination="Wu9-yj-33U" id="GOH-fh-zi7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1HC-Aq-0Uj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -97,6 +97,7 @@
 		24E8206F282CE70900EC50F4 /* RegisterObituaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8206E282CE70900EC50F4 /* RegisterObituaryViewController.swift */; };
 		24E82071282CF60000EC50F4 /* RegisterObituaryCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E82070282CF60000EC50F4 /* RegisterObituaryCustomTextField.swift */; };
 		24E82074282D151600EC50F4 /* OrderWreathNav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E82073282D151600EC50F4 /* OrderWreathNav.storyboard */; };
+		24E82076282D1ED200EC50F4 /* RegisterObituaryDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E82075282D1ED200EC50F4 /* RegisterObituaryDateView.swift */; };
 		C5B5AD7A472A7775F082E432 /* Pods_aedo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -193,6 +194,7 @@
 		24E8206E282CE70900EC50F4 /* RegisterObituaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterObituaryViewController.swift; sourceTree = "<group>"; };
 		24E82070282CF60000EC50F4 /* RegisterObituaryCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterObituaryCustomTextField.swift; sourceTree = "<group>"; };
 		24E82073282D151600EC50F4 /* OrderWreathNav.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderWreathNav.storyboard; sourceTree = "<group>"; };
+		24E82075282D1ED200EC50F4 /* RegisterObituaryDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterObituaryDateView.swift; sourceTree = "<group>"; };
 		3CB04653FAB6734767AA1362 /* Pods-aedo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		55F49DF30242C1A7C859A53F /* Pods-aedo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.release.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aedo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -788,6 +790,7 @@
 				24CC4B0327F76665001BDFA1 /* CustomCheckButton.swift */,
 				24CC4B0527F76678001BDFA1 /* CustomTextField.swift */,
 				24E82070282CF60000EC50F4 /* RegisterObituaryCustomTextField.swift */,
+				24E82075282D1ED200EC50F4 /* RegisterObituaryDateView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1062,6 +1065,7 @@
 				2425FB9D27FFDFA20062E597 /* NoticeDetailViewController.swift in Sources */,
 				24CC4ACE27F5720E001BDFA1 /* NetworkMonitor.swift in Sources */,
 				24CC4ADD27F57605001BDFA1 /* CustomAlertViewController.swift in Sources */,
+				24E82076282D1ED200EC50F4 /* RegisterObituaryDateView.swift in Sources */,
 				24CC4B0B27F7CDE2001BDFA1 /* AuthService.swift in Sources */,
 				24CC4A9327F551CA001BDFA1 /* SceneDelegate.swift in Sources */,
 				24CC4AD727F57458001BDFA1 /* SplashViewController.swift in Sources */,
