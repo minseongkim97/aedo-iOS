@@ -32,7 +32,7 @@ class InquiryListViewController: UIViewController {
         }
         
         inquiryListViewModel.inquiryListUpdated = { [weak self] in
-                self?.inquiryListTableView.reloadData()
+            self?.inquiryListTableView.reloadData()
         }
         
         inquiryListViewModel.showNetworkErrorAlert = { [weak self] in

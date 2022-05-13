@@ -8,7 +8,7 @@
 import Foundation
 
 class AccessToken {
-    static var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNzQ4NDAzMTYwNzgxZDI3OWVkZTYzMyIsImlhdCI6MTY1MjQyNDQ5NSwiZXhwIjoxNjUyNDI4MDk1fQ.EAV0QAhWalqOWmQQeOKFxHBxedTETRrswAJY2S4zSJo"
+    static var token = ""
     
     static var signUpAccessToken: String = UserDefaults.standard.string(forKey: "signUpAccessToken") ?? "" {
         didSet {

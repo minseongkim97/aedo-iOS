@@ -41,6 +41,7 @@ class RegisterObituaryViewController: UIViewController {
     @IBOutlet weak var dofpTimePicker: UITextField!
     @IBOutlet weak var residentWordTextView: UITextView!
     @IBOutlet weak var buriedPlaceTextField: UITextField!
+    @IBOutlet weak var activity: UIActivityIndicatorView!
     
     let datePicker: UIDatePicker = {
         let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
@@ -132,7 +133,7 @@ class RegisterObituaryViewController: UIViewController {
     }
     
     @IBAction func didTappedMakeObituary(_ sender: UIButton) {
-        
+        activity.startAnimating()
         let now: String = {
             let date = Date()
             let formatter = DateFormatter()
@@ -152,11 +153,31 @@ class RegisterObituaryViewController: UIViewController {
                 eod: "\(deathbedDatePicker.text!) \(deathbedTimePicker.text!)",
                 coffin: "\(coffinDatePicker.text!) \(coffinTimePicker.text!)",
                 dofp: "\(dofpDatePicker.text!) \(dofpTimePicker.text!)",
-                buried: buriedPlaceTextField.text ?? "",
-                word: residentWordTextView.text ?? "",
+                buried: buriedPlaceTextField.text == "" ? "장지" : buriedPlaceTextField.text,
+                word: residentWordTextView.text == "" ? "상주말씀" : residentWordTextView.text,
                 created: now
             ),
-            image: deceasedPortraitImageView.image!)
+            image: deceasedPortraitImageView.image!) { [weak self] result in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    self.activity.stopAnimating()
+                }
+                
+                switch result {
+                case .success(_):
+                    DispatchQueue.main.async {
+                        self.showCustomAlert(alertType: .none, alertTitle: "부고 작성이 완료되었습니다.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+                    }
+                case . failure(.invalidResponse):
+                    DispatchQueue.main.async {
+                        self.showCustomAlert(alertType: .none, alertTitle: "필수 항목들을 다시 확인해주십시오.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+                    }
+                default:
+                    DispatchQueue.main.async {
+                        self.showCustomAlert(alertType: .none, alertTitle: "네트워크가 원활하지 않습니다.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+                    }
+                }
+            }
     }
     
     //MARK: - Helpers

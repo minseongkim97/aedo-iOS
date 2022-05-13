@@ -56,7 +56,8 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func didTappedRegisterObituaryButton(_ sender: UIButton) {
-        
+        let registerObituaryViewController = UIStoryboard(name: "ObituaryNav", bundle: nil).instantiateViewController(identifier: RegisterObituaryViewController.identifier)
+        self.navigationController?.pushViewController(registerObituaryViewController, animated: true)
     }
     
     //MARK: - Helpers

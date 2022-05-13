@@ -924,6 +924,9 @@
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RZy-MP-1BV">
                                                                 <rect key="frame" x="175" y="0.0" width="62" height="34"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="62" id="sho-RR-0Mo"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -1473,6 +1476,10 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="Vj3-YL-eN8"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="0cB-9A-5cS"/>
                             </scrollView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hHF-QI-OFw">
+                                <rect key="frame" x="176.66666666666666" y="731.66666666666663" width="37" height="37"/>
+                                <color key="color" red="0.95294117649999999" green="0.70196078429999997" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hp5-YS-12F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1481,13 +1488,16 @@
                             <constraint firstItem="ZMF-1J-voh" firstAttribute="top" secondItem="hp5-YS-12F" secondAttribute="top" id="ACq-ZK-Inn"/>
                             <constraint firstItem="IrG-L5-hEb" firstAttribute="top" secondItem="ZMF-1J-voh" secondAttribute="bottom" id="J1g-vg-DUN"/>
                             <constraint firstAttribute="bottom" secondItem="IrG-L5-hEb" secondAttribute="bottom" id="Z7M-Nx-gdO"/>
+                            <constraint firstItem="hHF-QI-OFw" firstAttribute="centerY" secondItem="6ol-at-vVx" secondAttribute="centerY" id="fvo-bo-aU9"/>
                             <constraint firstItem="IrG-L5-hEb" firstAttribute="leading" secondItem="hp5-YS-12F" secondAttribute="leading" id="g7T-yf-BSM"/>
                             <constraint firstItem="IrG-L5-hEb" firstAttribute="trailing" secondItem="hp5-YS-12F" secondAttribute="trailing" id="mYP-AD-2Xy"/>
+                            <constraint firstItem="hHF-QI-OFw" firstAttribute="centerX" secondItem="6ol-at-vVx" secondAttribute="centerX" id="rg8-aR-Bh1"/>
                             <constraint firstItem="ZMF-1J-voh" firstAttribute="leading" secondItem="hp5-YS-12F" secondAttribute="leading" id="zJZ-oI-Ouj"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="390" height="1500"/>
                     <connections>
+                        <outlet property="activity" destination="hHF-QI-OFw" id="rtq-dr-bxG"/>
                         <outlet property="buriedPlaceTextField" destination="dzJ-GR-hnC" id="PyB-73-URU"/>
                         <outlet property="coffinDatePicker" destination="KAN-jP-Mb8" id="xnD-2v-eB6"/>
                         <outlet property="coffinTimePicker" destination="lgL-DO-eld" id="Wla-kP-Ucr"/>
