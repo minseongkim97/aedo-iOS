@@ -21,11 +21,10 @@ struct ObituaryResponse: Codable {
     var eod: String
     var coffin: String
     var dofp: String
-    var buried: String
-    var word: String
+    var buried: String?
+    var word: String?
     var userId: String
     var created: String
-    
 }
 
 struct Resident: Codable {

@@ -7,6 +7,7 @@
 
 import UIKit
 import DropDown
+import Photos
 
 class CustomBarButton: UIBarButtonItem {
   var sender: UITextField?
@@ -20,6 +21,8 @@ enum ToolBarMode {
 class RegisterObituaryViewController: UIViewController {
     //MARK: - Properties
     static let identifier = "RegisterObituaryViewController"
+    let registerObituaryService = RegisterObituaryService()
+    
     @IBOutlet weak var relationPicker: UITextField!
     @IBOutlet weak var relationTextButton: UIButton!
     @IBOutlet weak var residentNameTextField: RegisterObituaryCustomTextField!
@@ -40,8 +43,7 @@ class RegisterObituaryViewController: UIViewController {
     @IBOutlet weak var buriedPlaceTextField: UITextField!
     
     let datePicker: UIDatePicker = {
-        let datePicker = UIDatePicker()
-        datePicker.backgroundColor = .white
+        let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
         datePicker.datePickerMode = .date
         datePicker.locale = Locale(identifier: "ko_KR")
         datePicker.timeZone = TimeZone(abbreviation: "KST")
@@ -49,8 +51,7 @@ class RegisterObituaryViewController: UIViewController {
     }()
     
     let timePicker: UIDatePicker = {
-        let datePicker = UIDatePicker()
-        datePicker.backgroundColor = .white
+        let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
         datePicker.datePickerMode = .time
         datePicker.locale = Locale(identifier: "ko_KR")
         datePicker.timeZone = TimeZone(abbreviation: "KST")
@@ -80,8 +81,10 @@ class RegisterObituaryViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        dismissKeyboardWhenTappedAround()
         setConfigure()
-        setDropDown()
+        setRelationDropDown()
+        setPlaceDropDown()
     }
     
     //MARK: - Actions
@@ -91,6 +94,12 @@ class RegisterObituaryViewController: UIViewController {
     
     @IBAction func didTappedTimePicker(_ sender: UITextField) {
         setTimePickerView(of: sender)
+    }
+    
+    @IBAction func didTappedUploadImageButton(_ sender: UIButton) {
+        let imagePickerVC = UIImagePickerController()
+        imagePickerVC.delegate = self
+        self.present(imagePickerVC, animated: true, completion: nil)
     }
     
     //MARK: - Selector
@@ -106,7 +115,7 @@ class RegisterObituaryViewController: UIViewController {
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyyy-MM-dd"
         customBarButton.sender!.text = dateformatter.string(from: datePicker.date)
-        
+
         self.view.endEditing(true)
     }
     
@@ -120,6 +129,34 @@ class RegisterObituaryViewController: UIViewController {
     
     @objc func cancelButtonPressed() {
         self.view.endEditing(true)
+    }
+    
+    @IBAction func didTappedMakeObituary(_ sender: UIButton) {
+        
+        let now: String = {
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let dateString = formatter.string(from: date)
+            return dateString
+        }()
+        
+        registerObituaryService.uploadImage(
+            request: RegisterObituaryRequest(
+                relation: relationPicker.text!,
+                residentName: residentNameTextField.text!,
+                residentphone: residentPhoneNumberTextField.text!,
+                deceasedName: deceasedTextField.text!,
+                deceasedAge: deceasedAgeTextField.text!,
+                place: placeNameTextField.text!,
+                eod: "\(deathbedDatePicker.text!) \(deathbedTimePicker.text!)",
+                coffin: "\(coffinDatePicker.text!) \(coffinTimePicker.text!)",
+                dofp: "\(dofpDatePicker.text!) \(dofpTimePicker.text!)",
+                buried: buriedPlaceTextField.text ?? "",
+                word: residentWordTextView.text ?? "",
+                created: now
+            ),
+            image: deceasedPortraitImageView.image!)
     }
     
     //MARK: - Helpers
@@ -138,7 +175,7 @@ class RegisterObituaryViewController: UIViewController {
         residentWordTextView.layer.masksToBounds = true
     }
 
-    private func setDropDown() {
+    private func setRelationDropDown() {
         relationMenu.anchorView = relationPicker
         relationMenu.bottomOffset = CGPoint(x: 0, y:(relationMenu.anchorView?.plainView.bounds.height)!)
         relationMenu.backgroundColor = .white
@@ -154,7 +191,9 @@ class RegisterObituaryViewController: UIViewController {
         relationPickerGesture.numberOfTapsRequired = 1
         relationPickerGesture.numberOfTouchesRequired = 1
         relationPicker.addGestureRecognizer(relationPickerGesture)
-        
+    }
+    
+    private func setPlaceDropDown() {
         placeMenu.anchorView = placeNamePicker
         placeMenu.bottomOffset = CGPoint(x: 0, y:(placeMenu.anchorView?.plainView.bounds.height)!)
         placeMenu.backgroundColor = .white
@@ -173,18 +212,18 @@ class RegisterObituaryViewController: UIViewController {
     }
     
     private func makeToolBar(of sender: UITextField, mode: ToolBarMode) -> UIToolbar {
-        let toolbar = UIToolbar()
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 40))
         toolbar.sizeToFit()
         var doneButton: CustomBarButton
         
         if mode == .date {
-            doneButton = CustomBarButton(barButtonSystemItem: .done, target: self, action: #selector(doneButtonPressed(of:)))
+            doneButton = CustomBarButton(title: "완료", style: .plain, target: self, action: #selector(doneButtonPressed(of:)))
         } else {
-            doneButton = CustomBarButton(barButtonSystemItem: .done, target: self, action: #selector(timeDoneButtonPressed(of:)))
+            doneButton = CustomBarButton(title: "완료", style: .plain, target: self, action: #selector(timeDoneButtonPressed(of:)))
         }
         
         doneButton.sender = sender
-        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButtonPressed))
+        let cancelButton = UIBarButtonItem(title: "취소", style: .plain, target: self, action: #selector(cancelButtonPressed))
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         toolbar.setItems([cancelButton, flexibleSpace, doneButton], animated: true)
         
@@ -204,13 +243,19 @@ class RegisterObituaryViewController: UIViewController {
         if #available(iOS 13.4, *) {
             timePicker.preferredDatePickerStyle = .wheels
         }
-    
+
         sender.inputAccessoryView = makeToolBar(of: sender, mode: .time)
         sender.inputView = timePicker
     }
 }
 
-//MARK: - Extension: PickerViewDelegate, PickerViewDataSource
-extension RegisterObituaryViewController {
-    
+//MARK: - Extension: UIImagePickerControllerDelegate
+extension RegisterObituaryViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            deceasedPortraitImageView.image = image
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
 }

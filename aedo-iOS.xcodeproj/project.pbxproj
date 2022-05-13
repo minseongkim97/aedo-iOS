@@ -98,6 +98,10 @@
 		24E82071282CF60000EC50F4 /* RegisterObituaryCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E82070282CF60000EC50F4 /* RegisterObituaryCustomTextField.swift */; };
 		24E82074282D151600EC50F4 /* OrderWreathNav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E82073282D151600EC50F4 /* OrderWreathNav.storyboard */; };
 		24E82076282D1ED200EC50F4 /* RegisterObituaryDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E82075282D1ED200EC50F4 /* RegisterObituaryDateView.swift */; };
+		24E82078282DFBFB00EC50F4 /* RegisterObituaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E82077282DFBFB00EC50F4 /* RegisterObituaryService.swift */; };
+		24E8207A282E0DDD00EC50F4 /* ImageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E82079282E0DDD00EC50F4 /* ImageFile.swift */; };
+		24E8207E282E1B1000EC50F4 /* RegisterObituaryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8207D282E1B1000EC50F4 /* RegisterObituaryRequest.swift */; };
+		24E82080282E1B2C00EC50F4 /* RegisterObituaryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8207F282E1B2C00EC50F4 /* RegisterObituaryResponse.swift */; };
 		C5B5AD7A472A7775F082E432 /* Pods_aedo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -195,6 +199,10 @@
 		24E82070282CF60000EC50F4 /* RegisterObituaryCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterObituaryCustomTextField.swift; sourceTree = "<group>"; };
 		24E82073282D151600EC50F4 /* OrderWreathNav.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderWreathNav.storyboard; sourceTree = "<group>"; };
 		24E82075282D1ED200EC50F4 /* RegisterObituaryDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterObituaryDateView.swift; sourceTree = "<group>"; };
+		24E82077282DFBFB00EC50F4 /* RegisterObituaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterObituaryService.swift; sourceTree = "<group>"; };
+		24E82079282E0DDD00EC50F4 /* ImageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFile.swift; sourceTree = "<group>"; };
+		24E8207D282E1B1000EC50F4 /* RegisterObituaryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterObituaryRequest.swift; sourceTree = "<group>"; };
+		24E8207F282E1B2C00EC50F4 /* RegisterObituaryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterObituaryResponse.swift; sourceTree = "<group>"; };
 		3CB04653FAB6734767AA1362 /* Pods-aedo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		55F49DF30242C1A7C859A53F /* Pods-aedo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.release.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aedo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -816,6 +824,7 @@
 		24E82069282CE6E300EC50F4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				24E82077282DFBFB00EC50F4 /* RegisterObituaryService.swift */,
 				24E8206B282CE6E900EC50F4 /* Entity */,
 			);
 			path = Networking;
@@ -831,6 +840,8 @@
 		24E8206B282CE6E900EC50F4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				24E8207D282E1B1000EC50F4 /* RegisterObituaryRequest.swift */,
+				24E8207F282E1B2C00EC50F4 /* RegisterObituaryResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -846,6 +857,7 @@
 		24E8206D282CE6F900EC50F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24E82079282E0DDD00EC50F4 /* ImageFile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1022,6 +1034,7 @@
 				24455B0E280C1C9D00D23358 /* ObituaryListTableViewCell.swift in Sources */,
 				24CC4AE027F5789E001BDFA1 /* UIView.swift in Sources */,
 				247985A12804214900A8100C /* CommonQuestionTableViewCell.swift in Sources */,
+				24E82080282E1B2C00EC50F4 /* RegisterObituaryResponse.swift in Sources */,
 				2425FB9327FB76CC0062E597 /* CustomerNoticeListViewController.swift in Sources */,
 				244D43DE282348930034D5C7 /* CondoleMessageListResponse.swift in Sources */,
 				244D43ED2826F14E0034D5C7 /* DetailObituaryViewModel.swift in Sources */,
@@ -1047,13 +1060,16 @@
 				24CC4AE427F57B7A001BDFA1 /* Constant.swift in Sources */,
 				24CC4AE227F579FA001BDFA1 /* UIViewController.swift in Sources */,
 				2425FB8A27F93A5C0062E597 /* AnnouncementService.swift in Sources */,
+				24E8207E282E1B1000EC50F4 /* RegisterObituaryRequest.swift in Sources */,
 				244D43DC2823487C0034D5C7 /* CondoleMessageListService.swift in Sources */,
 				24550A9C2807EEE900853B58 /* SettingSwitchTableViewCell.swift in Sources */,
 				24CC4AFE27F705EA001BDFA1 /* AuthViewController.swift in Sources */,
 				244D43C0281F0BCA0034D5C7 /* ObituaryListViewModel.swift in Sources */,
+				24E82078282DFBFB00EC50F4 /* RegisterObituaryService.swift in Sources */,
 				2425FB9B27FFABD50062E597 /* AnnouncementListViewModel.swift in Sources */,
 				24455B13280C8AFF00D23358 /* CondoleMessageListViewController.swift in Sources */,
 				24550AA02807FA5C00853B58 /* SettingVersionTableViewCell.swift in Sources */,
+				24E8207A282E0DDD00EC50F4 /* ImageFile.swift in Sources */,
 				24550A892807B6B000853B58 /* SettingViewController.swift in Sources */,
 				244D43BA281F085F0034D5C7 /* ObituaryListResponse.swift in Sources */,
 				24CC4B1927F808B9001BDFA1 /* TermService.swift in Sources */,

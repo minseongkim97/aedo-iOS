@@ -17,7 +17,7 @@ extension UIViewController: CustomAlertDelegate {
     }
     
     @objc func dismissKeyboard() {
-        self.view.endEditing(false)
+        self.view.endEditing(true)
     }
     
     // MARK: UIWindow의 rootViewController를 변경하여 화면전환
