@@ -14,10 +14,6 @@ class MainViewController: UIViewController {
     
     @IBOutlet private weak var activity: UIActivityIndicatorView!
     @IBOutlet private weak var announcementView: UIView!
-//        didSet {
-//            announcementView.layer.shadowPath = UIBezierPath(roundedRect: announcementView.bounds, cornerRadius: announcementView.layer.cornerRadius).cgPath
-//        }
-//    }
     @IBOutlet private weak var announcementTableView: UITableView! {
         didSet {
             announcementTableView.delegate = self
@@ -65,6 +61,11 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(customerNoticeListViewController, animated: true)
     }
     
+    @IBAction func didTappedCustomerCenterButton(_ sender: UIButton) {
+        let customerCenterViewController = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: CustomerMainViewController.identifier)
+        self.navigationController?.pushViewController(customerCenterViewController, animated: true)
+    }
+    
     //MARK: - Helpers
     private func setUI() {
         announcementView.layer.cornerRadius = 10
@@ -72,7 +73,6 @@ class MainViewController: UIViewController {
         announcementView.layer.shadowColor = UIColor.black.cgColor
         announcementView.layer.shadowOffset = CGSize(width: 4, height: 15)
         announcementView.layer.shadowRadius = 10
-//        announcementView.layer.shadowPath = UIBezierPath(roundedRect: announcementView.bounds, cornerRadius: announcementView.layer.cornerRadius).cgPath
         announcementView.layer.masksToBounds = false
     }
 }
@@ -90,5 +90,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setAnnouncement(announcement)
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        guard let detailNoticeVC = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: NoticeDetailViewController.identifier) as? NoticeDetailViewController else { return }
+        detailNoticeVC.noticeID = announcementListViewModel.announcement(at: indexPath.row).id
+        
+        self.navigationController?.pushViewController(detailNoticeVC, animated: true)
     }
 }

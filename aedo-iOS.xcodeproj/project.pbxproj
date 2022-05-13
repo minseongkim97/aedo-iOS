@@ -116,7 +116,7 @@
 		2425FB9027FB62600062E597 /* CustomerNav.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomerNav.storyboard; sourceTree = "<group>"; };
 		2425FB9227FB76CC0062E597 /* CustomerNoticeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerNoticeListViewController.swift; sourceTree = "<group>"; };
 		2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerNoticeListTableViewCell.swift; sourceTree = "<group>"; };
-		2425FB9A27FFABD50062E597 /* AnnouncementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnouncementListViewModel.swift; path = "aedo-iOS/AnnouncementListViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		2425FB9A27FFABD50062E597 /* AnnouncementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnouncementListViewModel.swift; path = "aedo-iOS/CustomerNav/ViewModel/AnnouncementListViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
 		24455B0C280C1C9D00D23358 /* ObituaryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObituaryListTableViewCell.swift; sourceTree = "<group>"; };
 		24455B0D280C1C9D00D23358 /* ObituaryListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObituaryListTableViewCell.xib; sourceTree = "<group>"; };
@@ -254,15 +254,11 @@
 		2425FB8D27FB61F80062E597 /* Customer */ = {
 			isa = PBXGroup;
 			children = (
-				2425FB8E27FB62090062E597 /* CustomerMainViewController.swift */,
-				2425FB9227FB76CC0062E597 /* CustomerNoticeListViewController.swift */,
-				2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */,
 				2479859E280420C700A8100C /* CommonQuestionListViewController.swift */,
 				247985A42805327100A8100C /* InquiryListViewController.swift */,
 				24550A8C2807D13600853B58 /* DetailInquiryViewController.swift */,
 				24550A882807B6B000853B58 /* SettingViewController.swift */,
 				24550A8A2807D0B500853B58 /* WithdrawalViewController.swift */,
-				2425FB9027FB62600062E597 /* CustomerNav.storyboard */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -612,7 +608,6 @@
 		244D4409282CD7D90034D5C7 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				2425FB8927F93A5C0062E597 /* AnnouncementService.swift */,
 				24E82081282F079100EC50F4 /* UserService.swift */,
 				244D440A282CD7E40034D5C7 /* Entity */,
 			);
@@ -622,7 +617,6 @@
 		244D440A282CD7E40034D5C7 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				2425FB8027F810A00062E597 /* Announcemnet.swift */,
 				24E82083282F07AD00EC50F4 /* User.swift */,
 			);
 			path = Entity;
@@ -675,6 +669,7 @@
 				244D43F6282C9EEC0034D5C7 /* LoginNav */,
 				244D4408282CD7CA0034D5C7 /* MainNav */,
 				244D43DA2823473C0034D5C7 /* ObituaryNav */,
+				24E82085282F1FEB00EC50F4 /* CustomerNav */,
 				24E82072282D14E900EC50F4 /* OrderWreathNav */,
 				24CC4ACC27F571F6001BDFA1 /* CommonClass */,
 				24CC4AAC27F553BD001BDFA1 /* Extension */,
@@ -764,7 +759,6 @@
 		24CC4AD427F57279001BDFA1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				2425FB9A27FFABD50062E597 /* AnnouncementListViewModel.swift */,
 				247985A8280534C800A8100C /* InquiryListViewModel.swift */,
 			);
 			path = ViewModels;
@@ -874,6 +868,60 @@
 				24E82073282D151600EC50F4 /* OrderWreathNav.storyboard */,
 			);
 			path = OrderWreathNav;
+			sourceTree = "<group>";
+		};
+		24E82085282F1FEB00EC50F4 /* CustomerNav */ = {
+			isa = PBXGroup;
+			children = (
+				2425FB9027FB62600062E597 /* CustomerNav.storyboard */,
+				24E82089282F201500EC50F4 /* Networking */,
+				24E82088282F201200EC50F4 /* Model */,
+				24E82087282F200E00EC50F4 /* View */,
+				24E82086282F200800EC50F4 /* ViewModel */,
+			);
+			path = CustomerNav;
+			sourceTree = "<group>";
+		};
+		24E82086282F200800EC50F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2425FB9A27FFABD50062E597 /* AnnouncementListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		24E82087282F200E00EC50F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2425FB9227FB76CC0062E597 /* CustomerNoticeListViewController.swift */,
+				2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */,
+				2425FB8E27FB62090062E597 /* CustomerMainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24E82088282F201200EC50F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24E82089282F201500EC50F4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2425FB8927F93A5C0062E597 /* AnnouncementService.swift */,
+				24E8208A282F201800EC50F4 /* Entity */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		24E8208A282F201800EC50F4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2425FB8027F810A00062E597 /* Announcemnet.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		7C4245A03A8820329133AF7E /* Frameworks */ = {

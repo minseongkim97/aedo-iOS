@@ -1218,7 +1218,7 @@
         <!--Notice Detail View Controller-->
         <scene sceneID="HZn-Sg-c8P">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="YQE-fn-Rhl" customClass="NoticeDetailViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoticeDetailViewController" modalPresentationStyle="fullScreen" id="YQE-fn-Rhl" customClass="NoticeDetailViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gp9-fG-8nw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1237,6 +1237,9 @@
                                             <imageReference key="image" image="arrow.left" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTappedBackButton:" destination="YQE-fn-Rhl" eventType="touchUpInside" id="ZVK-NJ-l9E"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공지사항" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-Pw-lHe">
                                         <rect key="frame" x="68.5" y="10.5" width="70" height="39"/>
@@ -1346,7 +1349,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="44s-Rz-apv"/>
                     <connections>
-                        <outlet property="noticeCreatedDateLabel" destination="rG1-Mw-WyP" id="RAk-XQ-M9J"/>
+                        <outlet property="noticeContentLabel" destination="snh-BR-l3a" id="P8s-om-dEg"/>
+                        <outlet property="noticeCreatedDateLabel" destination="rG1-Mw-WyP" id="z4Q-8H-COM"/>
                         <outlet property="noticeTitleLabel" destination="Qod-4n-kEX" id="a1c-b7-HSF"/>
                         <outlet property="noticeView" destination="K5O-dt-pr3" id="9Yq-ay-4C8"/>
                     </connections>

@@ -32,14 +32,14 @@ class MainSubMenuViewController: UIViewController {
         userInfoService.getUserInfo { [weak self] result in
             guard let self = self else { return }
             switch result {
-            case .success(let user):
+            case .success(let response):
                 DispatchQueue.main.async {
-                    self.nameLabel.text = "\(user.user.name) 님,\n반갑습니다."
-                    self.phoneNumberLabel.text = user.user.phone
+                    self.nameLabel.text = "\(response.user.name) 님,\n반갑습니다."
+                    self.phoneNumberLabel.text = response.user.phone
                 }
             case .failure(_):
                 DispatchQueue.main.async {
-                    self.showCustomAlert(alertType: .PopError, alertTitle: "회원 정보를 불러오는데 실패하였습니다.", isRightButtonHidden: true)
+                    self.showCustomAlert(alertType: .PopError, alertTitle: "회원 정보를 불러오는데 실패하였습니다.", isRightButtonHidden: true, leftButtonTitle: "확인")
                 }
             }
         }

@@ -69,5 +69,9 @@ extension CustomerNoticeListViewController: UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let detailNoticeVC = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: NoticeDetailViewController.identifier) as? NoticeDetailViewController else { return }
+        detailNoticeVC.noticeID = announcementListViewModel.announcement(at: indexPath.row).id
+        
+        self.navigationController?.pushViewController(detailNoticeVC, animated: true)
     }
 }
