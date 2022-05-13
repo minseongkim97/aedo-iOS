@@ -17,6 +17,7 @@ enum AlertType {
     case SystemMaintenance
     case AppVersionUpdate
     case PermissionError
+    case PopError
     case none
 }
 

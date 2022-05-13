@@ -102,6 +102,8 @@
 		24E8207A282E0DDD00EC50F4 /* ImageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E82079282E0DDD00EC50F4 /* ImageFile.swift */; };
 		24E8207E282E1B1000EC50F4 /* RegisterObituaryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8207D282E1B1000EC50F4 /* RegisterObituaryRequest.swift */; };
 		24E82080282E1B2C00EC50F4 /* RegisterObituaryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8207F282E1B2C00EC50F4 /* RegisterObituaryResponse.swift */; };
+		24E82082282F079100EC50F4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E82081282F079100EC50F4 /* UserService.swift */; };
+		24E82084282F07AD00EC50F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E82083282F07AD00EC50F4 /* User.swift */; };
 		C5B5AD7A472A7775F082E432 /* Pods_aedo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -203,6 +205,8 @@
 		24E82079282E0DDD00EC50F4 /* ImageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFile.swift; sourceTree = "<group>"; };
 		24E8207D282E1B1000EC50F4 /* RegisterObituaryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterObituaryRequest.swift; sourceTree = "<group>"; };
 		24E8207F282E1B2C00EC50F4 /* RegisterObituaryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterObituaryResponse.swift; sourceTree = "<group>"; };
+		24E82081282F079100EC50F4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		24E82083282F07AD00EC50F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3CB04653FAB6734767AA1362 /* Pods-aedo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		55F49DF30242C1A7C859A53F /* Pods-aedo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aedo-iOS.release.xcconfig"; path = "Target Support Files/Pods-aedo-iOS/Pods-aedo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E5BC9416D57782C583292FF2 /* Pods_aedo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aedo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -609,6 +613,7 @@
 			isa = PBXGroup;
 			children = (
 				2425FB8927F93A5C0062E597 /* AnnouncementService.swift */,
+				24E82081282F079100EC50F4 /* UserService.swift */,
 				244D440A282CD7E40034D5C7 /* Entity */,
 			);
 			path = Networking;
@@ -618,6 +623,7 @@
 			isa = PBXGroup;
 			children = (
 				2425FB8027F810A00062E597 /* Announcemnet.swift */,
+				24E82083282F07AD00EC50F4 /* User.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1065,6 +1071,7 @@
 				24550A9C2807EEE900853B58 /* SettingSwitchTableViewCell.swift in Sources */,
 				24CC4AFE27F705EA001BDFA1 /* AuthViewController.swift in Sources */,
 				244D43C0281F0BCA0034D5C7 /* ObituaryListViewModel.swift in Sources */,
+				24E82084282F07AD00EC50F4 /* User.swift in Sources */,
 				24E82078282DFBFB00EC50F4 /* RegisterObituaryService.swift in Sources */,
 				2425FB9B27FFABD50062E597 /* AnnouncementListViewModel.swift in Sources */,
 				24455B13280C8AFF00D23358 /* CondoleMessageListViewController.swift in Sources */,
@@ -1082,6 +1089,7 @@
 				24CC4ACE27F5720E001BDFA1 /* NetworkMonitor.swift in Sources */,
 				24CC4ADD27F57605001BDFA1 /* CustomAlertViewController.swift in Sources */,
 				24E82076282D1ED200EC50F4 /* RegisterObituaryDateView.swift in Sources */,
+				24E82082282F079100EC50F4 /* UserService.swift in Sources */,
 				24CC4B0B27F7CDE2001BDFA1 /* AuthService.swift in Sources */,
 				24CC4A9327F551CA001BDFA1 /* SceneDelegate.swift in Sources */,
 				24CC4AD727F57458001BDFA1 /* SplashViewController.swift in Sources */,

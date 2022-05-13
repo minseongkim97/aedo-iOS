@@ -43,6 +43,11 @@ class CustomerNoticeListViewController: UIViewController {
         
         announcementListViewModel.list()
     }
+    
+    //MARK: - Actions
+    @IBAction func didTappedBackButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension CustomerNoticeListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -64,6 +69,5 @@ extension CustomerNoticeListViewController: UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
     }
 }

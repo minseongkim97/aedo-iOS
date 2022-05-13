@@ -89,6 +89,10 @@ class RegisterObituaryViewController: UIViewController {
     }
     
     //MARK: - Actions
+    @IBAction func didTappedBackButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func didTappedDatePicker(_ sender: UITextField) {
         setDatePickerView(of: sender)
     }

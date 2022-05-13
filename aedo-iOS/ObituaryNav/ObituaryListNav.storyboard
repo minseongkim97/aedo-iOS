@@ -713,7 +713,7 @@
         <!--Register Obituary View Controller-->
         <scene sceneID="vw7-Tc-MWQ">
             <objects>
-                <viewController id="zpm-E1-nxZ" customClass="RegisterObituaryViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterObituaryViewController" id="zpm-E1-nxZ" customClass="RegisterObituaryViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ol-at-vVx">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -734,6 +734,9 @@
                                         <state key="normal" image="chevron.left" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTappedBackButton:" destination="zpm-E1-nxZ" eventType="touchUpInside" id="XgS-9w-m45"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.70196078429999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>

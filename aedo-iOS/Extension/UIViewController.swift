@@ -81,6 +81,8 @@ extension UIViewController: CustomAlertDelegate {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 exit(0)
             }
+        case .PopError:
+            self.navigationController?.popViewController(animated: true)
         default:
             break
         }
