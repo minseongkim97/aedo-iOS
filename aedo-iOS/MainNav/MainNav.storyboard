@@ -177,6 +177,9 @@
                                 <rect key="frame" x="360" y="68" width="25" height="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="main_settings"/>
+                                <connections>
+                                    <action selector="didTappedSettingButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Iu3-fB-9Ug"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eR-YY-hHD">
                                 <rect key="frame" x="29" y="70.5" width="25" height="20"/>
@@ -643,6 +646,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dGO-uP-q8d"/>
                     <connections>
+                        <outlet property="commonQuestionStackView" destination="sI3-rP-ZEJ" id="meI-8A-nQ7"/>
                         <outlet property="nameLabel" destination="Tmb-cX-BZa" id="LJx-wH-ymo"/>
                         <outlet property="phoneNumberLabel" destination="src-Xg-n1e" id="nKC-EX-klt"/>
                     </connections>

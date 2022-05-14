@@ -241,12 +241,6 @@
 				247985A02804214900A8100C /* CommonQuestionTableViewCell.swift */,
 				247985A2280423EB00A8100C /* AnswerTableViewCell.swift */,
 				247985A62805330300A8100C /* InquiryListTableViewCell.swift */,
-				24550A962807EEDE00853B58 /* SettingStaticTableViewCell.swift */,
-				24550A972807EEDE00853B58 /* SettingStaticTableViewCell.xib */,
-				24550A9A2807EEE900853B58 /* SettingSwitchTableViewCell.swift */,
-				24550A9B2807EEE900853B58 /* SettingSwitchTableViewCell.xib */,
-				24550A9E2807FA5C00853B58 /* SettingVersionTableViewCell.swift */,
-				24550A9F2807FA5C00853B58 /* SettingVersionTableViewCell.xib */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -254,11 +248,8 @@
 		2425FB8D27FB61F80062E597 /* Customer */ = {
 			isa = PBXGroup;
 			children = (
-				2479859E280420C700A8100C /* CommonQuestionListViewController.swift */,
 				247985A42805327100A8100C /* InquiryListViewController.swift */,
 				24550A8C2807D13600853B58 /* DetailInquiryViewController.swift */,
-				24550A882807B6B000853B58 /* SettingViewController.swift */,
-				24550A8A2807D0B500853B58 /* WithdrawalViewController.swift */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -874,6 +865,7 @@
 			isa = PBXGroup;
 			children = (
 				2425FB9027FB62600062E597 /* CustomerNav.storyboard */,
+				24E8208B282F3C1200EC50F4 /* Cell */,
 				24E82089282F201500EC50F4 /* Networking */,
 				24E82088282F201200EC50F4 /* Model */,
 				24E82087282F200E00EC50F4 /* View */,
@@ -896,6 +888,9 @@
 				2425FB9227FB76CC0062E597 /* CustomerNoticeListViewController.swift */,
 				2425FB9C27FFDFA20062E597 /* NoticeDetailViewController.swift */,
 				2425FB8E27FB62090062E597 /* CustomerMainViewController.swift */,
+				2479859E280420C700A8100C /* CommonQuestionListViewController.swift */,
+				24550A882807B6B000853B58 /* SettingViewController.swift */,
+				24550A8A2807D0B500853B58 /* WithdrawalViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -922,6 +917,19 @@
 				2425FB8027F810A00062E597 /* Announcemnet.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		24E8208B282F3C1200EC50F4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				24550A962807EEDE00853B58 /* SettingStaticTableViewCell.swift */,
+				24550A972807EEDE00853B58 /* SettingStaticTableViewCell.xib */,
+				24550A9A2807EEE900853B58 /* SettingSwitchTableViewCell.swift */,
+				24550A9B2807EEE900853B58 /* SettingSwitchTableViewCell.xib */,
+				24550A9E2807FA5C00853B58 /* SettingVersionTableViewCell.swift */,
+				24550A9F2807FA5C00853B58 /* SettingVersionTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		7C4245A03A8820329133AF7E /* Frameworks */ = {

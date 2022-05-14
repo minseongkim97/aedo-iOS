@@ -28,15 +28,9 @@ class DynamicHeightTableView: UITableView {
     }
 }
 
-//class DynamicHeightView: UIView {
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        self.invalidateIntrinsicContentSize()
-//    }
-//}
-
 class CommonQuestionListViewController: UIViewController {
     //MARK: - Properties
+    static let identifier = "CommonQuestionListViewController"
     var answers: [Answer] = [
         Answer(question: "Q. 화한 주문 결제가 되지 않아요", answer: "장례식 어플 애도", isOpen: false),
         Answer(question: "Q. 부고 공유가 되지 않아요", answer: "장례식 어플 애도", isOpen: false),
@@ -56,18 +50,27 @@ class CommonQuestionListViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setContribute()
+    }
+    
+    //MARK: - Actions
+    @IBAction func didTappedBackButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    //MARK: - Helpers
+    private func setContribute() {
         containerView.layer.shadowOpacity = 0.05
         containerView.layer.shadowColor = UIColor.black.cgColor
         containerView.layer.shadowOffset = CGSize(width: 0, height: 10)
         containerView.layer.shadowRadius = 10
+        containerView.layer.borderWidth = 0.5
+        containerView.layer.cornerRadius = 10
+        containerView.layer.borderColor = UIColor(hex: 0xDDDDDD).cgColor
         
-        commonQuestionListTableView.layer.borderWidth = 0.5
         commonQuestionListTableView.layer.cornerRadius = 10
-        commonQuestionListTableView.layer.borderColor = UIColor(hex: 0xDDDDDD).cgColor
         commonQuestionListTableView.layer.masksToBounds = true
-        
     }
-    //MARK: - Helpers
 }
 
 //MARK: - Extension: UITableviewDelegate

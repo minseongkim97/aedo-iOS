@@ -66,6 +66,10 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(customerCenterViewController, animated: true)
     }
     
+    @IBAction func didTappedSettingButton(_ sender: UIButton) {
+        let settingViewController = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: SettingViewController.identifier)
+        self.navigationController?.pushViewController(settingViewController, animated: true)
+    }
     //MARK: - Helpers
     private func setUI() {
         announcementView.layer.cornerRadius = 10

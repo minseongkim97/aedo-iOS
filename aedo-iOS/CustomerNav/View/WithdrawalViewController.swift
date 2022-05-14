@@ -15,11 +15,11 @@ class WithdrawalViewController: UIViewController {
     //MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNoticeView()
+        setContribute()
     }
     
     //MARK: - Helpers
-    private func setNoticeView() {
+    private func setContribute() {
         noticeView.layer.borderWidth = 1
         noticeView.layer.borderColor = UIColor(hex: 0xDDDDDD).cgColor
         noticeView.layer.cornerRadius = 10

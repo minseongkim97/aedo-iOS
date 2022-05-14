@@ -49,6 +49,7 @@ class SettingViewController: UIViewController {
             settingTableView.register(UINib(nibName: SettingVersionTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: SettingVersionTableViewCell.identifier)
         }
     }
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,8 +125,6 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

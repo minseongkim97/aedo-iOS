@@ -14,11 +14,13 @@ class MainSubMenuViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var commonQuestionStackView: UIStackView!
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         getUserInfo()
+        putGesture()
     }
     
     //MARK: - Actions
@@ -26,8 +28,20 @@ class MainSubMenuViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    //MARK: - Selector
+    @objc func didTappedCommonQuestionStackView() {
+        guard let commonQuestionViewController = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: CommonQuestionListViewController.identifier) as? CommonQuestionListViewController else { return }
+        self.navigationController?.pushViewController(commonQuestionViewController, animated: true)
+    }
     
     //MARK: - Helpers
+    private func putGesture() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTappedCommonQuestionStackView))
+        gesture.numberOfTapsRequired = 1
+        gesture.numberOfTouchesRequired = 1
+        commonQuestionStackView.addGestureRecognizer(gesture)
+    }
+    
     private func getUserInfo() {
         userInfoService.getUserInfo { [weak self] result in
             guard let self = self else { return }
