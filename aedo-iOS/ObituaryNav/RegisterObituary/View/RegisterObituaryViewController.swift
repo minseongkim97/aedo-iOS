@@ -170,7 +170,7 @@ class RegisterObituaryViewController: UIViewController {
                 switch result {
                 case .success(_):
                     DispatchQueue.main.async {
-                        self.showCustomAlert(alertType: .none, alertTitle: "부고 작성이 완료되었습니다.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+                        self.showCustomAlert(alertType: .PopSuccess, alertTitle: "부고 작성이 완료되었습니다.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
                     }
                 case . failure(.invalidResponse):
                     DispatchQueue.main.async {

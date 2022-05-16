@@ -40,7 +40,7 @@ class AuthViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        set()
     }
     //MARK: - Actions
     @IBAction func didTappedRemovePhoneNumberButton(_ sender: UIButton) {
@@ -198,26 +198,30 @@ class AuthViewController: UIViewController {
                     self?.changeRootViewController(navVC)
                 }
                 
-            case .failure(.notUser):
-                DispatchQueue.main.async {
-                    self?.titleLabel.text =  "인증번호를 \n입력해주세요."
-                    self?.scriptLabel.text = "휴대전화로 전송된 4자리의 \n인증번호를 입력해주세요."
+            case .failure(let error):
+                print(error.localizedDescription)
+                if error == .notUser {
+                    print(1)
+                    DispatchQueue.main.async {
+                        self?.titleLabel.text =  "인증번호를 \n입력해주세요."
+                        self?.scriptLabel.text = "휴대전화로 전송된 4자리의 \n인증번호를 입력해주세요."
 
-                    self?.authenticationNumberTextField.isUserInteractionEnabled = false
-                    
-                    self?.signUpView.isHidden = false
-                    self?.phoneNumberLabel.text = self?.phoneNumberTextField.text
-                    self?.birthdayTextField.becomeFirstResponder()
-                }
-                
-            case .failure(.invalidResponse):
-                DispatchQueue.main.async {
-                    self?.showCustomAlert(alertType: .none, alertTitle: "전화번호 또는 인증번호를 다시 확인해 주세요.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
-                }
-                
-            default:
-                DispatchQueue.main.async {
-                    self?.showNetworkErrorAlert()
+                        self?.authenticationNumberTextField.isUserInteractionEnabled = false
+                        
+                        self?.signUpView.isHidden = false
+                        self?.phoneNumberLabel.text = self?.phoneNumberTextField.text
+                        self?.birthdayTextField.becomeFirstResponder()
+                    }
+                } else if error == .invalidResponse {
+                    print(2)
+                    DispatchQueue.main.async {
+                        self?.showCustomAlert(alertType: .none, alertTitle: "전화번호 또는 인증번호를 다시 확인해 주세요.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+                    }
+                } else {
+                    print(3)
+                    DispatchQueue.main.async {
+                        self?.showNetworkErrorAlert()
+                    }
                 }
             }
         }

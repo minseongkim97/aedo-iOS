@@ -57,6 +57,12 @@ class SettingViewController: UIViewController {
         configure()
     }
     
+    //MARK: - Actions
+    
+    @IBAction func didTappedBackButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     //MARK: - Helpers
     private func configure() {
         models.append(

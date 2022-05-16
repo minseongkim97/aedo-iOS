@@ -14,7 +14,7 @@ struct LogInRequest: Codable {
 
 struct LogInResponse: Codable {
     var status: String
-    var code: Int
+//    var code: Int
     var Accesstoken: String
     var userId: String
 }

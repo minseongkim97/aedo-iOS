@@ -32,10 +32,10 @@ class CommonQuestionListViewController: UIViewController {
     //MARK: - Properties
     static let identifier = "CommonQuestionListViewController"
     var answers: [Answer] = [
-        Answer(question: "Q. 화한 주문 결제가 되지 않아요", answer: "장례식 어플 애도", isOpen: false),
+        Answer(question: "Q. 화한 주문 결제가 되지 않아요", answer: "장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도", isOpen: false),
         Answer(question: "Q. 부고 공유가 되지 않아요", answer: "장례식 어플 애도", isOpen: false),
-        Answer(question: "Q. 화한 주문 환불이 가능한가요?", answer: "장례식 어플 애도", isOpen: false),
-        Answer(question: "Q. 길찾기가 가능한가요?", answer: "장례식 어플 애도", isOpen: false),
+        Answer(question: "Q. 화한 주문 환불이 가능한가요?", answer: "장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도", isOpen: false),
+        Answer(question: "Q. 길찾기가 가능한가요?", answer: "장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도", isOpen: false),
         Answer(question: "Q. 부고는 어떻게 작성하나요?", answer: "장례식 어플 애도", isOpen: false)
     ]
     

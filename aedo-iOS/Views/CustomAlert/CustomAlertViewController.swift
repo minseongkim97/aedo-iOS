@@ -18,6 +18,7 @@ enum AlertType {
     case AppVersionUpdate
     case PermissionError
     case PopError
+    case PopSuccess
     case none
 }
 
