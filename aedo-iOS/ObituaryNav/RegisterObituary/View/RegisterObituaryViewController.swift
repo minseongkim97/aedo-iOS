@@ -154,7 +154,7 @@ class RegisterObituaryViewController: UIViewController {
                 deceasedName: deceasedTextField.text!,
                 deceasedAge: deceasedAgeTextField.text!,
                 place: placeNameTextField.text!,
-                eod: "\(deathbedDatePicker.text!) \(deathbedTimePicker.text!)",
+                eod: "\(deathbedDatePicker.text!)",
                 coffin: "\(coffinDatePicker.text!) \(coffinTimePicker.text!)",
                 dofp: "\(dofpDatePicker.text!) \(dofpTimePicker.text!)",
                 buried: buriedPlaceTextField.text == "" ? "장지" : buriedPlaceTextField.text,
@@ -263,6 +263,7 @@ class RegisterObituaryViewController: UIViewController {
         sender.inputAccessoryView = makeToolBar(of: sender, mode: .date)
         sender.inputView = datePicker
     }
+    
     
     private func setTimePickerView(of sender: UITextField) {
         if #available(iOS 13.4, *) {

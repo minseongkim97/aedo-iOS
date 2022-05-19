@@ -125,9 +125,12 @@
                                         <state key="normal" image="chevron.left" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTappedBackButton:" destination="EIc-aB-8t9" eventType="touchUpInside" id="AQ8-4Q-Amt"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부고목록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHX-9b-pPc">
-                                        <rect key="frame" x="162" y="63.999999999999993" width="66.333333333333314" height="26.666666666666664"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부고" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHX-9b-pPc">
+                                        <rect key="frame" x="178.33333333333334" y="63.999999999999993" width="33.333333333333343" height="26.666666666666664"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -152,7 +155,7 @@
                                     <constraint firstAttribute="trailing" secondItem="VOi-Pi-LCG" secondAttribute="trailing" constant="25" id="v46-VI-CM4"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSu-tu-v4a">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSu-tu-v4a">
                                 <rect key="frame" x="0.0" y="110.66666666666669" width="390" height="889.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ou-lQ-HA9">
@@ -370,7 +373,7 @@
                                                                 <color key="textColor" red="0.054901960780000002" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ch-mP-0wL">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ch-mP-0wL">
                                                                 <rect key="frame" x="91" y="7.3333333333332575" width="7" height="18"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="12"/>
                                                                 <color key="textColor" systemColor="systemRedColor"/>
@@ -381,7 +384,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GMS-hy-IdU">
                                                         <rect key="frame" x="25" y="68.333333333333258" width="340" height="21"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="애도 임직원 일동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI3-8U-99v">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI3-8U-99v">
                                                                 <rect key="frame" x="0.0" y="0.0" width="170" height="21"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -401,13 +404,16 @@
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bj2-bQ-8Hk">
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bj2-bQ-8Hk">
                                                         <rect key="frame" x="25" y="140.33333333333326" width="340" height="33"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="조문 메세지 모두 보기">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="didTappedViewAllCondoleMessageButton:" destination="EIc-aB-8t9" eventType="touchUpInside" id="jqE-dX-l8K"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnt-g2-mrx">
                                                         <rect key="frame" x="335" y="19.666666666666629" width="30" height="32"/>
@@ -416,6 +422,9 @@
                                                         <state key="normal" title="쓰기">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="didTappedWriteCondoleMessageButton:" destination="EIc-aB-8t9" eventType="touchUpInside" id="ZEd-Fr-45v"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -485,6 +494,9 @@
                     <connections>
                         <outlet property="buriedPlaceLabel" destination="Vhs-b5-Lw2" id="pbM-2P-Lte"/>
                         <outlet property="coffinLabel" destination="gfd-pR-tIM" id="bp6-MX-Zgm"/>
+                        <outlet property="condoleMessageCreatedLabel" destination="cJI-KX-UeW" id="Tel-XV-9O8"/>
+                        <outlet property="condoleMessageLabel" destination="qUa-7v-7yk" id="FR7-fh-Jq2"/>
+                        <outlet property="condoleMessageWriterLabel" destination="UI3-8U-99v" id="fSb-Xf-QOS"/>
                         <outlet property="countCondoleMessageLabel" destination="0Ch-mP-0wL" id="Ko8-L5-eQs"/>
                         <outlet property="deceasedNameLabel" destination="71M-HX-PuQ" id="6Gv-OJ-nXU"/>
                         <outlet property="dofpLabel" destination="tNO-GN-kib" id="5by-S3-o1P"/>
@@ -494,6 +506,7 @@
                         <outlet property="placeLabel" destination="a0L-FH-csp" id="gfS-QO-ei5"/>
                         <outlet property="residentNameLabel" destination="uLI-Nk-EGD" id="ceK-6c-zOW"/>
                         <outlet property="residentRelationLabel" destination="01v-c2-New" id="71j-u4-4nR"/>
+                        <outlet property="viewCondoleMessageButton" destination="bj2-bQ-8Hk" id="Dnv-gc-EJy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eri-ja-mAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1086,7 +1099,7 @@
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="date-time"/>
                                                                 <connections>
-                                                                    <action selector="didTappedDatePicker:" destination="zpm-E1-nxZ" eventType="editingDidBegin" id="byl-Sr-ZTM"/>
+                                                                    <action selector="didTappedDatePicker:" destination="zpm-E1-nxZ" eventType="editingDidEnd" id="GDy-K4-tow"/>
                                                                 </connections>
                                                             </textField>
                                                         </subviews>
@@ -1128,7 +1141,7 @@
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="didTappedTimePicker:" destination="zpm-E1-nxZ" eventType="editingDidBegin" id="VZm-fp-dxD"/>
+                                                                    <action selector="didTappedTimePicker:" destination="zpm-E1-nxZ" eventType="editingDidEnd" id="Wlv-ub-Xec"/>
                                                                 </connections>
                                                             </textField>
                                                         </subviews>

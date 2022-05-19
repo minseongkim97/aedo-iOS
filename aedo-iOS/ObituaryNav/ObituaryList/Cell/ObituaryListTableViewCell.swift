@@ -11,6 +11,7 @@ import RxSwift
 class ObituaryListTableViewCell: UITableViewCell {
     //MARK: - Properties
     static let identifier = "ObituaryListTableViewCell"
+    var obID: String = ""
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var sendObituaryButton: UIButton!
     @IBOutlet weak var seeObituaryButton: UIButton! {
@@ -40,11 +41,10 @@ class ObituaryListTableViewCell: UITableViewCell {
     @objc func didTappedShowDetailObituary(_ sender: UIButton) {
         showDetailObituaryButtonAction?()
     }
-    
-    @IBAction func didTappedSendObituary(_ sender: UIButton) {
-    }
+
     //MARK: - Helpers
     func updateUI(item: ObituaryResponse) {
+        obID = item.id
         nameLabel.text = item.deceased.name
         dateLabel.text = item.created
         residentLabel.text = item.resident.name

@@ -34,6 +34,10 @@ class ObituaryListViewController: UIViewController {
     }
     
     @IBAction func didTappedHomeButton(_ sender: UIButton) {
+        let mainViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+        let navVC = UINavigationController(rootViewController: mainViewController)
+        navVC.isNavigationBarHidden = true
+        self.changeRootViewController(navVC)
     }
     
     //MARK: - Helpers
@@ -47,16 +51,25 @@ class ObituaryListViewController: UIViewController {
             .filter { !$0.isEmpty }
             .bind(to: obituaryListTableView.rx.items(cellIdentifier: ObituaryListTableViewCell.identifier, cellType: ObituaryListTableViewCell.self)) { (index, item, cell) in
                 cell.updateUI(item: item)
+                cell.showDetailObituaryButtonAction = { [weak self] in
+                    guard let self = self else { return }
+                    let detailObituaryVC = UIStoryboard(name: "ObituaryListNav", bundle: nil).instantiateViewController(identifier: DetailObituaryViewController.identifier) as! DetailObituaryViewController
+                    detailObituaryVC.deceasedName = cell.nameLabel.text!
+                    detailObituaryVC.obID = cell.obID
+                    self.navigationController?.pushViewController(detailObituaryVC, animated: true)
+                }
+                
             }
             .disposed(by: disposeBag)
         
-        obituaryListTableView.rx.modelSelected(ObituaryResponse.self)
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] _ in
-                let detailObituaryVC = UIStoryboard(name: "ObituaryListNav", bundle: nil).instantiateViewController(identifier: DetailObituaryViewController.identifier) as! DetailObituaryViewController
-                detailObituaryVC.name = ""
-                self?.navigationController?.pushViewController(detailObituaryVC, animated: true)
-            })
+//        obituaryListTableView.rx.modelSelected(ObituaryResponse.self)
+//            .observe(on: MainScheduler.instance)
+//            .subscribe(onNext: { [weak self] _ in
+//                let detailObituaryVC = UIStoryboard(name: "ObituaryListNav", bundle: nil).instantiateViewController(identifier: DetailObituaryViewController.identifier) as! DetailObituaryViewController
+//                detailObituaryVC.name = ""
+//                self?.navigationController?.pushViewController(detailObituaryVC, animated: true)
+//            })
+//            .disposed(by: disposeBag)
     }
 }
 
