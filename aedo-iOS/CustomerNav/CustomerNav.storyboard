@@ -404,25 +404,25 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AnswerTableViewCell" id="3sI-Iq-mZL" customClass="AnswerTableViewCell" customModule="aedo_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="105.5" width="374" height="36"/>
+                                                <rect key="frame" x="0.0" y="105.5" width="374" height="51"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3sI-Iq-mZL" id="xBp-Tr-SCH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="51"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장례식 어플" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugb-FD-95M">
-                                                            <rect key="frame" x="15" y="0.0" width="344" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장례식 어플" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugb-FD-95M">
+                                                            <rect key="frame" x="15" y="15" width="344" height="21"/>
                                                             <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                             <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="Ugb-FD-95M" firstAttribute="leading" secondItem="xBp-Tr-SCH" secondAttribute="leading" constant="15" id="7M6-2v-gYD"/>
                                                         <constraint firstAttribute="bottom" secondItem="Ugb-FD-95M" secondAttribute="bottom" constant="15" id="WQL-Wy-lWz"/>
                                                         <constraint firstAttribute="trailing" secondItem="Ugb-FD-95M" secondAttribute="trailing" constant="15" id="piQ-Ok-a0E"/>
-                                                        <constraint firstItem="Ugb-FD-95M" firstAttribute="top" secondItem="xBp-Tr-SCH" secondAttribute="top" id="wNe-bv-8aL"/>
+                                                        <constraint firstItem="Ugb-FD-95M" firstAttribute="top" secondItem="xBp-Tr-SCH" secondAttribute="top" constant="15" id="wNe-bv-8aL"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
@@ -1387,23 +1387,6 @@
             </objects>
             <point key="canvasLocation" x="2721.739130434783" y="42.857142857142854"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="zyA-Tl-ZFH">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wzG-Bi-1eS" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uQw-QR-BR3">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="1PI-tW-ug1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oa7-Id-S6E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="44.927536231884062" y="38.839285714285715"/>
-        </scene>
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
@@ -1421,6 +1404,9 @@
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

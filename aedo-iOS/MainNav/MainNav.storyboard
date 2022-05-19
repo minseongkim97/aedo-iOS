@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Wv-Cm-N4c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -118,7 +118,7 @@
                                                             <constraint firstAttribute="width" secondItem="Stm-8B-xFH" secondAttribute="height" multiplier="1:1" id="SCZ-bP-oKv"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="main_make"/>
+                                                        <state key="normal" image="main_search"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="통합 검색" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTk-45-X4Q">
                                                         <rect key="frame" x="19" y="72.5" width="55.5" height="21"/>
@@ -156,7 +156,7 @@
                                                             <constraint firstAttribute="width" secondItem="cQ9-UW-NtW" secondAttribute="height" multiplier="1:1" id="KWa-HK-6vp"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="main_customerCenter"/>
+                                                        <state key="normal" image="main_setting"/>
                                                         <connections>
                                                             <action selector="didTappedSettingButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cVP-Un-XeU"/>
                                                         </connections>
@@ -406,13 +406,16 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="933-7q-Tyj">
                                                 <rect key="frame" x="0.0" y="0.5" width="92.5" height="63"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUg-90-qon">
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUg-90-qon" customClass="BaseButton" customModule="aedo_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="32" y="0.0" width="28.5" height="26.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="uUg-90-qon" secondAttribute="height" multiplier="23:21" id="5nR-eJ-Zfp"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="main_sub_kakaotalk"/>
+                                                        <connections>
+                                                            <action selector="didTappedInquiryButton:" destination="ayb-C5-fYR" eventType="touchUpInside" id="9H5-gT-cbD"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="카카오톡문의" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="v4L-uW-IV9">
                                                         <rect key="frame" x="10.5" y="43.5" width="72" height="19.5"/>
@@ -425,13 +428,16 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="sI3-rP-ZEJ">
                                                 <rect key="frame" x="102.5" y="0.0" width="94" height="63.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PT-cz-3qC">
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PT-cz-3qC" customClass="BaseButton" customModule="aedo_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="32.5" y="0.0" width="29" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="4PT-cz-3qC" secondAttribute="height" multiplier="1:1" id="Gid-9H-PQ9"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="main_sub_questionMark"/>
+                                                        <connections>
+                                                            <action selector="didTappedCommonQuestionButton:" destination="ayb-C5-fYR" eventType="touchUpInside" id="QQj-mf-fmF"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자주 묻는 질문" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="LUk-7z-Cio">
                                                         <rect key="frame" x="7.5" y="44" width="79.5" height="19.5"/>
@@ -444,13 +450,16 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ltx-jv-kUw">
                                                 <rect key="frame" x="206.5" y="0.0" width="80" height="63.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBb-Pc-ULb">
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBb-Pc-ULb" customClass="BaseButton" customModule="aedo_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="25.5" y="0.0" width="29" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="fBb-Pc-ULb" secondAttribute="height" multiplier="1:1" id="Jen-Ml-ao0"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="main_sub_message"/>
+                                                        <connections>
+                                                            <action selector="didTappedInquiryButton:" destination="ayb-C5-fYR" eventType="touchUpInside" id="YWI-uK-avN"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:1 문의" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="Acs-en-sYZ">
                                                         <rect key="frame" x="17" y="44" width="46" height="19.5"/>
@@ -463,13 +472,16 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="H7v-hY-UQC">
                                                 <rect key="frame" x="296.5" y="10" width="97.5" height="53.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHr-dV-uUv">
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHr-dV-uUv" customClass="BaseButton" customModule="aedo_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="30" y="0.0" width="37.5" height="14"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="RHr-dV-uUv" secondAttribute="height" multiplier="96:35" id="AXZ-C2-x4b"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="main_sub_phone"/>
+                                                        <connections>
+                                                            <action selector="didTappedPhoneInquiryButton:" destination="ayb-C5-fYR" eventType="touchUpInside" id="R0T-5U-1G2"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화문의" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="DGd-lW-PyR">
                                                         <rect key="frame" x="25" y="34" width="48" height="19.5"/>
@@ -501,7 +513,7 @@
                                 <rect key="frame" x="0.0" y="332.5" width="414" height="563.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6j-bN-vZw">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="349"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="354.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jkq-wR-L2R">
                                                 <rect key="frame" x="30" y="40" width="384" height="29"/>
@@ -558,17 +570,18 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="d8e-F9-Q1E">
-                                                <rect key="frame" x="30" y="217" width="384" height="23"/>
+                                                <rect key="frame" x="30" y="217" width="384" height="29"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_sub_settings" translatesAutoresizingMaskIntoConstraints="NO" id="LwE-Yb-WYd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="23"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LwE-Yb-WYd">
+                                                        <rect key="frame" x="0.0" y="-3.5" width="29" height="36"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="LwE-Yb-WYd" secondAttribute="height" multiplier="96:77" id="tJ5-EE-qRB"/>
+                                                            <constraint firstAttribute="width" secondItem="LwE-Yb-WYd" secondAttribute="height" multiplier="1:1" id="tJ5-EE-qRB"/>
                                                         </constraints>
+                                                        <imageReference key="image" image="list.bullet.rectangle.portrait" catalog="system" symbolScale="large"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="설정" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKC-P1-SHp">
-                                                        <rect key="frame" x="44" y="0.0" width="340" height="23"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="주문목록" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKC-P1-SHp">
+                                                        <rect key="frame" x="44" y="0.0" width="340" height="29"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -576,17 +589,17 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="y8Q-eh-qcl">
-                                                <rect key="frame" x="30" y="270" width="384" height="29"/>
+                                                <rect key="frame" x="30" y="276" width="384" height="28.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_sub_smiling" translatesAutoresizingMaskIntoConstraints="NO" id="EDM-uC-I0e">
-                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="28.5"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="EDM-uC-I0e" secondAttribute="height" multiplier="1:1" id="QjD-8g-ykg"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="감사조문인사" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aek-nB-cDw">
-                                                        <rect key="frame" x="44" y="0.0" width="340" height="29"/>
+                                                        <rect key="frame" x="44" y="0.0" width="340" height="28.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -652,31 +665,117 @@
                     </view>
                     <navigationItem key="navigationItem" id="dGO-uP-q8d"/>
                     <connections>
-                        <outlet property="commonQuestionStackView" destination="sI3-rP-ZEJ" id="meI-8A-nQ7"/>
+                        <outlet property="commonQuestionButton" destination="4PT-cz-3qC" id="dA2-71-EXy"/>
+                        <outlet property="kakaoTalkInquiryButton" destination="uUg-90-qon" id="TQ6-k4-0cZ"/>
                         <outlet property="nameLabel" destination="Tmb-cX-BZa" id="LJx-wH-ymo"/>
+                        <outlet property="personalInquiryButton" destination="fBb-Pc-ULb" id="Ny5-9r-PMl"/>
+                        <outlet property="phoneInquiryButton" destination="RHr-dV-uUv" id="t1w-Yv-B51"/>
                         <outlet property="phoneNumberLabel" destination="src-Xg-n1e" id="nKC-EX-klt"/>
+                        <outlet property="useInfoStackView" destination="jkq-wR-L2R" id="yge-xS-E5z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7T-xc-7tm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2049" y="39"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ySX-bk-xW0">
+        <!--Use Info View Controller-->
+        <scene sceneID="Fye-wZ-fnN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="0Wv-Cm-N4c" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IgZ-br-aOO">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <viewController storyboardIdentifier="UseInfoViewController" id="bgt-8W-2hH" customClass="UseInfoViewController" customModule="aedo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Id-WL-cez">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAw-d0-6Bb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqH-Bl-ivv">
+                                        <rect key="frame" x="15" y="10.5" width="38.5" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="LqH-Bl-ivv" secondAttribute="height" multiplier="1:1" id="kkI-B1-PIC"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="arrow.left" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTappedBackButton:" destination="bgt-8W-2hH" eventType="touchUpInside" id="k9u-zM-2P3"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용 안내" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gPz-ww-d3Q">
+                                        <rect key="frame" x="68.5" y="10.5" width="75.5" height="39"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.70196078429999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="LqH-Bl-ivv" firstAttribute="height" secondItem="lAw-d0-6Bb" secondAttribute="height" multiplier="0.645161" id="84z-fT-0a6"/>
+                                    <constraint firstItem="gPz-ww-d3Q" firstAttribute="height" secondItem="lAw-d0-6Bb" secondAttribute="height" multiplier="0.65" id="9WS-YV-UWl"/>
+                                    <constraint firstItem="LqH-Bl-ivv" firstAttribute="leading" secondItem="lAw-d0-6Bb" secondAttribute="leading" constant="15" id="OHl-0t-xmz"/>
+                                    <constraint firstItem="gPz-ww-d3Q" firstAttribute="leading" secondItem="LqH-Bl-ivv" secondAttribute="trailing" constant="15" id="VM5-TD-iaU"/>
+                                    <constraint firstItem="LqH-Bl-ivv" firstAttribute="centerY" secondItem="lAw-d0-6Bb" secondAttribute="centerY" id="VUT-g6-2Xz"/>
+                                    <constraint firstItem="gPz-ww-d3Q" firstAttribute="centerY" secondItem="lAw-d0-6Bb" secondAttribute="centerY" id="WTS-mo-wXv"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gPz-ww-d3Q" secondAttribute="trailing" constant="30" id="rg1-PS-v4q"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1z7-LP-feV">
+                                <rect key="frame" x="0.0" y="104" width="414" height="792"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxz-g8-ueR">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="5000"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_sub_useInfoImage" translatesAutoresizingMaskIntoConstraints="NO" id="UDf-FW-3jO">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="5000"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5000" id="V0s-u5-JUg"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="UDf-FW-3jO" secondAttribute="bottom" id="Aqb-l3-Gve"/>
+                                            <constraint firstAttribute="trailing" secondItem="UDf-FW-3jO" secondAttribute="trailing" id="BKp-je-mi9"/>
+                                            <constraint firstItem="UDf-FW-3jO" firstAttribute="leading" secondItem="yxz-g8-ueR" secondAttribute="leading" id="RTk-rR-VhE"/>
+                                            <constraint firstItem="UDf-FW-3jO" firstAttribute="top" secondItem="yxz-g8-ueR" secondAttribute="top" id="eVG-38-dbG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yxz-g8-ueR" firstAttribute="trailing" secondItem="KLV-t7-mwo" secondAttribute="trailing" id="DAM-KD-89F"/>
+                                    <constraint firstItem="yxz-g8-ueR" firstAttribute="bottom" secondItem="KLV-t7-mwo" secondAttribute="bottom" id="Gry-21-LTk"/>
+                                    <constraint firstItem="yxz-g8-ueR" firstAttribute="width" secondItem="D2m-eC-qLa" secondAttribute="width" id="gR7-N0-Y7w"/>
+                                    <constraint firstItem="yxz-g8-ueR" firstAttribute="leading" secondItem="KLV-t7-mwo" secondAttribute="leading" id="rEH-xP-g6t"/>
+                                    <constraint firstItem="yxz-g8-ueR" firstAttribute="top" secondItem="KLV-t7-mwo" secondAttribute="top" id="rRs-fV-pYw"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="KLV-t7-mwo"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="D2m-eC-qLa"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r2U-69-ev8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lAw-d0-6Bb" firstAttribute="top" secondItem="r2U-69-ev8" secondAttribute="top" id="8N9-Rc-FrF"/>
+                            <constraint firstItem="1z7-LP-feV" firstAttribute="trailing" secondItem="r2U-69-ev8" secondAttribute="trailing" id="cvp-Hg-1fJ"/>
+                            <constraint firstAttribute="bottom" secondItem="1z7-LP-feV" secondAttribute="bottom" id="iDe-4K-TNk"/>
+                            <constraint firstItem="r2U-69-ev8" firstAttribute="trailing" secondItem="lAw-d0-6Bb" secondAttribute="trailing" id="ibM-yv-55o"/>
+                            <constraint firstItem="1z7-LP-feV" firstAttribute="top" secondItem="lAw-d0-6Bb" secondAttribute="bottom" id="pGx-4B-aVN"/>
+                            <constraint firstItem="lAw-d0-6Bb" firstAttribute="width" secondItem="lAw-d0-6Bb" secondAttribute="height" multiplier="69:10" id="rEk-OY-INn"/>
+                            <constraint firstItem="1z7-LP-feV" firstAttribute="leading" secondItem="r2U-69-ev8" secondAttribute="leading" id="rKe-rA-0o4"/>
+                            <constraint firstItem="lAw-d0-6Bb" firstAttribute="leading" secondItem="4Id-WL-cez" secondAttribute="leading" id="tRH-pj-DuF"/>
+                        </constraints>
+                    </view>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="oC1-W0-iTg"/>
+                        <outlet property="useInfoImageHeightConstraint" destination="V0s-u5-JUg" id="hOm-1a-C7D"/>
+                        <outlet property="useInfoImageView" destination="UDf-FW-3jO" id="7X4-QT-txC"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gEW-hX-LPP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o4f-Lk-aG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="38.839285714285715"/>
+            <point key="canvasLocation" x="3163.7681159420295" y="18.75"/>
         </scene>
     </scenes>
     <resources>
@@ -684,6 +783,7 @@
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
         <image name="logo" width="275" height="275"/>
         <image name="main_announcement" width="54" height="56"/>
         <image name="main_background" width="1440" height="2560"/>
@@ -691,15 +791,17 @@
         <image name="main_make" width="203" height="204"/>
         <image name="main_menuBar" width="83" height="65"/>
         <image name="main_order" width="204" height="204"/>
+        <image name="main_search" width="203" height="204"/>
         <image name="main_send" width="203" height="204"/>
+        <image name="main_setting" width="203" height="204"/>
         <image name="main_settings" width="75" height="77"/>
         <image name="main_sub_kakaotalk" width="92" height="84.5"/>
         <image name="main_sub_message" width="80" height="80"/>
         <image name="main_sub_phone" width="96" height="35.5"/>
         <image name="main_sub_questionMark" width="94" height="94"/>
-        <image name="main_sub_settings" width="75" height="77"/>
         <image name="main_sub_smiling" width="96" height="96"/>
         <image name="main_sub_useInfo" width="56" height="88"/>
+        <image name="main_sub_useInfoImage" width="1439" height="8198"/>
         <image name="splash_title" width="317" height="166"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

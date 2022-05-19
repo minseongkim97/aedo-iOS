@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class MainSubMenuViewController: UIViewController {
     //MARK: - Properties
@@ -14,11 +15,17 @@ class MainSubMenuViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
-    @IBOutlet weak var commonQuestionStackView: UIStackView!
+    @IBOutlet weak var kakaoTalkInquiryButton: BaseButton!
+    @IBOutlet weak var personalInquiryButton: BaseButton!
+    
+    @IBOutlet weak var commonQuestionButton: BaseButton!
+    @IBOutlet weak var phoneInquiryButton: BaseButton!
+    @IBOutlet weak var useInfoStackView: UIStackView!
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getUserInfo()
         putGesture()
     }
@@ -28,20 +35,39 @@ class MainSubMenuViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    //MARK: - Selector
-    @objc func didTappedCommonQuestionStackView() {
-        guard let commonQuestionViewController = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: CommonQuestionListViewController.identifier) as? CommonQuestionListViewController else { return }
+    @IBAction func didTappedInquiryButton(_ sender: UIButton) {
+        openSFSafariView("http://pf.kakao.com/_Xuvxeb/chat")
+    }
+    
+    @IBAction func didTappedCommonQuestionButton(_ sender: UIButton) {
+        let commonQuestionViewController = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: CommonQuestionListViewController.identifier) as! CommonQuestionListViewController
         self.navigationController?.pushViewController(commonQuestionViewController, animated: true)
     }
     
+    @IBAction func didTappedPhoneInquiryButton(_ sender: UIButton) {
+        print("전화문의")
+    }
+    //MARK: - Selector
+    @objc func didTappedStackView() {
+        let useInfoVC = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: UseInfoViewController.identifier) as! UseInfoViewController
+        self.navigationController?.pushViewController(useInfoVC, animated: true)
+    }
+
     //MARK: - Helpers
-    private func putGesture() {
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTappedCommonQuestionStackView))
-        gesture.numberOfTapsRequired = 1
-        gesture.numberOfTouchesRequired = 1
-        commonQuestionStackView.addGestureRecognizer(gesture)
+    private func openSFSafariView(_ targetURL: String) {
+        guard let url = URL(string: targetURL) else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.modalPresentationStyle = .automatic
+        present(safariViewController, animated: true, completion: nil)
     }
     
+    private func putGesture() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTappedStackView))
+        gesture.numberOfTapsRequired = 1
+        gesture.numberOfTouchesRequired = 1
+        useInfoStackView.addGestureRecognizer(gesture)
+    }
+
     private func getUserInfo() {
         userInfoService.getUserInfo { [weak self] result in
             guard let self = self else { return }
@@ -59,5 +85,3 @@ class MainSubMenuViewController: UIViewController {
         }
     }
 }
-
-

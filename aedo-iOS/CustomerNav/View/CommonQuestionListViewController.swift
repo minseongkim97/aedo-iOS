@@ -32,11 +32,11 @@ class CommonQuestionListViewController: UIViewController {
     //MARK: - Properties
     static let identifier = "CommonQuestionListViewController"
     var answers: [Answer] = [
-        Answer(question: "Q. 화한 주문 결제가 되지 않아요", answer: "장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도", isOpen: false),
-        Answer(question: "Q. 부고 공유가 되지 않아요", answer: "장례식 어플 애도", isOpen: false),
-        Answer(question: "Q. 화한 주문 환불이 가능한가요?", answer: "장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도", isOpen: false),
-        Answer(question: "Q. 길찾기가 가능한가요?", answer: "장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도\n장례식 어플 애도", isOpen: false),
-        Answer(question: "Q. 부고는 어떻게 작성하나요?", answer: "장례식 어플 애도", isOpen: false)
+        Answer(question: "Q. 1. 화한 주문 결제", answer: "화한 주문 페이지를 클릭한 뒤\n원하시는 화한을 선택 후 결제해주시면 됩니다.", isOpen: false),
+        Answer(question: "Q. 2. 화한 주문 환불", answer: "고객센터로 문의해주세요", isOpen: false),
+        Answer(question: "Q. 3. 부고 공유가 되지 않아요", answer: "고객센터로 문의해주세요", isOpen: false),
+        Answer(question: "Q. 4. 길찾기", answer: "고객센터로 문의해주세요", isOpen: false),
+        Answer(question: "Q. 5. 부고 작성", answer: "고객센터로 문의해주세요", isOpen: false)
     ]
     
     @IBOutlet private weak var containerView: UIView!
@@ -92,11 +92,9 @@ extension CommonQuestionListViewController: UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: CommonQuestionTableViewCell.identifier, for: indexPath) as! CommonQuestionTableViewCell
             cell.questionLabel.text = answers[indexPath.section].question
             if answers[indexPath.section].isOpen {
-                cell.contentView.backgroundColor = UIColor(hex: 0xF6F6F6)
                 cell.chevronImageView.image = UIImage(systemName: "chevron.up")
                 cell.separateLine.isHidden = true
             } else {
-                cell.contentView.backgroundColor = .systemBackground
                 cell.chevronImageView.image = UIImage(systemName: "chevron.down")
                 cell.separateLine.isHidden = false
             }
