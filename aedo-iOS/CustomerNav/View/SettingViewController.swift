@@ -122,13 +122,13 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         return 30
     }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        if let header = view as? UITableViewHeaderFooterView {
-            if section == 0 {
-                header.textLabel?.textColor = .white
-            }
-        }
-    }
+//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        if let header = view as? UITableViewHeaderFooterView {
+//            if section == 0 {
+//                header.textLabel?.textColor = .white
+//            }
+//        }
+//    }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     }

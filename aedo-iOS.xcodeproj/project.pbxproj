@@ -10,6 +10,8 @@
 		24210FC12832815D0050C424 /* RegisterCondoleMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FC02832815D0050C424 /* RegisterCondoleMessageViewController.swift */; };
 		24210FC32832CE1F0050C424 /* RegisterCondoleMessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FC22832CE1F0050C424 /* RegisterCondoleMessageService.swift */; };
 		24210FCC2832D0140050C424 /* RegisterCondoleMessageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FCB2832D0140050C424 /* RegisterCondoleMessageRequest.swift */; };
+		24210FCE2836092E0050C424 /* RegisterCondoleMessageReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FCD2836092E0050C424 /* RegisterCondoleMessageReponse.swift */; };
+		24210FD0283620020050C424 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FCF283620020050C424 /* Place.swift */; };
 		2425FB8127F810A00062E597 /* Announcemnet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8027F810A00062E597 /* Announcemnet.swift */; };
 		2425FB8727F811C40062E597 /* AnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8527F811C40062E597 /* AnnouncementTableViewCell.swift */; };
 		2425FB8A27F93A5C0062E597 /* AnnouncementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8927F93A5C0062E597 /* AnnouncementService.swift */; };
@@ -114,6 +116,8 @@
 		24210FC02832815D0050C424 /* RegisterCondoleMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCondoleMessageViewController.swift; sourceTree = "<group>"; };
 		24210FC22832CE1F0050C424 /* RegisterCondoleMessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCondoleMessageService.swift; sourceTree = "<group>"; };
 		24210FCB2832D0140050C424 /* RegisterCondoleMessageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCondoleMessageRequest.swift; sourceTree = "<group>"; };
+		24210FCD2836092E0050C424 /* RegisterCondoleMessageReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCondoleMessageReponse.swift; sourceTree = "<group>"; };
+		24210FCF283620020050C424 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		2425FB8027F810A00062E597 /* Announcemnet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcemnet.swift; sourceTree = "<group>"; };
 		2425FB8527F811C40062E597 /* AnnouncementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewCell.swift; sourceTree = "<group>"; };
 		2425FB8927F93A5C0062E597 /* AnnouncementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementService.swift; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				24210FCB2832D0140050C424 /* RegisterCondoleMessageRequest.swift */,
+				24210FCD2836092E0050C424 /* RegisterCondoleMessageReponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 		244D43E72826EFAF0034D5C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24210FCF283620020050C424 /* Place.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1134,6 +1140,7 @@
 				244D43BC281F099C0034D5C7 /* ObituaryListService.swift in Sources */,
 				24CC4B0627F76678001BDFA1 /* CustomTextField.swift in Sources */,
 				24CC4AC927F571B2001BDFA1 /* AppVerification.swift in Sources */,
+				24210FD0283620020050C424 /* Place.swift in Sources */,
 				247985A72805330300A8100C /* InquiryListTableViewCell.swift in Sources */,
 				2425FB8C27F949520062E597 /* MainSubMenuViewController.swift in Sources */,
 				24455B11280C217100D23358 /* ObituaryListViewController.swift in Sources */,
@@ -1146,6 +1153,7 @@
 				24210FC12832815D0050C424 /* RegisterCondoleMessageViewController.swift in Sources */,
 				24CC4AAE27F553CB001BDFA1 /* UIColor.swift in Sources */,
 				24455B0E280C1C9D00D23358 /* ObituaryListTableViewCell.swift in Sources */,
+				24210FCE2836092E0050C424 /* RegisterCondoleMessageReponse.swift in Sources */,
 				24CC4AE027F5789E001BDFA1 /* UIView.swift in Sources */,
 				247985A12804214900A8100C /* CommonQuestionTableViewCell.swift in Sources */,
 				24E82080282E1B2C00EC50F4 /* RegisterObituaryResponse.swift in Sources */,

@@ -159,7 +159,7 @@
                                 <rect key="frame" x="0.0" y="110.66666666666669" width="390" height="889.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ou-lQ-HA9">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="952"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="970"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1C-wC-2WJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="140"/>
@@ -340,7 +340,7 @@
                                                             <constraint firstAttribute="trailing" secondItem="6Bx-oH-bNE" secondAttribute="trailing" constant="15" id="wmK-Gy-Mys"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiW-bQ-jR2">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiW-bQ-jR2" customClass="NMFNaverMapView">
                                                         <rect key="frame" x="25" y="60.333333333333258" width="340" height="200"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -362,7 +362,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZk-gy-8jI">
-                                                <rect key="frame" x="0.0" y="753.66666666666674" width="390" height="198.33333333333337"/>
+                                                <rect key="frame" x="0.0" y="753.66666666666674" width="390" height="216.33333333333337"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uGP-Dw-RHA">
                                                         <rect key="frame" x="25" y="23" width="98" height="25.333333333333329"/>
@@ -381,40 +381,53 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GMS-hy-IdU">
-                                                        <rect key="frame" x="25" y="68.333333333333258" width="340" height="21"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="MEh-df-Bkh">
+                                                        <rect key="frame" x="25" y="68.333333333333258" width="340" height="123"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI3-8U-99v">
-                                                                <rect key="frame" x="0.0" y="0.0" width="170" height="21"/>
-                                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GMS-hy-IdU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="340" height="24"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="애도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI3-8U-99v">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="24"/>
+                                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000-00-00 00:00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJI-KX-UeW">
+                                                                        <rect key="frame" x="170" y="0.0" width="170" height="24"/>
+                                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="삼가 고인의 명복을 빕니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUa-7v-7yk">
+                                                                <rect key="frame" x="0.0" y="39" width="180" height="24"/>
+                                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000-00-00 00:00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJI-KX-UeW">
-                                                                <rect key="frame" x="170" y="0.0" width="170" height="21"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bj2-bQ-8Hk">
+                                                                <rect key="frame" x="0.0" y="78" width="340" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="uRf-tT-j7u"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
-                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="조문 메세지 모두 보기">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="didTappedViewAllCondoleMessageButton:" destination="EIc-aB-8t9" eventType="touchUpInside" id="jqE-dX-l8K"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="GMS-hy-IdU" secondAttribute="trailing" id="GEd-0I-t2Y"/>
+                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qUa-7v-7yk" secondAttribute="trailing" id="YGT-Eb-Y0L"/>
+                                                            <constraint firstAttribute="trailing" secondItem="bj2-bQ-8Hk" secondAttribute="trailing" id="pAb-xU-HHe"/>
+                                                        </constraints>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="삼가 고인의 명복을 빕니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUa-7v-7yk">
-                                                        <rect key="frame" x="25" y="99.333333333333258" width="157.33333333333334" height="21"/>
-                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bj2-bQ-8Hk">
-                                                        <rect key="frame" x="25" y="140.33333333333326" width="340" height="33"/>
-                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="조문 메세지 모두 보기">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="didTappedViewAllCondoleMessageButton:" destination="EIc-aB-8t9" eventType="touchUpInside" id="jqE-dX-l8K"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnt-g2-mrx">
                                                         <rect key="frame" x="335" y="19.666666666666629" width="30" height="32"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="13"/>
@@ -430,18 +443,13 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="uGP-Dw-RHA" firstAttribute="leading" secondItem="DZk-gy-8jI" secondAttribute="leading" constant="25" id="2U4-V7-Oez"/>
-                                                    <constraint firstAttribute="trailing" secondItem="bj2-bQ-8Hk" secondAttribute="trailing" constant="25" id="BDG-O8-DaM"/>
-                                                    <constraint firstItem="qUa-7v-7yk" firstAttribute="leading" secondItem="DZk-gy-8jI" secondAttribute="leading" constant="25" id="BSP-Xl-jYV"/>
-                                                    <constraint firstItem="bj2-bQ-8Hk" firstAttribute="top" secondItem="qUa-7v-7yk" secondAttribute="bottom" constant="20" id="IDv-lw-zIf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MEh-df-Bkh" secondAttribute="trailing" constant="25" id="33y-lB-9Uj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MEh-df-Bkh" secondAttribute="bottom" constant="25" id="Ehl-J3-zIc"/>
                                                     <constraint firstAttribute="trailing" secondItem="rnt-g2-mrx" secondAttribute="trailing" constant="25" id="Lj5-16-ivX"/>
                                                     <constraint firstItem="uGP-Dw-RHA" firstAttribute="top" secondItem="DZk-gy-8jI" secondAttribute="top" constant="23" id="QaZ-su-DQl"/>
-                                                    <constraint firstItem="qUa-7v-7yk" firstAttribute="top" secondItem="GMS-hy-IdU" secondAttribute="bottom" constant="10" id="Qvt-6z-eOh"/>
-                                                    <constraint firstItem="bj2-bQ-8Hk" firstAttribute="leading" secondItem="DZk-gy-8jI" secondAttribute="leading" constant="25" id="SCZ-va-hu4"/>
-                                                    <constraint firstAttribute="trailing" secondItem="GMS-hy-IdU" secondAttribute="trailing" constant="25" id="Sa0-11-zx5"/>
-                                                    <constraint firstAttribute="bottom" secondItem="bj2-bQ-8Hk" secondAttribute="bottom" constant="25" id="WSe-UK-A7e"/>
-                                                    <constraint firstItem="GMS-hy-IdU" firstAttribute="leading" secondItem="DZk-gy-8jI" secondAttribute="leading" constant="25" id="hdj-VG-S5Y"/>
+                                                    <constraint firstItem="MEh-df-Bkh" firstAttribute="top" secondItem="uGP-Dw-RHA" secondAttribute="bottom" constant="20" id="Xyf-zX-gCO"/>
+                                                    <constraint firstItem="MEh-df-Bkh" firstAttribute="leading" secondItem="DZk-gy-8jI" secondAttribute="leading" constant="25" id="YBq-3Q-QfV"/>
                                                     <constraint firstItem="rnt-g2-mrx" firstAttribute="centerY" secondItem="uGP-Dw-RHA" secondAttribute="centerY" id="pXv-SO-rtT"/>
-                                                    <constraint firstItem="GMS-hy-IdU" firstAttribute="top" secondItem="uGP-Dw-RHA" secondAttribute="bottom" constant="20" id="qdX-KC-spJ"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -506,12 +514,12 @@
                         <outlet property="placeLabel" destination="a0L-FH-csp" id="gfS-QO-ei5"/>
                         <outlet property="residentNameLabel" destination="uLI-Nk-EGD" id="ceK-6c-zOW"/>
                         <outlet property="residentRelationLabel" destination="01v-c2-New" id="71j-u4-4nR"/>
-                        <outlet property="viewCondoleMessageButton" destination="bj2-bQ-8Hk" id="Dnv-gc-EJy"/>
+                        <outlet property="viewCondoleMessageButton" destination="bj2-bQ-8Hk" id="KmW-c0-85j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eri-ja-mAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="915" y="105"/>
+            <point key="canvasLocation" x="913.84615384615381" y="104.50236966824644"/>
         </scene>
         <!--Condole Message List View Controller-->
         <scene sceneID="D8K-sa-hbZ">

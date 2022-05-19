@@ -12,7 +12,7 @@ import RxCocoa
 class CondoleMessageListViewController: UIViewController {
     //MARK: - Properties
     private let disposeBag = DisposeBag()
-    var obID: String = "625cbe4e2c2b0c5f008930e2"
+    var obID: String = ""
     private lazy var condoleMessageListViewModel = CondoleMessageListViewModel(obID: self.obID)
     static let identifier = "CondoleMessageListViewController"
     
@@ -55,7 +55,8 @@ class CondoleMessageListViewController: UIViewController {
     }
     
     @IBAction func didTappedWriteCondoleButton(_ sender: UIButton) {
-        let registerCondoleViewController = UIStoryboard(name: "ObituaryListNav", bundle: nil).instantiateViewController(identifier: RegisterCondoleMessageViewController.identifier)
+        let registerCondoleViewController = UIStoryboard(name: "ObituaryListNav", bundle: nil).instantiateViewController(identifier: RegisterCondoleMessageViewController.identifier) as! RegisterCondoleMessageViewController
+        registerCondoleViewController.obID = self.obID
         self.navigationController?.pushViewController(registerCondoleViewController, animated: true)
     }
     

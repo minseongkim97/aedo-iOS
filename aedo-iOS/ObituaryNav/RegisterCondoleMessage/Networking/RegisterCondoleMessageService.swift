@@ -19,9 +19,9 @@ class RegisterCondoleMessageService {
     func registerCondoleMessage(content: String,
                                 name: String,
                                 obID: String,
-                                completion: @escaping ((Result<CondoleMessage, GFError>) -> Void)
+                                completion: @escaping ((Result<RegisterCondoleMessageReponse, GFError>) -> Void)
     ) {
-        guard let url = URL(string: "\(Constant.BASE_URL)v1/user") else {
+        guard let url = URL(string: "\(Constant.BASE_URL)v1/condole") else {
             completion(.failure(.invalidURL))
             return
         }
@@ -41,6 +41,7 @@ class RegisterCondoleMessageService {
         // URL요청 생성
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethod.POST.rawValue
+        request.setValue(AccessToken.token, forHTTPHeaderField: Constant.ACCESSTOKEN_HEADERFIELD)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type") // 요청타입 JSON
         request.setValue("application/json", forHTTPHeaderField: "Accept") // 응답타입 JSON
         request.httpBody = jsonData
@@ -56,7 +57,7 @@ class RegisterCondoleMessageService {
                 return
             }
             
-            if let data = data, let response = try? JSONDecoder().decode(CondoleMessage.self, from: data) {
+            if let data = data, let response = try? JSONDecoder().decode(RegisterCondoleMessageReponse.self, from: data) {
                 completion(.success(response))
                 return
             }

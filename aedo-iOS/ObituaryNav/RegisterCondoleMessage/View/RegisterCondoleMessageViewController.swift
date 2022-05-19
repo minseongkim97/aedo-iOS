@@ -11,6 +11,7 @@ class RegisterCondoleMessageViewController: UIViewController {
     //MARK: - Properties
     static let identifier = "RegisterCondoleMessageViewController"
     let registerCondoleMessageService = RegisterCondoleMessageService()
+    var obID: String = ""
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -35,20 +36,21 @@ class RegisterCondoleMessageViewController: UIViewController {
     @IBAction func didTappedRegisterCondoleMessageButton(_ sender: UIButton) {
         registerCondoleMessageService.registerCondoleMessage(content: condoleMessageTextField.text ?? "조문 메시지",
                                                              name: nameTextField.text ?? "",
-                                                             obID: ""
+                                                             obID: self.obID
         ) { result in
             switch result {
             case .success(_):
                 DispatchQueue.main.async { [weak self] in
-                    self?.showCustomAlert(alertType: .PopSuccess, alertTitle: "조문 메시지를 등록하셨습니다.", isRightButtonHidden: true, leftButtonTitle: "확인")
+                    self?.showCustomAlert(alertType: .PopSuccess, alertTitle: "조문 메시지를 등록하셨습니다.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
                 }
             case .failure(let error):
+                print(error.localizedDescription)
                 DispatchQueue.main.async { [weak self] in
                     switch error {
                     case .invalidRequest, .invalidResponse:
-                        self?.showCustomAlert(alertType: .none, alertTitle: "입력하신 정보들을 다시 확인해주세요.", isRightButtonHidden: true, leftButtonTitle: "확인")
+                        self?.showCustomAlert(alertType: .none, alertTitle: "입력하신 정보들을 다시 확인해주세요.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
                     default:
-                        self?.showCustomAlert(alertType: .none, alertTitle: "조문 메세지 등록에 실패하셨습니다. 네트워크 연결을 확인해주세요.", isRightButtonHidden: true, leftButtonTitle: "확인")
+                        self?.showCustomAlert(alertType: .none, alertTitle: "조문 메세지 등록에 실패하셨습니다. 네트워크 연결을 확인해주세요.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
                     }
                 }
             }
