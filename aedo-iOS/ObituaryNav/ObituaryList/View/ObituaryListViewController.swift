@@ -28,6 +28,14 @@ class ObituaryListViewController: UIViewController {
         setBinding()
     }
     
+    //MARK: - Actions
+    @IBAction func didTappedBackButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func didTappedHomeButton(_ sender: UIButton) {
+    }
+    
     //MARK: - Helpers
     private func setBinding() {
         obituaryListTableView.rx
@@ -41,6 +49,14 @@ class ObituaryListViewController: UIViewController {
                 cell.updateUI(item: item)
             }
             .disposed(by: disposeBag)
+        
+        obituaryListTableView.rx.modelSelected(ObituaryResponse.self)
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in
+                let detailObituaryVC = UIStoryboard(name: "ObituaryListNav", bundle: nil).instantiateViewController(identifier: DetailObituaryViewController.identifier) as! DetailObituaryViewController
+                detailObituaryVC.name = ""
+                self?.navigationController?.pushViewController(detailObituaryVC, animated: true)
+            })
     }
 }
 
@@ -49,4 +65,6 @@ extension ObituaryListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 270
     }
+    
+   
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -419,6 +419,21 @@
                                                             <constraint firstItem="IIU-9g-BrM" firstAttribute="height" secondItem="VoN-JG-9Ga" secondAttribute="height" id="W7r-Pp-LuQ"/>
                                                         </constraints>
                                                     </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-4A-PuL" customClass="CustomCheckButton" customModule="aedo_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="30" y="314" width="354" height="50"/>
+                                                        <color key="backgroundColor" red="0.95294117649999999" green="0.70196078429999997" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="M3b-4A-PuL" secondAttribute="height" multiplier="177:25" id="WAh-XE-ZJe"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="인증번호 전송">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="didTappedSendAuthNumberButton:" destination="aFD-a8-G3X" eventType="touchUpInside" id="Wed-bV-fqd"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -429,8 +444,11 @@
                                                     <constraint firstItem="Gj5-ej-LdL" firstAttribute="top" secondItem="rn5-pe-Mrr" secondAttribute="bottom" constant="15" id="A4N-2F-x9X"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kKg-nk-E56" secondAttribute="trailing" constant="30" id="DBn-ZZ-Ogr"/>
                                                     <constraint firstItem="61q-uP-su0" firstAttribute="top" secondItem="pNY-1p-wIR" secondAttribute="top" constant="70" id="EOx-ei-Ktn"/>
+                                                    <constraint firstItem="M3b-4A-PuL" firstAttribute="top" secondItem="di8-B9-gP4" secondAttribute="bottom" constant="50" id="I8z-Uz-bT2"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="61q-uP-su0" secondAttribute="trailing" constant="30" id="Jcz-ZA-ANX"/>
                                                     <constraint firstItem="Gj5-ej-LdL" firstAttribute="leading" secondItem="pNY-1p-wIR" secondAttribute="leading" constant="30" id="KPd-il-3dl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="M3b-4A-PuL" secondAttribute="trailing" constant="30" id="MKj-2x-MbX"/>
+                                                    <constraint firstItem="M3b-4A-PuL" firstAttribute="leading" secondItem="pNY-1p-wIR" secondAttribute="leading" constant="30" id="U0c-EA-afT"/>
                                                     <constraint firstItem="di8-B9-gP4" firstAttribute="top" secondItem="kKg-nk-E56" secondAttribute="bottom" constant="50" id="Ze8-mX-FDc"/>
                                                     <constraint firstAttribute="trailing" secondItem="rn5-pe-Mrr" secondAttribute="trailing" constant="30" id="bn4-t0-MFi"/>
                                                     <constraint firstItem="va1-t3-dTp" firstAttribute="width" secondItem="snL-tw-oXr" secondAttribute="width" id="fGm-GO-Yrn"/>
@@ -626,32 +644,14 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="cwN-H7-hXY"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="MnF-og-Gd4"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-4A-PuL" customClass="CustomCheckButton" customModule="aedo_iOS" customModuleProvider="target">
-                                <rect key="frame" x="30" y="1066" width="354" height="50"/>
-                                <color key="backgroundColor" red="0.95294117649999999" green="0.70196078429999997" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="M3b-4A-PuL" secondAttribute="height" multiplier="177:25" id="WAh-XE-ZJe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="인증번호 전송">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTappedSendAuthNumberButton:" destination="aFD-a8-G3X" eventType="touchUpInside" id="Wed-bV-fqd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Oi-fs-cAk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="M3b-4A-PuL" firstAttribute="leading" secondItem="1Oi-fs-cAk" secondAttribute="leading" constant="30" id="47W-D0-cB8"/>
                             <constraint firstItem="uCU-en-SWi" firstAttribute="trailing" secondItem="1Oi-fs-cAk" secondAttribute="trailing" id="Cr4-7A-xSi"/>
                             <constraint firstItem="uCU-en-SWi" firstAttribute="top" secondItem="1Oi-fs-cAk" secondAttribute="top" id="Drf-Vt-Xrv"/>
                             <constraint firstItem="uCU-en-SWi" firstAttribute="leading" secondItem="1Oi-fs-cAk" secondAttribute="leading" id="MlP-I0-THd"/>
-                            <constraint firstItem="1Oi-fs-cAk" firstAttribute="bottom" secondItem="M3b-4A-PuL" secondAttribute="bottom" constant="50" id="nZL-BM-ZRd"/>
                             <constraint firstAttribute="bottom" secondItem="uCU-en-SWi" secondAttribute="bottom" id="uw3-Lx-Ivo"/>
-                            <constraint firstItem="1Oi-fs-cAk" firstAttribute="trailing" secondItem="M3b-4A-PuL" secondAttribute="trailing" constant="30" id="wFS-d9-4hd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mgC-9n-Z4w"/>

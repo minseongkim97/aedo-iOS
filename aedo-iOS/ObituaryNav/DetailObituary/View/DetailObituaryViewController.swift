@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import NMapsMap
 
 class DetailObituaryViewController: UIViewController {
     //MARK: - Properties
@@ -23,7 +24,11 @@ class DetailObituaryViewController: UIViewController {
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var coffinLabel: UILabel!
     @IBOutlet weak var dofpLabel: UILabel!
+    @IBOutlet weak var buriedPlaceLabel: UILabel!
+    @IBOutlet weak var mapView: UIView!
+    @IBOutlet weak var mapAddressLabel: UILabel!
     
+    @IBOutlet weak var countCondoleMessageLabel: UILabel!
     static func instantiate(viewModel: DetailObituaryViewModel) -> DetailObituaryViewController {
         let storyboard = UIStoryboard(name: "ObituaryListNav", bundle: nil)
         let vc = storyboard.instantiateInitialViewController() as! DetailObituaryViewController
@@ -34,7 +39,13 @@ class DetailObituaryViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setAttribute()
     }
     
     //MARK: - Helpers
+    private func setAttribute() {
+        let nmapView = NMFNaverMapView()
+        mapView.addSubview(nmapView)
+    }
 }
+

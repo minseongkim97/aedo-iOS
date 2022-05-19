@@ -56,6 +56,16 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(registerObituaryViewController, animated: true)
     }
     
+    @IBAction func didTappedSendObituaryButton(_ sender: UIButton) {
+        let obituaryListViewController = UIStoryboard(name: "ObituaryListNav", bundle: nil).instantiateViewController(identifier: ObituaryListViewController.identifier)
+        self.navigationController?.pushViewController(obituaryListViewController, animated: true)
+    }
+    
+    @IBAction func didTappedCondoleListButton(_ sender: UIButton) {
+        let condoleListViewController = UIStoryboard(name: "ObituaryListNav", bundle: nil).instantiateViewController(identifier: CondoleMessageListViewController.identifier)
+        self.navigationController?.pushViewController(condoleListViewController, animated: true)
+    }
+    
     @IBAction func didTappedMoreAnnouncementButton(_ sender: UIButton) {
         let customerNoticeListViewController = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: CustomerNoticeListViewController.identifier)
         self.navigationController?.pushViewController(customerNoticeListViewController, animated: true)

@@ -1,6 +1,7 @@
 PODS:
   - DropDown (2.3.13)
   - Kingfisher (7.1.1)
+  - NMapsMap (3.14.0)
   - Realm (10.19.0):
     - Realm/Headers (= 10.19.0)
   - Realm/Headers (10.19.0)
@@ -16,6 +17,7 @@ PODS:
 DEPENDENCIES:
   - DropDown
   - Kingfisher
+  - NMapsMap
   - RealmSwift
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
@@ -24,6 +26,7 @@ SPEC REPOS:
   trunk:
     - DropDown
     - Kingfisher
+    - NMapsMap
     - Realm
     - RealmSwift
     - RxCocoa
@@ -33,12 +36,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
+  NMapsMap: 61c2abfc409bbcdc91583ccc455a5b6f64c7414e
   Realm: 869ab2a7e3bdfa6bf06d8723251539f504e6f602
   RealmSwift: f1f51c4a02fe826e5cea623b5441992f06bdc942
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 710817d74c9b815ab1de0c4beff32270c0fcf389
+PODFILE CHECKSUM: 3d56907e9aa498f651a2551da1d3f4ac1c402639
 
 COCOAPODS: 1.11.2

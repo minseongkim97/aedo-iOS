@@ -49,6 +49,16 @@ class CondoleMessageListViewController: UIViewController {
         floatingButton.layer.cornerRadius = 30
     }
     
+    //MARK: - Action
+    @IBAction func didTappedBackButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func didTappedWriteCondoleButton(_ sender: UIButton) {
+        let registerCondoleViewController = UIStoryboard(name: "ObituaryListNav", bundle: nil).instantiateViewController(identifier: RegisterCondoleMessageViewController.identifier)
+        self.navigationController?.pushViewController(registerCondoleViewController, animated: true)
+    }
+    
     //MARK: - Helpers
     private func bind() {
         condoleMessageListTableView.rx

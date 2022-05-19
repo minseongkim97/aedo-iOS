@@ -11,4 +11,5 @@ target 'aedo-iOS' do
     	pod 'RxCocoa', '6.5.0'
 	pod 'Kingfisher'
 	pod 'DropDown'
+	pod 'NMapsMap'
 end
