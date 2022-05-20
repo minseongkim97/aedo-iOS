@@ -17,10 +17,13 @@ class MainSubMenuViewController: UIViewController {
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var kakaoTalkInquiryButton: BaseButton!
     @IBOutlet weak var personalInquiryButton: BaseButton!
-    
     @IBOutlet weak var commonQuestionButton: BaseButton!
     @IBOutlet weak var phoneInquiryButton: BaseButton!
     @IBOutlet weak var useInfoStackView: UIStackView!
+    @IBOutlet weak var businessmanInfoStackView: UIStackView!
+    @IBOutlet weak var obituaryListStackView: UIStackView!
+    @IBOutlet weak var orderListStackView: UIStackView!
+    @IBOutlet weak var thanksToCondoleMessageStackView: UIStackView!
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -39,33 +42,76 @@ class MainSubMenuViewController: UIViewController {
         openSFSafariView("http://pf.kakao.com/_Xuvxeb/chat")
     }
     
+    @IBAction func didTappedPhoneInquiryButton(_ sender: UIButton) {
+        let number:Int = 1028320516
+                
+        // URLScheme 문자열을 통해 URL 인스턴스를 만들어 줍니다.
+        if let url = NSURL(string: "tel://0" + "\(number)"),
+        
+           //canOpenURL(_:) 메소드를 통해서 URL 체계를 처리하는 데 앱을 사용할 수 있는지 여부를 확인
+           UIApplication.shared.canOpenURL(url as URL) {
+           
+           //사용가능한 URLScheme이라면 open(_:options:completionHandler:) 메소드를 호출해서
+           //만들어둔 URL 인스턴스를 열어줍니다.
+            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+        }
+    }
+    
     @IBAction func didTappedCommonQuestionButton(_ sender: UIButton) {
         let commonQuestionViewController = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: CommonQuestionListViewController.identifier) as! CommonQuestionListViewController
         self.navigationController?.pushViewController(commonQuestionViewController, animated: true)
     }
     
-    @IBAction func didTappedPhoneInquiryButton(_ sender: UIButton) {
-        print("전화문의")
-    }
     //MARK: - Selector
-    @objc func didTappedStackView() {
+    @objc func didTappedUseInfoStackView() {
         let useInfoVC = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: UseInfoViewController.identifier) as! UseInfoViewController
         self.navigationController?.pushViewController(useInfoVC, animated: true)
     }
-
-    //MARK: - Helpers
-    private func openSFSafariView(_ targetURL: String) {
-        guard let url = URL(string: targetURL) else { return }
-        let safariViewController = SFSafariViewController(url: url)
-        safariViewController.modalPresentationStyle = .automatic
-        present(safariViewController, animated: true, completion: nil)
+    
+    @objc func didTappedObituaryListStackView() {
+        let obituaryListVC = UIStoryboard(name: "ObituaryListNav", bundle: nil).instantiateViewController(identifier: ObituaryListViewController.identifier) as! ObituaryListViewController
+        self.navigationController?.pushViewController(obituaryListVC, animated: true)
     }
     
+    @objc func didTappedBusinessmanInfoStackView() {
+        let businessmanInfoVC = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: BusinessmanInfoViewController.identifier) as! BusinessmanInfoViewController
+        self.navigationController?.pushViewController(businessmanInfoVC, animated: true)
+    }
+    
+    @objc func didTappedOrderListStackView() {
+    }
+    
+    @objc func didTappedThanksToCondoleMessageStackView() {
+        let thanksToCondoleMessageVC = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: ThanksToCondoleMessageViewController.identifier) as! ThanksToCondoleMessageViewController
+        self.navigationController?.pushViewController(thanksToCondoleMessageVC, animated: true)
+    }
+
+    //MARK: - Helpers
     private func putGesture() {
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTappedStackView))
-        gesture.numberOfTapsRequired = 1
-        gesture.numberOfTouchesRequired = 1
-        useInfoStackView.addGestureRecognizer(gesture)
+        let useInfoStackGesture = UITapGestureRecognizer(target: self, action: #selector(didTappedUseInfoStackView))
+        useInfoStackGesture.numberOfTapsRequired = 1
+        useInfoStackGesture.numberOfTouchesRequired = 1
+        useInfoStackView.addGestureRecognizer(useInfoStackGesture)
+        
+        let obituaryListStackGesture = UITapGestureRecognizer(target: self, action: #selector(didTappedObituaryListStackView))
+        obituaryListStackGesture.numberOfTapsRequired = 1
+        obituaryListStackGesture.numberOfTouchesRequired = 1
+        obituaryListStackView.addGestureRecognizer(obituaryListStackGesture)
+        
+        let businessmanInfoStackGesture = UITapGestureRecognizer(target: self, action: #selector(didTappedBusinessmanInfoStackView))
+        businessmanInfoStackGesture.numberOfTapsRequired = 1
+        businessmanInfoStackGesture.numberOfTouchesRequired = 1
+        businessmanInfoStackView.addGestureRecognizer(businessmanInfoStackGesture)
+        
+        let orderListStackGesture = UITapGestureRecognizer(target: self, action: #selector(didTappedOrderListStackView))
+        orderListStackGesture.numberOfTapsRequired = 1
+        orderListStackGesture.numberOfTouchesRequired = 1
+        orderListStackView.addGestureRecognizer(orderListStackGesture)
+        
+        let thanksToCondoleMessageStackGesture = UITapGestureRecognizer(target: self, action: #selector(didTappedThanksToCondoleMessageStackView))
+        thanksToCondoleMessageStackGesture.numberOfTapsRequired = 1
+        thanksToCondoleMessageStackGesture.numberOfTouchesRequired = 1
+        thanksToCondoleMessageStackView.addGestureRecognizer(thanksToCondoleMessageStackGesture)
     }
 
     private func getUserInfo() {

@@ -1,40 +1,31 @@
 //
-//  CommonQuestionListViewController.swift
+//  BusinessmanInfoViewController.swift
 //  aedo-iOS
 //
-//  Created by MIN SEONG KIM on 2022/04/11.
+//  Created by MIN SEONG KIM on 2022/05/19.
 //
 
 import UIKit
 
-struct Answer {
-    var question: String
-    var answer: String
-    var isOpen: Bool
-    
-    static func EMPTY() -> Answer {
-        return Answer(question: "", answer: "", isOpen: false)
-    }
-}
-
-class CommonQuestionListViewController: UIViewController {
+class ThanksToCondoleMessageViewController: UIViewController {
     //MARK: - Properties
-    static let identifier = "CommonQuestionListViewController"
+    static let identifier = "ThanksToCondoleMessageViewController"
     var answers: [Answer] = [
-        Answer(question: "Q. 1. 화한 주문 결제", answer: "화한 주문 페이지를 클릭한 뒤\n원하시는 화한을 선택 후 결제해주시면 됩니다.", isOpen: false),
-        Answer(question: "Q. 2. 화한 주문 환불", answer: "고객센터로 문의해주세요", isOpen: false),
-        Answer(question: "Q. 3. 부고 공유가 되지 않아요", answer: "고객센터로 문의해주세요", isOpen: false),
-        Answer(question: "Q. 4. 길찾기", answer: "고객센터로 문의해주세요", isOpen: false),
-        Answer(question: "Q. 5. 부고 작성", answer: "고객센터로 문의해주세요", isOpen: false)
+        Answer(question: "Q. 1. 조문감사", answer: "바쁘신 중에도 장례에 오셔서 위로해주셔서 정말 감사드립니다.\n건강 하시길 기도 드리며 다시 한번 더 감사의 인사를 드립니다.", isOpen: false),
+        Answer(question: "Q. 2. 조문감사", answer: "기도와 위로 주시고 슬픔을 함께 해주셔서 장례를 잘 마칠 수 있었습니다.\n고마운 마음 잊지 않고 오래도록 기억 하겠습니다.\n다시 한번 감사의 인사드립니다.", isOpen: false),
+        Answer(question: "Q. 3. 조문감사", answer: "바쁘신 와중에도 참석하여 따뜻한 위로의 말씀을 해주신 점 깊이 감사드립니다.\n덕분에 장례는 무사히 마치게 되었습니다.\n정말 큰 위로와 힘이 되었으며 감사한 마음을 오래도록 잊지 않고 간직 하겠습니다.", isOpen: false),
+        Answer(question: "Q. 4. 조문감사", answer: "먼곳에서 조문을 와주시고 따뜻한 조위와 후의를 베풀어 주시어 무사히 장례를 마칠 수 있었습니다.\n깊은 감사드립니다.", isOpen: false),
+        Answer(question: "Q. 5. 조문감사", answer: "직접 찾아뵙지 않고 문자를 통해서 감사의 인사를 드리는 부분 양해 부탁드립니다.\n다시 한번 감사 드리고 가정의 평안과 행운이 가득 하시길 기원하겠습니다.", isOpen: false)
     ]
     
-    @IBOutlet private weak var containerView: UIView!
-    @IBOutlet private weak var commonQuestionListTableView: DynamicHeightTableView! {
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var thanksToCondoleMessageTableView: DynamicHeightTableView! {
         didSet {
-            commonQuestionListTableView.delegate = self
-            commonQuestionListTableView.dataSource = self
+            thanksToCondoleMessageTableView.delegate = self
+            thanksToCondoleMessageTableView.dataSource = self
         }
     }
+    
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -56,14 +47,14 @@ class CommonQuestionListViewController: UIViewController {
         containerView.layer.borderWidth = 0.5
         containerView.layer.cornerRadius = 10
         containerView.layer.borderColor = UIColor(hex: 0xDDDDDD).cgColor
-        
-        commonQuestionListTableView.layer.cornerRadius = 10
-        commonQuestionListTableView.layer.masksToBounds = true
+
+        thanksToCondoleMessageTableView.layer.cornerRadius = 10
+        thanksToCondoleMessageTableView.layer.masksToBounds = true
     }
 }
 
 //MARK: - Extension: UITableviewDelegate
-extension CommonQuestionListViewController: UITableViewDelegate, UITableViewDataSource {
+extension ThanksToCondoleMessageViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return answers.count
     }

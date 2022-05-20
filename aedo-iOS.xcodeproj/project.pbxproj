@@ -14,6 +14,10 @@
 		24210FD0283620020050C424 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FCF283620020050C424 /* Place.swift */; };
 		24210FD22836315E0050C424 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FD12836315E0050C424 /* BaseButton.swift */; };
 		24210FD4283658DF0050C424 /* UseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FD3283658DE0050C424 /* UseInfoViewController.swift */; };
+		24210FD6283660AA0050C424 /* ThanksToCondoleMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FD5283660AA0050C424 /* ThanksToCondoleMessageViewController.swift */; };
+		24210FD8283663770050C424 /* BusinessmanInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FD7283663770050C424 /* BusinessmanInfoViewController.swift */; };
+		24210FDA283667980050C424 /* DynamicHeightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FD9283667980050C424 /* DynamicHeightTableView.swift */; };
+		24210FDE28366AD60050C424 /* BusinessInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FDD28366AD60050C424 /* BusinessInfoTableViewCell.swift */; };
 		2425FB8127F810A00062E597 /* Announcemnet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8027F810A00062E597 /* Announcemnet.swift */; };
 		2425FB8727F811C40062E597 /* AnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8527F811C40062E597 /* AnnouncementTableViewCell.swift */; };
 		2425FB8A27F93A5C0062E597 /* AnnouncementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8927F93A5C0062E597 /* AnnouncementService.swift */; };
@@ -122,6 +126,10 @@
 		24210FCF283620020050C424 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		24210FD12836315E0050C424 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		24210FD3283658DE0050C424 /* UseInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseInfoViewController.swift; sourceTree = "<group>"; };
+		24210FD5283660AA0050C424 /* ThanksToCondoleMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksToCondoleMessageViewController.swift; sourceTree = "<group>"; };
+		24210FD7283663770050C424 /* BusinessmanInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessmanInfoViewController.swift; sourceTree = "<group>"; };
+		24210FD9283667980050C424 /* DynamicHeightTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightTableView.swift; sourceTree = "<group>"; };
+		24210FDD28366AD60050C424 /* BusinessInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoTableViewCell.swift; sourceTree = "<group>"; };
 		2425FB8027F810A00062E597 /* Announcemnet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcemnet.swift; sourceTree = "<group>"; };
 		2425FB8527F811C40062E597 /* AnnouncementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewCell.swift; sourceTree = "<group>"; };
 		2425FB8927F93A5C0062E597 /* AnnouncementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementService.swift; sourceTree = "<group>"; };
@@ -302,8 +310,6 @@
 			isa = PBXGroup;
 			children = (
 				2425FB8527F811C40062E597 /* AnnouncementTableViewCell.swift */,
-				247985A02804214900A8100C /* CommonQuestionTableViewCell.swift */,
-				247985A2280423EB00A8100C /* AnswerTableViewCell.swift */,
 				247985A62805330300A8100C /* InquiryListTableViewCell.swift */,
 			);
 			path = CustomCells;
@@ -850,6 +856,7 @@
 				24E82070282CF60000EC50F4 /* RegisterObituaryCustomTextField.swift */,
 				24E82075282D1ED200EC50F4 /* RegisterObituaryDateView.swift */,
 				24210FD12836315E0050C424 /* BaseButton.swift */,
+				24210FD9283667980050C424 /* DynamicHeightTableView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -951,6 +958,8 @@
 				2479859E280420C700A8100C /* CommonQuestionListViewController.swift */,
 				24550A882807B6B000853B58 /* SettingViewController.swift */,
 				24550A8A2807D0B500853B58 /* WithdrawalViewController.swift */,
+				24210FD5283660AA0050C424 /* ThanksToCondoleMessageViewController.swift */,
+				24210FD7283663770050C424 /* BusinessmanInfoViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -989,6 +998,9 @@
 				24550A9E2807FA5C00853B58 /* SettingVersionTableViewCell.swift */,
 				24550A9F2807FA5C00853B58 /* SettingVersionTableViewCell.xib */,
 				2425FB9427FB7B540062E597 /* CustomerNoticeListTableViewCell.swift */,
+				247985A02804214900A8100C /* CommonQuestionTableViewCell.swift */,
+				247985A2280423EB00A8100C /* AnswerTableViewCell.swift */,
+				24210FDD28366AD60050C424 /* BusinessInfoTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1158,6 +1170,8 @@
 				24CC4B0427F76665001BDFA1 /* CustomCheckButton.swift in Sources */,
 				24CC4ACB27F571B7001BDFA1 /* AppPolicy.swift in Sources */,
 				24210FC12832815D0050C424 /* RegisterCondoleMessageViewController.swift in Sources */,
+				24210FDE28366AD60050C424 /* BusinessInfoTableViewCell.swift in Sources */,
+				24210FDA283667980050C424 /* DynamicHeightTableView.swift in Sources */,
 				24CC4AAE27F553CB001BDFA1 /* UIColor.swift in Sources */,
 				24455B0E280C1C9D00D23358 /* ObituaryListTableViewCell.swift in Sources */,
 				24210FCE2836092E0050C424 /* RegisterCondoleMessageReponse.swift in Sources */,
@@ -1197,6 +1211,8 @@
 				24E82084282F07AD00EC50F4 /* User.swift in Sources */,
 				24E82078282DFBFB00EC50F4 /* RegisterObituaryService.swift in Sources */,
 				2425FB9B27FFABD50062E597 /* AnnouncementListViewModel.swift in Sources */,
+				24210FD6283660AA0050C424 /* ThanksToCondoleMessageViewController.swift in Sources */,
+				24210FD8283663770050C424 /* BusinessmanInfoViewController.swift in Sources */,
 				24455B13280C8AFF00D23358 /* CondoleMessageListViewController.swift in Sources */,
 				24550AA02807FA5C00853B58 /* SettingVersionTableViewCell.swift in Sources */,
 				24E8207A282E0DDD00EC50F4 /* ImageFile.swift in Sources */,

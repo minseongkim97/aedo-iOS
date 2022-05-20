@@ -9,7 +9,7 @@ import UIKit
 
 class RegisterObituaryService {
     func uploadImage(request: RegisterObituaryRequest, image: UIImage, completion: @escaping ((Result<RegisterObituaryResponse, GFError>) -> Void)) {
-        let parameters = [
+        let parameters: [String: String?] = [
             "relation": request.relation,
             "residentName": request.residentName,
             "residentphone": request.residentphone,
@@ -57,14 +57,14 @@ class RegisterObituaryService {
         }.resume()
     }
     
-    func createDataBody(withParameters params: [String: Any]?, media: [Media]?, boundary: String) -> Data {
+    func createDataBody(withParameters params: [String: String?]?, media: [Media]?, boundary: String) -> Data {
        let lineBreak = "\r\n"
        var body = Data()
        if let parameters = params {
           for (key, value) in parameters {
              body.append("--\(boundary + lineBreak)")
              body.append("Content-Disposition: form-data; name=\"\(key)\"\(lineBreak + lineBreak)")
-             body.append("\(value as! String + lineBreak)")
+             body.append("\(value! + lineBreak)")
           }
        }
        if let media = media {

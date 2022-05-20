@@ -17,7 +17,11 @@ class SettingSwitchTableViewCell: UITableViewCell {
         super.awakeFromNib()
         settingSwitch.transform = CGAffineTransform(scaleX: 0.65, y: 0.65)
     }
-
+    
+    @IBAction func switchAction(_ sender: UISwitch) {
+        print(sender.isOn)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

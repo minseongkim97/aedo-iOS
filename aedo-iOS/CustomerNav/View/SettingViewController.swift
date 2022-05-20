@@ -53,8 +53,8 @@ class SettingViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configure()
+        setContribute()
     }
     
     //MARK: - Actions
@@ -64,6 +64,12 @@ class SettingViewController: UIViewController {
     }
     
     //MARK: - Helpers
+    private func setContribute() {
+        settingTableView.layer.masksToBounds = false
+        settingTableView.layer.shadowColor = UIColor.black.cgColor
+        settingTableView.layer.shadowOpacity = 0.07
+        settingTableView.layer.shadowRadius = 10
+    }
     private func configure() {
         models.append(
             Section(title: "기능설정", options: [
@@ -79,13 +85,19 @@ class SettingViewController: UIViewController {
         models.append(
             Section(title: "약관상세", options: [
                 .staticCell(model: SettingsOption(title: "이용약관", handler: {
-                    print("Tapped 이용약관")
+                    let privateInfoAccessVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: PrivateInfoAccessViewController.identifier) as! PrivateInfoAccessViewController
+                    privateInfoAccessVC.modalPresentationStyle = .fullScreen
+                    self.present(privateInfoAccessVC, animated: true)
                 })),
                 .staticCell(model: SettingsOption(title: "개인정보이용동의", handler: {
-                    print("Tapped 개인정보이용동의")
+                    let privateInfoAccessVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: PrivateInfoAccessViewController.identifier) as! PrivateInfoAccessViewController
+                    privateInfoAccessVC.modalPresentationStyle = .fullScreen
+                    self.present(privateInfoAccessVC, animated: true)
                 })),
                 .staticCell(model: SettingsOption(title: "제3자 정보제공 이용동의", handler: {
-                    print("Tapped 제3자 정보제공 이용동의")
+                    let privateInfoAccessVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: PrivateInfoAccessViewController.identifier) as! PrivateInfoAccessViewController
+                    privateInfoAccessVC.modalPresentationStyle = .fullScreen
+                    self.present(privateInfoAccessVC, animated: true)
                 }))
             ])
         )
@@ -96,7 +108,8 @@ class SettingViewController: UIViewController {
                     print("Tapped 로그아웃")
                 })),
                 .staticCell(model: SettingsOption(title: "회원탈퇴", handler: {
-                    print("Tapped 회원탈퇴")
+                    let withdrawalVC = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: WithdrawalViewController.identifier) as! WithdrawalViewController
+                    self.navigationController?.pushViewController(withdrawalVC, animated: true)
                 }))
             ])
         )

@@ -10,15 +10,17 @@ import UIKit
 class CustomerMainViewController: UIViewController {
     //MARK: - Properties
     static let identifier = "CustomerMainViewController"
-    let mainSettings = [
+    lazy var mainSettings = [
         SettingsOption(title: "공지사항", handler: {
-        print("공지사항")
+            let noticeVC = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: CustomerNoticeListViewController.identifier) as! CustomerNoticeListViewController
+            self.navigationController?.pushViewController(noticeVC, animated: true)
     }),
     SettingsOption(title: "자주 묻는 질문", handler: {
-        print("자주 묻는 질문")
+        let commonQuestionVC = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: CommonQuestionListViewController.identifier) as! CommonQuestionListViewController
+        self.navigationController?.pushViewController(commonQuestionVC, animated: true)
     }),
     SettingsOption(title: "나의 민원", handler: {
-        print("나의 민원")
+        self.openSFSafariView("http://pf.kakao.com/_Xuvxeb/chat")
     })
     ]
     
