@@ -1,0 +1,96 @@
+
+/* Class = "UITextField"; placeholder = "인증번호를 입력해주세요."; ObjectID = "1pb-hs-QU2"; */
+"1pb-hs-QU2.placeholder" = "인증번호를 입력해주세요.";
+
+/* Class = "UILabel"; text = "위치정보"; ObjectID = "24J-e8-U0t"; */
+"24J-e8-U0t.text" = "위치정보";
+
+/* Class = "UILabel"; text = "저장공간"; ObjectID = "2en-Am-7Mf"; */
+"2en-Am-7Mf.text" = "저장공간";
+
+/* Class = "UILabel"; text = "휴대전화 정보를"; ObjectID = "61q-uP-su0"; */
+"61q-uP-su0.text" = "휴대전화 정보를";
+
+/* Class = "UILabel"; text = "앱 접근 권한 동의"; ObjectID = "8gY-Cw-jus"; */
+"8gY-Cw-jus.text" = "앱 접근 권한 동의";
+
+/* Class = "UILabel"; text = "생년월일"; ObjectID = "EyO-se-VRZ"; */
+"EyO-se-VRZ.text" = "생년월일";
+
+/* Class = "UILabel"; text = "개인정보 이용 동의"; ObjectID = "Iw4-L3-vIR"; */
+"Iw4-L3-vIR.text" = "개인정보 이용 동의";
+
+/* Class = "UITextField"; placeholder = "6자리 생년월일을 입력해주세요."; ObjectID = "Jbz-tl-pTI"; */
+"Jbz-tl-pTI.placeholder" = "6자리 생년월일을 입력해주세요.";
+
+/* Class = "UILabel"; text = "공지 및 PUSH 알림"; ObjectID = "L3e-wh-Ihq"; */
+"L3e-wh-Ihq.text" = "공지 및 PUSH 알림";
+
+/* Class = "UIButton"; normalTitle = "인증번호 전송"; ObjectID = "M3b-4A-PuL"; */
+"M3b-4A-PuL.normalTitle" = "인증번호 전송";
+
+/* Class = "UILabel"; text = "※ 회원가입은 만 15세 이상만 가능합니다. 허위사항 기재 시 불이익을 받을 수 있습니다."; ObjectID = "NqE-1O-WOG"; */
+"NqE-1O-WOG.text" = "※ 회원가입은 만 15세 이상만 가능합니다. 허위사항 기재 시 불이익을 받을 수 있습니다.";
+
+/* Class = "UILabel"; text = "인증번호"; ObjectID = "SnH-pN-KQl"; */
+"SnH-pN-KQl.text" = "인증번호";
+
+/* Class = "UILabel"; text = "휴대전화 번호"; ObjectID = "TZZ-iD-M6c"; */
+"TZZ-iD-M6c.text" = "휴대전화 번호";
+
+/* Class = "UILabel"; text = "휴대전화 번호"; ObjectID = "V0h-oz-PKh"; */
+"V0h-oz-PKh.text" = "휴대전화 번호";
+
+/* Class = "UIButton"; normalTitle = "휴대전화 번호 재입력"; ObjectID = "VoN-JG-9Ga"; */
+"VoN-JG-9Ga.normalTitle" = "휴대전화 번호 재입력";
+
+/* Class = "UILabel"; text = "알림"; ObjectID = "a7K-FP-jkX"; */
+"a7K-FP-jkX.text" = "알림";
+
+/* Class = "UILabel"; text = "‘애도’ 개인정보 고유식별번호 동의 이용약관"; ObjectID = "dbu-In-fXh"; */
+"dbu-In-fXh.text" = "‘애도’ 개인정보 고유식별번호 동의 이용약관";
+
+/* Class = "UILabel"; text = "(필수)"; ObjectID = "ecG-cE-LH7"; */
+"ecG-cE-LH7.text" = "(필수)";
+
+/* Class = "UILabel"; text = "이용약관 동의, 개인정보이용 동의, 제3자정보제공 동의, 위치 정보이용 동의의 모든 약관을 확인하였으며, 충분히 숙지하였고 동의합니다."; ObjectID = "fzw-aZ-Z1b"; */
+"fzw-aZ-Z1b.text" = "이용약관 동의, 개인정보이용 동의, 제3자정보제공 동의, 위치 정보이용 동의의 모든 약관을 확인하였으며, 충분히 숙지하였고 동의합니다.";
+
+/* Class = "UILabel"; text = "(필수)"; ObjectID = "hIW-Ws-qhW"; */
+"hIW-Ws-qhW.text" = "(필수)";
+
+/* Class = "UIButton"; normalTitle = "인증코드 재전송"; ObjectID = "jZm-QD-2OX"; */
+"jZm-QD-2OX.normalTitle" = "인증코드 재전송";
+
+/* Class = "UILabel"; text = "첨부파일 저장 및 반납사진 업로드"; ObjectID = "jr0-ee-uj4"; */
+"jr0-ee-uj4.text" = "첨부파일 저장 및 반납사진 업로드";
+
+/* Class = "UILabel"; text = "안녕하세요. 애도입니다. "; ObjectID = "kKg-nk-E56"; */
+"kKg-nk-E56.text" = "안녕하세요. 애도입니다. ";
+
+/* Class = "UIButton"; normalTitle = "확인"; ObjectID = "mJX-mD-JhN"; */
+"mJX-mD-JhN.normalTitle" = "확인";
+
+/* Class = "UILabel"; text = "(선택)"; ObjectID = "oJJ-Ov-3ks"; */
+"oJJ-Ov-3ks.text" = "(선택)";
+
+/* Class = "UILabel"; text = "위치기반 서비스 제공"; ObjectID = "rEh-P5-CbY"; */
+"rEh-P5-CbY.text" = "위치기반 서비스 제공";
+
+/* Class = "UITextField"; placeholder = "‘-’ 없이 입력해주세요."; ObjectID = "rPS-xG-0IR"; */
+"rPS-xG-0IR.placeholder" = "‘-’ 없이 입력해주세요.";
+
+/* Class = "UITextField"; placeholder = "이름을 입력해주세요."; ObjectID = "ts3-Gk-qgS"; */
+"ts3-Gk-qgS.placeholder" = "이름을 입력해주세요.";
+
+/* Class = "UIButton"; normalTitle = "확인"; ObjectID = "tva-jl-oXt"; */
+"tva-jl-oXt.normalTitle" = "확인";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "uhN-6C-TQa"; */
+"uhN-6C-TQa.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "확인"; ObjectID = "va1-t3-dTp"; */
+"va1-t3-dTp.normalTitle" = "확인";
+
+/* Class = "UILabel"; text = "이름"; ObjectID = "weF-y5-KY3"; */
+"weF-y5-KY3.text" = "이름";

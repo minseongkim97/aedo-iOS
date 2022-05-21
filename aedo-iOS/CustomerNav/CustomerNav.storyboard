@@ -81,13 +81,16 @@
                                                     <constraint firstAttribute="width" secondItem="fyX-Qc-3pd" secondAttribute="height" multiplier="13:6" id="fMU-mQ-PkV"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sva-56-zzO">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sva-56-zzO" customClass="BaseButton" customModule="aedo_iOS" customModuleProvider="target">
                                                 <rect key="frame" x="311.5" y="18.5" width="32.5" height="33"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Sva-56-zzO" secondAttribute="height" multiplier="1:1" id="KYl-09-fz8"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="customer_main_phone"/>
+                                                <connections>
+                                                    <action selector="didTappedPhoneCallButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2ja-Xd-U6o"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

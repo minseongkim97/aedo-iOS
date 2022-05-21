@@ -75,6 +75,15 @@ class MainViewController: UIViewController {
         let settingViewController = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: SettingViewController.identifier)
         self.navigationController?.pushViewController(settingViewController, animated: true)
     }
+    
+    @IBAction func didTappedSearchButton(_ sender: UIButton) {
+        self.showCustomAlert(alertType: .none, alertTitle: "해당 기능은 준비중입니다.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+    }
+    
+    @IBAction func didTappedOrderWreath(_ sender: UIButton) {
+        self.showCustomAlert(alertType: .none, alertTitle: "해당 기능은 준비중입니다.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+    }
+    
     //MARK: - Helpers
     private func setUI() {
         announcementView.layer.cornerRadius = 10

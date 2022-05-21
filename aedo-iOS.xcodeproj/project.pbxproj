@@ -18,6 +18,7 @@
 		24210FD8283663770050C424 /* BusinessmanInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FD7283663770050C424 /* BusinessmanInfoViewController.swift */; };
 		24210FDA283667980050C424 /* DynamicHeightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FD9283667980050C424 /* DynamicHeightTableView.swift */; };
 		24210FDE28366AD60050C424 /* BusinessInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24210FDD28366AD60050C424 /* BusinessInfoTableViewCell.swift */; };
+		24210FE52838BD1D0050C424 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24210FE72838BD1D0050C424 /* InfoPlist.strings */; };
 		2425FB8127F810A00062E597 /* Announcemnet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8027F810A00062E597 /* Announcemnet.swift */; };
 		2425FB8727F811C40062E597 /* AnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8527F811C40062E597 /* AnnouncementTableViewCell.swift */; };
 		2425FB8A27F93A5C0062E597 /* AnnouncementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425FB8927F93A5C0062E597 /* AnnouncementService.swift */; };
@@ -130,6 +131,10 @@
 		24210FD7283663770050C424 /* BusinessmanInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessmanInfoViewController.swift; sourceTree = "<group>"; };
 		24210FD9283667980050C424 /* DynamicHeightTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightTableView.swift; sourceTree = "<group>"; };
 		24210FDD28366AD60050C424 /* BusinessInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoTableViewCell.swift; sourceTree = "<group>"; };
+		24210FE12838BCCD0050C424 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		24210FE22838BCCD0050C424 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		24210FE62838BD1D0050C424 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24210FE82838BD3E0050C424 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2425FB8027F810A00062E597 /* Announcemnet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcemnet.swift; sourceTree = "<group>"; };
 		2425FB8527F811C40062E597 /* AnnouncementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewCell.swift; sourceTree = "<group>"; };
 		2425FB8927F93A5C0062E597 /* AnnouncementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementService.swift; sourceTree = "<group>"; };
@@ -704,6 +709,7 @@
 		24CC4A8427F551CA001BDFA1 = {
 			isa = PBXGroup;
 			children = (
+				24210FE72838BD1D0050C424 /* InfoPlist.strings */,
 				24CC4A8F27F551CA001BDFA1 /* aedo-iOS */,
 				24CC4A8E27F551CA001BDFA1 /* Products */,
 				042AB33250FEE12612A9A168 /* Pods */,
@@ -1057,6 +1063,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 24CC4A8427F551CA001BDFA1;
 			productRefGroup = 24CC4A8E27F551CA001BDFA1 /* Products */;
@@ -1078,6 +1085,7 @@
 				24455B17280C8B7200D23358 /* CondoleMessageListTableViewCell.xib in Resources */,
 				24455B0F280C1C9D00D23358 /* ObituaryListTableViewCell.xib in Resources */,
 				24550A992807EEDE00853B58 /* SettingStaticTableViewCell.xib in Resources */,
+				24210FE52838BD1D0050C424 /* InfoPlist.strings in Resources */,
 				24550AA428095FA700853B58 /* ObituaryListNav.storyboard in Resources */,
 				24550AA12807FA5C00853B58 /* SettingVersionTableViewCell.xib in Resources */,
 				24CC4ADE27F57605001BDFA1 /* CustomAlertViewController.xib in Resources */,
@@ -1239,10 +1247,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		24210FE72838BD1D0050C424 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24210FE62838BD1D0050C424 /* ko */,
+				24210FE82838BD3E0050C424 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		24CC4A9627F551CA001BDFA1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				24CC4A9727F551CA001BDFA1 /* Base */,
+				24210FE12838BCCD0050C424 /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1251,6 +1269,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				24CC4A9C27F551CB001BDFA1 /* Base */,
+				24210FE22838BCCD0050C424 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1262,6 +1281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1323,6 +1343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

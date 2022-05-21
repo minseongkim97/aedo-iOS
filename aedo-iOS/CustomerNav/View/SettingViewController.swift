@@ -106,7 +106,8 @@ class SettingViewController: UIViewController {
         models.append(
             Section(title: "계정", options: [
                 .staticCell(model: SettingsOption(title: "로그아웃", handler: {
-                    print("Tapped 로그아웃")
+                    let withdrawalVC = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: WithdrawalViewController.identifier) as! WithdrawalViewController
+                    self.navigationController?.pushViewController(withdrawalVC, animated: true)
                 })),
                 .staticCell(model: SettingsOption(title: "회원탈퇴", handler: {
                     let withdrawalVC = UIStoryboard(name: "CustomerNav", bundle: nil).instantiateViewController(identifier: WithdrawalViewController.identifier) as! WithdrawalViewController
@@ -118,7 +119,6 @@ class SettingViewController: UIViewController {
         models.append(
             Section(title: nil, options: [
                 .versionCell(model: SettingVersionOption(title: "버전정보", version: "v 1.0", handler: {
-                    print("Tapped 버전정보")
                 }))
             ])
         )

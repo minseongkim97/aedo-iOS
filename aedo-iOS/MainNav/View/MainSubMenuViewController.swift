@@ -78,6 +78,7 @@ class MainSubMenuViewController: UIViewController {
     }
     
     @objc func didTappedOrderListStackView() {
+        self.showCustomAlert(alertType: .none, alertTitle: "해당 기능은 준비중입니다.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
     }
     
     @objc func didTappedThanksToCondoleMessageStackView() {

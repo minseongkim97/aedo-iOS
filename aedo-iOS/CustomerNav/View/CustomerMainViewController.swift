@@ -45,6 +45,20 @@ class CustomerMainViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func didTappedPhoneCallButton(_ sender: UIButton) {
+        let number:Int = 1028320516
+                
+        // URLScheme 문자열을 통해 URL 인스턴스를 만들어 줍니다.
+        if let url = NSURL(string: "tel://0" + "\(number)"),
+        
+           //canOpenURL(_:) 메소드를 통해서 URL 체계를 처리하는 데 앱을 사용할 수 있는지 여부를 확인
+           UIApplication.shared.canOpenURL(url as URL) {
+           
+           //사용가능한 URLScheme이라면 open(_:options:completionHandler:) 메소드를 호출해서
+           //만들어둔 URL 인스턴스를 열어줍니다.
+            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+        }
+    }
     //MARK: - Helpers
     private func setContribute() {
         customerCenterVeiw.layer.cornerRadius = 10

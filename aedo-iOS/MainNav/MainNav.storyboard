@@ -119,6 +119,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="main_search"/>
+                                                        <connections>
+                                                            <action selector="didTappedSearchButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oFG-gV-H9q"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="통합 검색" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTk-45-X4Q">
                                                         <rect key="frame" x="19" y="72.5" width="55.5" height="21"/>
@@ -138,6 +141,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="main_order"/>
+                                                        <connections>
+                                                            <action selector="didTappedOrderWreath:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OBK-x8-H06"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="화환 조문" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrF-cK-hrD">
                                                         <rect key="frame" x="19" y="72.5" width="55.5" height="21"/>
