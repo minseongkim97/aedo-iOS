@@ -19,6 +19,7 @@ enum AlertType {
     case PermissionError
     case PopError
     case PopSuccess
+    case Withdrawal
     case none
 }
 

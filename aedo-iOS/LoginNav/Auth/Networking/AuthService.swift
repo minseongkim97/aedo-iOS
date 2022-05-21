@@ -134,4 +134,36 @@ class AuthService {
             completion(.failure(.invalidData))
         }.resume()
     }
+    
+    func withdrawal(completion: @escaping ((Result<Bool, GFError>) -> Void)) {
+        guard let url = URL(string:  "\(Constant.BASE_URL)v1/user") else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = HTTPMethod.DELETE.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(AccessToken.token, forHTTPHeaderField: Constant.ACCESSTOKEN_HEADERFIELD)
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let _ = error {
+                print(error!)
+                completion(.failure(.unableToComplete))
+                return
+            }
+                           
+            guard let response = response as? HTTPURLResponse, (200..<300) ~= response.statusCode else {
+                completion(.failure(.invalidResponse))
+                return
+            }
+            
+            if data != nil {
+                completion(.success(true))
+                return
+            }
+            completion(.failure(.invalidData))
+        }.resume()
+    }
 }

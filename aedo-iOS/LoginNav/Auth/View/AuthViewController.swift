@@ -11,7 +11,6 @@ import SwiftUI
 class AuthViewController: UIViewController {
     //MARK: - Properties
     static let identifier = "AuthViewController"
-    
     let authService = AuthService()
     
     @IBOutlet private weak var authView: UIView!
@@ -201,7 +200,6 @@ class AuthViewController: UIViewController {
             case .failure(let error):
                 print(error.localizedDescription)
                 if error == .notUser {
-                    print(1)
                     DispatchQueue.main.async {
                         self?.titleLabel.text =  "인증번호를 \n입력해주세요."
                         self?.scriptLabel.text = "휴대전화로 전송된 4자리의 \n인증번호를 입력해주세요."
@@ -213,12 +211,10 @@ class AuthViewController: UIViewController {
                         self?.birthdayTextField.becomeFirstResponder()
                     }
                 } else if error == .invalidResponse {
-                    print(2)
                     DispatchQueue.main.async {
                         self?.showCustomAlert(alertType: .none, alertTitle: "전화번호 또는 인증번호를 다시 확인해 주세요.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
                     }
                 } else {
-                    print(3)
                     DispatchQueue.main.async {
                         self?.showNetworkErrorAlert()
                     }
@@ -237,14 +233,8 @@ class AuthViewController: UIViewController {
             switch result {
             case .success(let response):
                 AccessToken.signUpAccessToken = response.Accesstoken
+                UserDefaults.standard.set(true, forKey: "autoLogin")
                 self?.login()
-//                DispatchQueue.main.async {
-                   
-//                    let mainViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
-//                    let navVC = UINavigationController(rootViewController: mainViewController)
-//                    navVC.isNavigationBarHidden = true
-//                    self?.changeRootViewController(navVC)
-//                }
             default:
                 DispatchQueue.main.async {
                     self?.showNetworkErrorAlert()
@@ -257,7 +247,6 @@ class AuthViewController: UIViewController {
 //MARK: - Extension
 extension AuthViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-   
         switch textField {
         case phoneNumberTextField:
             phoneNumberLine.backgroundColor = .mainBrown
@@ -270,7 +259,6 @@ extension AuthViewController: UITextFieldDelegate {
         default:
             break
         }
-        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

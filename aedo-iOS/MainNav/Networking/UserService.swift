@@ -17,7 +17,6 @@ class UserService {
         }
         
         var request = URLRequest(url: url)
-        print(AccessToken.token)
         request.setValue(AccessToken.token, forHTTPHeaderField: Constant.ACCESSTOKEN_HEADERFIELD)
         
         URLSession.shared.dataTask(with: request) { data, response, error in

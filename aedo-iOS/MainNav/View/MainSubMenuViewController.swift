@@ -28,7 +28,6 @@ class MainSubMenuViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         getUserInfo()
         putGesture()
     }

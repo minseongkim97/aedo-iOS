@@ -34,5 +34,4 @@ class SettingVersionTableViewCell: UITableViewCell {
         titleLabel.text = model.title
         versionLabel.text = model.version
     }
-    
 }

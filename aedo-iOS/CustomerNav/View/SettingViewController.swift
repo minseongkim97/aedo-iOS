@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 struct Section {
     let title: String?
@@ -20,6 +21,7 @@ enum SettingsOptionType {
 
 struct SettingSwitchOption {
     let title: String
+    let kind: Switch
     var isOn: Bool
     let handler: (() -> Void)
 }
@@ -70,14 +72,13 @@ class SettingViewController: UIViewController {
         settingTableView.layer.shadowOpacity = 0.07
         settingTableView.layer.shadowRadius = 10
     }
+    
     private func configure() {
         models.append(
             Section(title: "기능설정", options: [
-                .switchCell(model: SettingSwitchOption(title: "자동로그인", isOn: false, handler: {
-                    print("Tapped 자동로그인")
+                .switchCell(model: SettingSwitchOption(title: "자동로그인", kind: .autoLogin, isOn: UserDefaults.standard.bool(forKey: "autoLogin"), handler: {
                 })),
-                .switchCell(model: SettingSwitchOption(title: "푸시수신", isOn: true, handler: {
-                    print("Tapped 푸시수신")
+                .switchCell(model: SettingSwitchOption(title: "푸시수신", kind: .alarm, isOn: UserDefaults.standard.bool(forKey: "alarm"), handler: {
                 }))
             ])
         )
@@ -133,17 +134,6 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
-    }
-    
-//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-//        if let header = view as? UITableViewHeaderFooterView {
-//            if section == 0 {
-//                header.textLabel?.textColor = .white
-//            }
-//        }
-//    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

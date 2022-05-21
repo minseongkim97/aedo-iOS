@@ -208,7 +208,12 @@ class SplashViewController: UIViewController {
       
         // 긴급공지가 같다 - 다음 화면으로 이동
         if needPopUpNotice == "N" {
-            requestAutoLogIn()
+            if UserDefaults.standard.bool(forKey: "autoLogin") {
+                requestAutoLogIn()
+                return
+            }
+            let authVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: AuthViewController.identifier) as! AuthViewController
+            self.changeRootViewController(authVC)
         } else {
             // 긴급공지가 다를 때 - 긴급공지 다이얼로그를 띄워준다.
             showCustomAlert(alertType: .none, alertTitle: noticeContent, isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)

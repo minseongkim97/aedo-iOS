@@ -92,6 +92,9 @@ extension UIViewController: CustomAlertDelegate {
             }
         case .PopError, .PopSuccess:
             self.navigationController?.popViewController(animated: true)
+        case .Withdrawal:
+            let authVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: AuthViewController.identifier) as! AuthViewController
+            self.changeRootViewController(authVC)
         default:
             break
         }

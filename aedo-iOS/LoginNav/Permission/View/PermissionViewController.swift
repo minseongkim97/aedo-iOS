@@ -78,6 +78,7 @@ class PermissionViewController: UIViewController, UNUserNotificationCenterDelega
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { isAlarmPermission, error in
             if isAlarmPermission {
+                UserDefaults.standard.set(true, forKey: "alarm")
                 DispatchQueue.main.async {
                     UIApplication.shared.registerForRemoteNotifications()
                 }
