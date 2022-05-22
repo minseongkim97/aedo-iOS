@@ -579,12 +579,12 @@
                                                 <rect key="frame" x="30" y="217" width="384" height="29"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LwE-Yb-WYd">
-                                                        <rect key="frame" x="0.0" y="-3.5" width="29" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="LwE-Yb-WYd" secondAttribute="height" multiplier="1:1" id="tJ5-EE-qRB"/>
                                                         </constraints>
-                                                        <imageReference key="image" image="list.bullet.rectangle.portrait" catalog="system" symbolScale="large"/>
+                                                        <imageReference key="image" image="main_sub_orderList" symbolScale="large"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="주문목록" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKC-P1-SHp">
                                                         <rect key="frame" x="44" y="0.0" width="340" height="29"/>
@@ -793,7 +793,6 @@
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
-        <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
         <image name="logo" width="275" height="275"/>
         <image name="main_announcement" width="54" height="56"/>
         <image name="main_background" width="1440" height="2560"/>
@@ -807,6 +806,7 @@
         <image name="main_settings" width="75" height="77"/>
         <image name="main_sub_kakaotalk" width="92" height="84.5"/>
         <image name="main_sub_message" width="80" height="80"/>
+        <image name="main_sub_orderList" width="80" height="90"/>
         <image name="main_sub_phone" width="96" height="35.5"/>
         <image name="main_sub_questionMark" width="94" height="94"/>
         <image name="main_sub_smiling" width="96" height="96"/>

@@ -16,6 +16,7 @@ class ObituaryListService {
                 observer.onError(GFError.invalidURL)
                 return Disposables.create {}
             }
+            
             var request = URLRequest(url: url)
             request.setValue(AccessToken.token, forHTTPHeaderField: Constant.ACCESSTOKEN_HEADERFIELD)
             
@@ -26,7 +27,6 @@ class ObituaryListService {
                 }
                                
                 guard let response = response as? HTTPURLResponse, (200..<300) ~= response.statusCode else {
-                    print("invalid response error")
                     observer.onError(GFError.invalidResponse)
                     return
                 }

@@ -52,7 +52,7 @@ class WithdrawalViewController: UIViewController {
         if !sender.isSelected {
             sender.isSelected = true
             sender.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
-            sender.tintColor = .mainBrown
+            sender.tintColor = .pointOrange
         } else {
             sender.isSelected = false
             sender.setImage(UIImage(systemName: "square"), for: .normal)

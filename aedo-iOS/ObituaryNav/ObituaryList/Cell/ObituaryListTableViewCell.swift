@@ -13,7 +13,11 @@ class ObituaryListTableViewCell: UITableViewCell {
     static let identifier = "ObituaryListTableViewCell"
     var obID: String = ""
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var sendObituaryButton: UIButton!
+    @IBOutlet weak var sendObituaryButton: UIButton! {
+        didSet {
+            sendObituaryButton.addTarget(self, action: #selector(didTappedSendObituary(_:)), for: .touchUpInside)
+        }
+    }
     @IBOutlet weak var seeObituaryButton: UIButton! {
         didSet {
             seeObituaryButton.addTarget(self, action: #selector(didTappedShowDetailObituary), for: .touchUpInside)
@@ -26,6 +30,7 @@ class ObituaryListTableViewCell: UITableViewCell {
     
     var disposeBag = DisposeBag()
     var showDetailObituaryButtonAction: (() -> Void)?
+    var sendObituaryButtonAction: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,6 +43,10 @@ class ObituaryListTableViewCell: UITableViewCell {
     }
     
     //MARK: - Actions
+    @objc func didTappedSendObituary(_ sender: UIButton) {
+        sendObituaryButtonAction?()
+    }
+    
     @objc func didTappedShowDetailObituary(_ sender: UIButton) {
         showDetailObituaryButtonAction?()
     }

@@ -58,18 +58,13 @@ class ObituaryListViewController: UIViewController {
                     detailObituaryVC.obID = cell.obID
                     self.navigationController?.pushViewController(detailObituaryVC, animated: true)
                 }
-                
+                cell.sendObituaryButtonAction = { [weak self] in
+                    guard let self = self else { return }
+                    self.showCustomAlert(alertType: .none, alertTitle: "해당 기능은 준비중입니다.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+                    
+                }
             }
             .disposed(by: disposeBag)
-        
-//        obituaryListTableView.rx.modelSelected(ObituaryResponse.self)
-//            .observe(on: MainScheduler.instance)
-//            .subscribe(onNext: { [weak self] _ in
-//                let detailObituaryVC = UIStoryboard(name: "ObituaryListNav", bundle: nil).instantiateViewController(identifier: DetailObituaryViewController.identifier) as! DetailObituaryViewController
-//                detailObituaryVC.name = ""
-//                self?.navigationController?.pushViewController(detailObituaryVC, animated: true)
-//            })
-//            .disposed(by: disposeBag)
     }
 }
 
