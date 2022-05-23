@@ -12,4 +12,5 @@ target 'aedo-iOS' do
 	pod 'Kingfisher'
 	pod 'DropDown'
 	pod 'NMapsMap'
+	pod 'IQKeyboardManagerSwift'
 end

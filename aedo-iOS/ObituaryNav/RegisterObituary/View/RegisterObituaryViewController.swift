@@ -62,8 +62,37 @@ class RegisterObituaryViewController: UIViewController {
     let relationMenu: DropDown = {
         let menu = DropDown()
         menu.dataSource = [
+            "배우자",
             "아들",
-            "딸"
+            "딸",
+            "며느리",
+            "사위",
+            "손",
+            "손자",
+            "손녀",
+            "외손",
+            "외손자",
+            "외손녀",
+            "손부",
+            "손서",
+            "외손부",
+            "외손서",
+            "상주",
+            "조카",
+            "형제",
+            "자매",
+            "부",
+            "모",
+            "형",
+            "동생",
+            "형수",
+            "제수",
+            "처남",
+            "매제",
+            "매형",
+            "누나",
+            "언니",
+            "남매"
         ]
         return menu
     }()
