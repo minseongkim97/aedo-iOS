@@ -1,5 +1,6 @@
 PODS:
   - DropDown (2.3.13)
+  - IQKeyboardManagerSwift (6.5.8)
   - Kingfisher (7.1.1)
   - NMapsMap (3.14.0)
   - Realm (10.19.0):
@@ -16,6 +17,7 @@ PODS:
 
 DEPENDENCIES:
   - DropDown
+  - IQKeyboardManagerSwift
   - Kingfisher
   - NMapsMap
   - RealmSwift
@@ -25,6 +27,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - DropDown
+    - IQKeyboardManagerSwift
     - Kingfisher
     - NMapsMap
     - Realm
@@ -35,6 +38,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  IQKeyboardManagerSwift: 8139150a3c90a915a413d72a8a3e8634c2d3278b
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   NMapsMap: 61c2abfc409bbcdc91583ccc455a5b6f64c7414e
   Realm: 869ab2a7e3bdfa6bf06d8723251539f504e6f602
@@ -43,6 +47,6 @@ SPEC CHECKSUMS:
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 3d56907e9aa498f651a2551da1d3f4ac1c402639
+PODFILE CHECKSUM: 320567b3ea2573ae0f2b17c55a760738db2eab36
 
 COCOAPODS: 1.11.2

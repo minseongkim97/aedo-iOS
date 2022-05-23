@@ -126,7 +126,6 @@ class AuthViewController: UIViewController {
     //MARK: - Helpers
     private func set() {
         dismissKeyboardWhenTappedAround()
-        phoneNumberTextField.becomeFirstResponder()
         titleLabel.text =  "휴대전화 정보를 \n입력해주세요."
         scriptLabel.text = "안녕하세요. 애도입니다. \n로그인을 위해 휴대전화 번호를 입력해주세요."
         

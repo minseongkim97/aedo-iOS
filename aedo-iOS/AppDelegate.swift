@@ -7,12 +7,20 @@
 
 import UIKit
 import RealmSwift
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+//        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        IQKeyboardManager.shared.enable = true
+        
+        let firstLaunch = UserDefaults.standard.integer(forKey: "firstLaunch")
+        if firstLaunch == 0 || firstLaunch == 1 {
+            UserDefaults.standard.set(firstLaunch + 1, forKey: "firstLaunch")
+        }
+       
         
         NetworkMonitor.shared.startMonitoring()
         

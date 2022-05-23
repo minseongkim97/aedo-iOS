@@ -21,13 +21,10 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         // 네트워크 연결 확인
         if NetworkMonitor.shared.isConnected {
-            print("network connected")
             // jailbreak 확인
             if UIDevice().isJailBroken {
-                print("isJailBreak")
                 showSystemMaintenanceAlert()
             } else {
-                print("isNotJailBreak")
                 manageVerficationService()
             }
         } else { // 네트워크 연결 실패
@@ -120,7 +117,6 @@ class SplashViewController: UIViewController {
                 realm.add(verification)
             }
         } catch {
-            print("realm write error")
             showSystemMaintenanceAlert()
         }
     }
@@ -134,7 +130,6 @@ class SplashViewController: UIViewController {
                 }
                 
             default:
-                print("get verfication data is failed")
                 DispatchQueue.main.async {
                     self?.showSystemMaintenanceAlert()
                 }
@@ -152,7 +147,6 @@ class SplashViewController: UIViewController {
                 }
                 
             default:
-                print("get policy data is failed")
                 DispatchQueue.main.async {
                     self?.showSystemMaintenanceAlert()
                 }
@@ -208,10 +202,11 @@ class SplashViewController: UIViewController {
       
         // 긴급공지가 같다 - 다음 화면으로 이동
         if needPopUpNotice == "N" {
-            if UserDefaults.standard.bool(forKey: "autoLogin") {
+            if UserDefaults.standard.bool(forKey: "autoLogin") || UserDefaults.standard.integer(forKey: "firstLaunch") == 1 {
                 requestAutoLogIn()
                 return
             }
+            
             let authVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: AuthViewController.identifier) as! AuthViewController
             self.changeRootViewController(authVC)
         } else {
