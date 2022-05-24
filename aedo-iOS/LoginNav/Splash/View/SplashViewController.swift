@@ -202,7 +202,7 @@ class SplashViewController: UIViewController {
       
         // 긴급공지가 같다 - 다음 화면으로 이동
         if needPopUpNotice == "N" {
-            if UserDefaults.standard.bool(forKey: "autoLogin") || UserDefaults.standard.integer(forKey: "firstLaunch") == 1 {
+            if UserDefaults.standard.bool(forKey: "autoLogin") || UserDefaults.standard.integer(forKey: "firstLaunch") == 0 {
                 requestAutoLogIn()
                 return
             }

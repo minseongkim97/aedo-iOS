@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterObituaryDateView: UITextField {
+class RegisterObituaryDateView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,5 +20,9 @@ class RegisterObituaryDateView: UITextField {
         self.layer.borderColor = UIColor(hex: 0x9F9F9F).cgColor
         self.layer.cornerRadius = 5
         self.layer.masksToBounds = true
+    }
+    
+    override var intrinsicContentSize: CGSize {
+           return CGSize.zero
     }
 }

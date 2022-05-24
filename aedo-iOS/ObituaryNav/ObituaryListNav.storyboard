@@ -143,6 +143,9 @@
                                         <state key="normal" image="house.fill" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTappedHomeButton:" destination="EIc-aB-8t9" eventType="touchUpInside" id="LGP-fB-VNP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.70196078429999997" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1106,9 +1109,6 @@
                                                                 <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                                                <connections>
-                                                                    <action selector="didTappedDatePicker:" destination="zpm-E1-nxZ" eventType="editingDidEnd" id="GDy-K4-tow"/>
-                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1148,9 +1148,6 @@
                                                                 <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="didTappedTimePicker:" destination="zpm-E1-nxZ" eventType="editingDidEnd" id="Wlv-ub-Xec"/>
-                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1223,9 +1220,6 @@
                                                                 <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="didTappedDatePicker:" destination="zpm-E1-nxZ" eventType="editingDidBegin" id="Gh7-mf-6th"/>
-                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1265,9 +1259,6 @@
                                                                 <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="didTappedTimePicker:" destination="zpm-E1-nxZ" eventType="editingDidBegin" id="DxA-xR-93g"/>
-                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1340,9 +1331,6 @@
                                                                 <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="didTappedDatePicker:" destination="zpm-E1-nxZ" eventType="editingDidBegin" id="wMy-M6-rQK"/>
-                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1382,9 +1370,6 @@
                                                                 <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="didTappedTimePicker:" destination="zpm-E1-nxZ" eventType="editingDidBegin" id="5pb-8c-qHR"/>
-                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

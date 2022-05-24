@@ -115,19 +115,21 @@ class RegisterObituaryViewController: UIViewController {
         setConfigure()
         setRelationDropDown()
         setPlaceDropDown()
+        setPickerView()
     }
     
+    private func setPickerView() {
+        setDatePickerView(of: deathbedDatePicker)
+        setDatePickerView(of: dofpDatePicker)
+        setDatePickerView(of: coffinDatePicker)
+        
+        setTimePickerView(of: deathbedTimePicker)
+        setTimePickerView(of: dofpTimePicker)
+        setTimePickerView(of: coffinTimePicker)
+    }
     //MARK: - Actions
     @IBAction func didTappedBackButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func didTappedDatePicker(_ sender: UITextField) {
-        setDatePickerView(of: sender)
-    }
-    
-    @IBAction func didTappedTimePicker(_ sender: UITextField) {
-        setTimePickerView(of: sender)
     }
     
     @IBAction func didTappedUploadImageButton(_ sender: UIButton) {

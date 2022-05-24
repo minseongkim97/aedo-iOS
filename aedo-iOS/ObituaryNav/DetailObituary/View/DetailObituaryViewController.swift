@@ -51,6 +51,13 @@ class DetailObituaryViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func didTappedHomeButton(_ sender: UIButton) {
+        let mainViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
+        let navVC = UINavigationController(rootViewController: mainViewController)
+        navVC.isNavigationBarHidden = true
+        self.changeRootViewController(navVC)
+    }
+    
     @IBAction func didTappedWriteCondoleMessageButton(_ sender: UIButton) {
         let registerCondoleMessageVC = UIStoryboard(name: "ObituaryListNav", bundle: nil).instantiateViewController(identifier: RegisterCondoleMessageViewController.identifier) as! RegisterCondoleMessageViewController
         registerCondoleMessageVC.obID = self.obID

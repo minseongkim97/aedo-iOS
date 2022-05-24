@@ -199,6 +199,7 @@ class AuthViewController: UIViewController {
                 DispatchQueue.main.async {
                     AccessToken.logInAccessToken = response.Accesstoken
                     AccessToken.autoLogInAccessToken = response.Accesstoken
+                    UserDefaults.standard.set(true, forKey: "autoLogin")
                     let mainViewController = UIStoryboard(name: "MainNav", bundle: nil).instantiateViewController(identifier: MainViewController.identifier)
                     let navVC = UINavigationController(rootViewController: mainViewController)
                     navVC.isNavigationBarHidden = true

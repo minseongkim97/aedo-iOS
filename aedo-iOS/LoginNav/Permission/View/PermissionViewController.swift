@@ -41,6 +41,7 @@ class PermissionViewController: UIViewController, UNUserNotificationCenterDelega
     
     //MARK: - Actions
     @IBAction private func didTappedCheckButton() {
+        UserDefaults.standard.set(1, forKey: "firstLaunch")
         let authViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: AuthViewController.identifier)
         let navVC = UINavigationController(rootViewController: authViewController)
         navVC.isNavigationBarHidden = true
@@ -60,6 +61,7 @@ class PermissionViewController: UIViewController, UNUserNotificationCenterDelega
     }
     
     private func requestAlbumPermission() {
+        self.requestAlarmPermission()
         PHPhotoLibrary.requestAuthorization { [weak self] status in
             switch status {
             case .authorized, .limited:

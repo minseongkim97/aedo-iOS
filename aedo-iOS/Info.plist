@@ -35,5 +35,13 @@
 	</dict>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleDarkContent</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>장례식장과의 위치 비교에 위치 정보가 필요합니다.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>장례식장과의 위치 비교에 위치 정보가 필요합니다.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>부고 사진 등록을 위해 앨범 접근 권한이 필요합니다.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>부고 사진 등록을 위해 카메라 접근 권한이 필요합니다.</string>
 </dict>
 </plist>
