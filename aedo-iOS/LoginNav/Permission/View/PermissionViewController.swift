@@ -61,7 +61,6 @@ class PermissionViewController: UIViewController, UNUserNotificationCenterDelega
     }
     
     private func requestAlbumPermission() {
-        self.requestAlarmPermission()
         PHPhotoLibrary.requestAuthorization { [weak self] status in
             switch status {
             case .authorized, .limited:
