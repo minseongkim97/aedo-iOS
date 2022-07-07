@@ -23,9 +23,9 @@ class RegisterObituaryViewController: UIViewController {
     static let identifier = "RegisterObituaryViewController"
     let registerObituaryService = RegisterObituaryService()
     
-    @IBOutlet weak var relationPicker: UITextField!
+    @IBOutlet weak var relationPicker: RegisterObituaryCustomTextField!
     @IBOutlet weak var relationTextButton: UIButton!
-    @IBOutlet weak var residentNameTextField: RegisterObituaryCustomTextField!
+    @IBOutlet weak var residentNameTextField: UITextField!
     @IBOutlet weak var residentPhoneNumberTextField: UITextField!
     @IBOutlet weak var placeNamePicker: RegisterObituaryCustomTextField!
     @IBOutlet weak var placeNameTextField: UITextField!

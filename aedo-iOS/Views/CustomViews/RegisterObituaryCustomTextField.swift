@@ -19,10 +19,6 @@ class RegisterObituaryCustomTextField: UITextField {
         setRightView()
     }
     
-    override var intrinsicContentSize: CGSize {
-           return CGSize.zero
-       }
-    
     private func setRightView() {
         let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 21, height: 30))
         let rightImageView = UIImageView(frame: CGRect(x: 0, y: 10, width: 10, height: 10))

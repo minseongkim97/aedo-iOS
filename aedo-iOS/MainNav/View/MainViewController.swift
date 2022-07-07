@@ -81,7 +81,8 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func didTappedOrderWreath(_ sender: UIButton) {
-        self.showCustomAlert(alertType: .none, alertTitle: "해당 기능은 준비중입니다.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
+        let orderWreathViewController = UIStoryboard(name: "OrderWreathNav", bundle: nil).instantiateViewController(identifier: OrderWreathViewController.identifier)
+        self.navigationController?.pushViewController(orderWreathViewController, animated: true)
     }
     
     //MARK: - Helpers

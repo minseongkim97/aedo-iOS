@@ -7,10 +7,11 @@ target 'aedo-iOS' do
 
   # Pods for aedo-iOS
 	pod 'RealmSwift'
-	pod 'RxSwift', '6.5.0'
-    	pod 'RxCocoa', '6.5.0'
+	pod 'RxSwift'
+    	pod 'RxCocoa'
 	pod 'Kingfisher'
 	pod 'DropDown'
 	pod 'NMapsMap'
 	pod 'IQKeyboardManagerSwift'
+	pod "PagingKit"
 end

@@ -28,6 +28,7 @@ class AccessToken {
         didSet {
             AccessToken.token = autoLogInAccessToken
             UserDefaults.standard.set(autoLogInAccessToken, forKey: "autoLogInAccessToken")
+            print(UserDefaults.standard.string(forKey: "autoLogInAccessToken")!)
         }
     }
 }

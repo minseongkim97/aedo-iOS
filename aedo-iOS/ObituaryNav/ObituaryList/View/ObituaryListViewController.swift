@@ -61,7 +61,6 @@ class ObituaryListViewController: UIViewController {
                 cell.sendObituaryButtonAction = { [weak self] in
                     guard let self = self else { return }
                     self.showCustomAlert(alertType: .none, alertTitle: "해당 기능은 준비중입니다.", isRightButtonHidden: true, leftButtonTitle: "확인", isMessageLabelHidden: true)
-                    
                 }
             }
             .disposed(by: disposeBag)
@@ -73,6 +72,4 @@ extension ObituaryListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 270
     }
-    
-   
 }

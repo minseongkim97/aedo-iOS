@@ -3,6 +3,7 @@ PODS:
   - IQKeyboardManagerSwift (6.5.8)
   - Kingfisher (7.1.1)
   - NMapsMap (3.14.0)
+  - PagingKit (1.18.0)
   - Realm (10.19.0):
     - Realm/Headers (= 10.19.0)
   - Realm/Headers (10.19.0)
@@ -20,9 +21,10 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - Kingfisher
   - NMapsMap
+  - PagingKit
   - RealmSwift
-  - RxCocoa (= 6.5.0)
-  - RxSwift (= 6.5.0)
+  - RxCocoa
+  - RxSwift
 
 SPEC REPOS:
   trunk:
@@ -30,6 +32,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Kingfisher
     - NMapsMap
+    - PagingKit
     - Realm
     - RealmSwift
     - RxCocoa
@@ -41,12 +44,13 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 8139150a3c90a915a413d72a8a3e8634c2d3278b
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   NMapsMap: 61c2abfc409bbcdc91583ccc455a5b6f64c7414e
+  PagingKit: 366cc22d74f4de7768bb31d8fcd49182f53e3ce7
   Realm: 869ab2a7e3bdfa6bf06d8723251539f504e6f602
   RealmSwift: f1f51c4a02fe826e5cea623b5441992f06bdc942
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 320567b3ea2573ae0f2b17c55a760738db2eab36
+PODFILE CHECKSUM: a39e0efaf2bf9e5ed7f50740f8b915fdd2360179
 
 COCOAPODS: 1.11.2

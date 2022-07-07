@@ -78,7 +78,7 @@ class AuthService {
             }
             
             guard let response = response as? HTTPURLResponse, (200..<300) ~= response.statusCode else {
-                if (response as! HTTPURLResponse).statusCode == 400 {
+                if (response as! HTTPURLResponse).statusCode == 403 {
                     completion(.failure(.notUser))
                     return
                 }
